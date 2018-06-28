@@ -1,20 +1,36 @@
 {
-  "name": "design-system-example",
+  "name": "radargovernamental-design-system-example",
   "homepage": "https://radargovernamental.github.io/design-system",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "license": "MIT",
+  "license": "Apache License 2.0",
   "dependencies": {
+    "radargovernamental-design-system": "link:..",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "design-system": "link:..",
     "react-scripts": "^1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^3.4.8",
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-info": "^3.4.8",
+    "@storybook/addon-knobs": "^3.4.8",
+    "@storybook/addon-links": "^3.4.8",
+    "@storybook/addon-notes": "^3.4.8",
+    "@storybook/addon-storysource": "^3.4.8",
+    "@storybook/addons": "^3.4.8",
+    "@storybook/react": "^3.4.8",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "react-app-rewired": "^1.5.2"
   }
 }

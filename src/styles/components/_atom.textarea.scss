@@ -1,0 +1,59 @@
+@import '../settings/settings';
+
+%c-form__textarea--valid {
+  border-color: $color-success !important;
+  background-color: lighten($color-success, 48%);
+}
+
+%c-form__textarea--error {
+  border-color: $color-danger !important;
+  background-color: lighten($color-danger, 48%);
+}
+
+.c-form__textarea {
+  border: 1px solid $color-text;
+  border-radius: $form-border-radius-md;
+  box-sizing: border-box;
+  color: $color-text;
+  font-family: $font-sans-serif;
+  font-size: $font-size-md;
+  margin: 0;
+  padding: $form-padding-vertical-md $form-padding-horizontal-md;
+  transition: $global-transition all ease-in-out;
+  width: 100%;
+
+  &--lg {
+    padding: $form-padding-vertical-lg $form-padding-horizontal-lg;
+    font-size: $font-size-lg;
+    border-radius: $form-border-radius-lg;
+  }
+  &--sm {
+    padding: $form-padding-vertical-sm $form-padding-horizontal-sm;
+    font-size: $font-size-sm;
+    border-radius: $form-border-radius-sm;
+  }
+  &--xs {
+    padding: $form-padding-vertical-xs $form-padding-horizontal-xs;
+    font-size: $font-size-xs;
+    border-radius: $form-border-radius-xs;
+  }
+
+  &:hover, &:focus {
+    outline: none;
+    @extend %c-form__textarea--valid;
+  }
+
+  &--valid {
+    @extend %c-form__textarea--valid;
+  }
+
+  &--error {
+    @extend %c-form__textarea--error;
+  }
+
+  &:disabled {
+    border-color: lighten($color_text, 30%);
+    background: lighten($color_text, 80%);
+    opacity: .4;
+  }
+}

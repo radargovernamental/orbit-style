@@ -1,0 +1,16 @@
+.c-form__container {
+  margin: $base-spacing-unit 0;
+
+  & .c-form__row:first-of-type .c-form__col:first-child input {
+    border-top-left-radius: 5px;
+  }
+  & .c-form__row:first-of-type .c-form__col:last-child input {
+    border-top-right-radius: 5px;
+  }
+  & .c-form__row:last-of-type .c-form__col:first-child input {
+    border-bottom-left-radius: 5px;
+  }
+  & .c-form__row:last-of-type .c-form__col:last-child input {
+    border-bottom-right-radius: 5px;
+  }
+}

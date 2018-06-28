@@ -1,0 +1,17 @@
+/**
+ * Grid loop mixin
+ */
+
+@mixin grid-loop($name){
+  @for $i from 0 through $grid-columns {
+    @if $i != 0 {
+      .col--#{$name}-#{$i} {
+        width: percentage($i/$grid-columns);
+      }
+    }
+    .col--#{$name}-offset-#{$i} {
+      margin-left: percentage($i/$grid-columns);
+    }
+  }
+}
+

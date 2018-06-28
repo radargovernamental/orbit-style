@@ -1,0 +1,34 @@
+@import '../settings/colors';
+@import '../settings/type';
+
+
+.c-text {
+  color: $color-text;
+  font-size: $font-size-md;
+  font-family: $font-text;
+  line-height: $line-height-base;
+  margin: 1em 0;
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--success {
+    color: $color-success;
+  }
+
+  &--warning {
+    color: $color-warning;
+  }
+
+  &--danger {
+    color: $color-danger;
+  }
+
+  &--ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+

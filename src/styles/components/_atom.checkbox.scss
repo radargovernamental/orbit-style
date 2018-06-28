@@ -1,0 +1,85 @@
+@import '../settings/settings';
+
+%c-form__checkbox--valid {
+  border-color: $color-primary;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+) $color-primary no-repeat center center;
+  background-size: 60%;
+}
+
+%c-form__checkbox--error {
+  border-color: $color-danger !important;
+  background: $color-danger;
+}
+
+.c-form__checkbox {
+  & > input {
+    display: none;
+  }
+
+  & > .c-form__checkbox-value:before {
+    content: '';
+    display: inline-block;
+    width: $form-checkbox-size-md;
+    height: $form-checkbox-size-md;
+    border-radius: $form-checkbox-size-md;
+    border: 1px solid $color-text-light;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+) #fff no-repeat center center;
+    background-size: 0;
+    margin: 0 ($form-checkbox-size-md / 2) 0 0;
+    vertical-align: middle;
+    font-size: $font-size-md;
+    transition: $global-transition all ease-in-out;
+  }
+
+  &--lg {
+    & > .c-form__checkbox-value:before {
+      width: $form-checkbox-size-lg;
+      height: $form-checkbox-size-lg;
+      border-radius: $form-checkbox-size-lg;
+    }
+    font-size: $font-size-lg;
+  }
+  &--sm {
+    & > .c-form__checkbox-value:before {
+      width: $form-checkbox-size-sm;
+      height: $form-checkbox-size-sm;
+      border-radius: $form-checkbox-size-sm;
+    }
+    font-size: $font-size-sm;
+  }
+  &--xs {
+    & > .c-form__checkbox-value:before {
+      width: $form-checkbox-size-xs;
+      height: $form-checkbox-size-xs;
+      border-radius: $form-checkbox-size-xs;
+    }
+    font-size: $font-size-sm;
+  }
+
+  &:hover, &:focus {
+    outline: none;
+    &:before {
+      @extend %c-form__checkbox--valid;
+    }
+  }
+
+  &--valid {
+    @extend %c-form__checkbox--valid;
+  }
+
+  &--error {
+    & > .c-form__checkbox-value:before {
+      @extend %c-form__checkbox--error;
+    }
+  }
+
+  & > input:checked ~ .c-form__checkbox-value:before {
+    @extend %c-form__checkbox--valid;
+  }
+
+  &:disabled {
+    border-color: lighten($color_text, 30%);
+    background: lighten($color_text, 80%);
+    opacity: .4;
+  }
+}

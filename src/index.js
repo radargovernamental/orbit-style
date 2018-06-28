@@ -1,26 +1,18 @@
-/**
- * @class ExampleComponent
- */
+// Grid
+export Col from './js/components/molecule/Col';
+export Row from './js/components/molecule/Row';
+export Container from './js/components/molecule/Container';
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// UI
+export Blockquote from './js/components/atom/Blockquote';
+export Button from './js/components/atom/Button';
+export Heading from './js/components/atom/Heading';
+export Text from './js/components/atom/Text';
 
-import styles from './styles.css'
+// Form
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export Checkbox from './js/components/atom/Checkbox';
+export Radio from './js/components/atom/Radio';
+export Select from './js/components/atom/Select';
+export Textarea from './js/components/atom/Textarea';
+export Textfield from './js/components/atom/Textfield';

@@ -1,13 +1,13 @@
-# design-system
+# radargovernamental-design-system
 
-> Radar Governamental&#x27;s Design System
+> Radar Governamental's Design System
 
-[![NPM](https://img.shields.io/npm/v/design-system.svg)](https://www.npmjs.com/package/design-system) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/radargovernamental-design-system.svg)](https://www.npmjs.com/package/radargovernamental-design-system) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save design-system
+npm install --save radargovernamental-design-system
 ```
 
 ## Usage
@@ -15,12 +15,12 @@ npm install --save design-system
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'design-system'
+import { Button } from 'radargovernamental-design-system'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <Button>Hello</Button>
     )
   }
 }
@@ -28,4 +28,4 @@ class Example extends Component {
 
 ## License
 
-MIT © [radargovernamental](https://github.com/radargovernamental)
+Apache License 2.0 © [radargovernamental](https://github.com/radargovernamental/design-system)

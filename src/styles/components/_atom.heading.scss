@@ -1,0 +1,50 @@
+@import '../settings/colors';
+@import '../settings/type';
+
+.c-heading {
+  color: $color-text;
+  font-family: $font-heading;
+  line-height: $line-height-base;
+  margin: 1em 0;
+
+  &__1 {
+    font-size: 2rem;
+  }
+
+  &__2 {
+    font-size: 1.8rem;
+  }
+
+  &__3 {
+    font-size: 1.5rem;
+  }
+
+  &__4 {
+    font-size: 1.2rem;
+  }
+
+  &__5 {
+    font-size: 1rem;
+  }
+
+  &__6 {
+    font-size: .9rem;
+  }
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--success {
+    color: $color-success;
+  }
+
+  &--warning {
+    color: $color-warning;
+  }
+
+  &--danger {
+    color: $color-danger;
+  }
+}
+

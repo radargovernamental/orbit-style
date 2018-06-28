@@ -1,6 +1,6 @@
 {
-  "short_name": "design-system",
-  "name": "design-system",
+  "short_name": "radargovernamental-design-system",
+  "name": "radargovernamental-design-system",
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",

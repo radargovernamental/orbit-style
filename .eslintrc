@@ -2,7 +2,8 @@
   "parser": "babel-eslint",
   "extends": [
     "standard",
-    "standard-react"
+    "standard-react",
+    "airbnb"
   ],
   "env": {
     "es6": true
@@ -22,6 +23,11 @@
     "react/jsx-boolean-value": 0,
 
     // allow imports mixed with non-import statements at top of file
-    "import/first": 0
+    "import/first": 0,
+
+    "react/jsx-filename-extension": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "import/no-extraneous-dependencies": 0,
+    "max-len": ["error", 120]
   }
 }

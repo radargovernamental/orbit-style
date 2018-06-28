@@ -1,0 +1,39 @@
+/**
+ * Based on https://github.com/benchmarkstudios/simple-grid
+ */
+
+/**
+ * Space between columns
+ */
+
+$grid-gutter: $base-spacing-unit !default;
+
+
+/**
+ * Max width of container
+ */
+
+$grid-max-width: 1200px + ($grid-gutter * 2) !default;
+
+
+/**
+ * Number of total columns
+ */
+
+$grid-columns: 12 !default;
+
+
+/**
+ * Breakpoints
+ */
+
+$breakpoint-lg: mq-get-breakpoint-width('wide', $mq-breakpoints) !default;
+$breakpoint-md: mq-get-breakpoint-width('desktop', $mq-breakpoints) !default;
+$breakpoint-sm: mq-get-breakpoint-width('tablet', $mq-breakpoints) !default;
+
+$breakpoints: (
+  'lg' '(min-width: ' + $breakpoint-lg + ')',
+  'md' '(min-width: ' + $breakpoint-md + ') and (max-width: ' + ($breakpoint-lg - 1) + ')',
+  'sm' '(min-width: ' + $breakpoint-sm + ') and (max-width: ' + ($breakpoint-md - 1) + ')',
+  'xs' '(max-width: ' + ($breakpoint-sm - 1) + ')'
+) !default;
