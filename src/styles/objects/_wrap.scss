@@ -1,0 +1,42 @@
+@import '../settings/settings';
+@import '../tools/tools';
+
+@for $size from 1 to ($spacer-columns + 1) {
+  .mt-lg-#{$size} {
+    margin-top: $base-inline-spacer-lg-x * $size;
+  }
+  @include mq($until: desktop) {
+    .mt-md-#{$size} {
+      margin-top: $base-inline-spacer-md-x * $size;
+    }
+  }
+  @include mq($until: desktop) {
+    .mt-sm-#{$size} {
+      margin-top: $base-inline-spacer-sm-x * $size;
+    }
+  }
+  @include mq($until: desktop) {
+    .mt-xs-#{$size} {
+      margin-top: $base-inline-spacer-xs-x * $size;
+    }
+  }
+
+  .mr-lg-#{$size} {
+    margin-right: $base-inline-spacer-lg-x * $size;
+  }
+  @include mq($until: desktop) {
+    .mr-md-#{$size} {
+      margin-right: $base-inline-spacer-md-x * $size;
+    }
+  }
+  @include mq($until: tablet) {
+    .mr-sm-#{$size} {
+      margin-right: $base-inline-spacer-sm-x * $size;
+    }
+  }
+  @include mq($until: mobile) {
+    .mr-xs-#{$size} {
+      margin-right: $base-inline-spacer-xs-x * $size;
+    }
+  }
+}

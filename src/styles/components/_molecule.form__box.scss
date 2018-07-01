@@ -1,0 +1,78 @@
+@import '../settings/settings';
+@import '../tools/tools';
+
+.c-form__box {
+  .c-form__element:not(.c-form__select--parent) {
+    border-radius: 0;
+    padding-top: 30px;
+  }
+
+  .c-form__row--parent:first-of-type .c-form__item--parent:first-child {
+    &.c-form__item--active { border-top-left-radius: 5px; }
+    .c-form__element {
+      border-top-left-radius: 5px;
+      & > div > div {
+        border-top-left-radius: 5px; // for react-select
+      }
+      // for react-select
+    }
+  }
+  .c-form__row--parent:first-of-type .c-form__item--parent:last-child {
+    &.c-form__item--active { border-top-right-radius: 5px; }
+    .c-form__element {
+      border-top-right-radius: 5px;
+      & > div > div {
+        border-top-right-radius: 5px; // for react-select
+      }
+    }
+  }
+  .c-form__row--parent:last-of-type .c-form__item--parent:first-child {
+    &.c-form__item--active { border-bottom-left-radius: 5px; }
+    .c-form__element {
+      border-bottom-left-radius: 5px;
+      & > div > div {
+        border-bottom-left-radius: 5px; // for react-select
+      }
+    }
+  }
+  .c-form__row--parent:last-of-type .c-form__item--parent:last-child {
+    &.c-form__item--active { border-bottom-right-radius: 5px; }
+    .c-form__element {
+      border-bottom-right-radius: 5px;
+      & > div > div {
+        border-bottom-right-radius: 5px; // for react-select
+      }
+    }
+  }
+
+  .c-form__label--parent {
+    font-size: 1rem;
+    font-weight: normal;
+    left: 10px;
+    margin-top: -.5rem;
+    position: absolute;
+    top: 50%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .c-form__item--active {
+    border: 1px solid $form-color-border-normal;
+    background-color: $form-color-background-normal;
+    box-sizing: border-box;
+    color: $color-text;
+    padding: 34px 0 11px 10px;
+  }
+
+  .c-form__item--active .c-form__label--parent,
+  .c-form__element--value ~ .c-form__label--parent,
+  .c-form__element:hover ~ .c-form__label--parent,
+  .c-form__element:focus ~ .c-form__label--parent,
+  .c-form__element.active ~ .c-form__label--parent {
+    color: $form-color-label-text-active;
+    font-size: 0.8rem;
+    font-weight: 500;
+    left: 8px;
+    margin-top: 0;
+    top: 8px;
+  }
+}

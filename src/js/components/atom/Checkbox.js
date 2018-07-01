@@ -8,6 +8,7 @@ const Checkbox = (props) => {
   const {
     children,
     id,
+    name,
     lg,
     md,
     sm,
@@ -26,7 +27,7 @@ const Checkbox = (props) => {
   });
   return (
     <label htmlFor={id} className={classes}>
-      <input type="checkbox" name={id} id={id} {...otherProps} />
+      <input type="checkbox" name={name || id} id={id} {...otherProps} />
       <span className={css['c-form__checkbox-value']}>
         {children}
       </span>
@@ -36,7 +37,8 @@ const Checkbox = (props) => {
 
 Checkbox.propTypes = {
   children: PropTypes.node,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string,
   lg: PropTypes.bool,
   md: PropTypes.bool,
   sm: PropTypes.bool,
@@ -45,7 +47,7 @@ Checkbox.propTypes = {
 };
 Checkbox.defaultProps = {
   children: null,
-  id: 'check',
+  name: null,
   lg: false,
   md: false,
   sm: false,

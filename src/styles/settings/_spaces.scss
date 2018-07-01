@@ -1,11 +1,21 @@
 // Base spacing between components
 $base-spacing-unit: 20px;
 
-
 $base-lg: 20px;
 $base-md: 16px;
 $base-sm: 12px;
 $base-xs: 10px;
+
+$spacer-columns: 10;
+$base-inline-spacer-lg-x: $base-lg / 2;
+$base-inline-spacer-lg-y: $base-lg / 2;
+$base-inline-spacer-md-x: $base-md / 2;
+$base-inline-spacer-md-y: $base-md / 2;
+$base-inline-spacer-sm-x: $base-sm / 2;
+$base-inline-spacer-sm-y: $base-sm / 2;
+$base-inline-spacer-xs-x: $base-xs / 2;
+$base-inline-spacer-xs-y: $base-xs / 2;
+
 
 /**********************************
  * Buttons spacing
@@ -40,10 +50,10 @@ $form-padding-vertical-sm: 0.8 * $base-sm;
 $form-padding-vertical-xs: 0.8 * $base-xs;
 
 // Padding horizontal
-$form-padding-horizontal-lg: 1 * $base-lg;
-$form-padding-horizontal-md: 1 * $base-md;
-$form-padding-horizontal-sm: 1 * $base-sm;
-$form-padding-horizontal-xs: 1 * $base-xs;
+$form-padding-horizontal-lg: 0.5 * $base-lg;
+$form-padding-horizontal-md: 0.5 * $base-md;
+$form-padding-horizontal-sm: 0.5 * $base-sm;
+$form-padding-horizontal-xs: 0.5 * $base-xs;
 
 // Border-radius
 $form-border-radius-lg: 0.2 * $base-lg;
@@ -52,13 +62,13 @@ $form-border-radius-sm: 0.2 * $base-sm;
 $form-border-radius-xs: 0.2 * $base-xs;
 
 // Radio size
-$form-radio-size-lg: 2 * $base-lg;
-$form-radio-size-md: 2 * $base-md;
-$form-radio-size-sm: 2 * $base-sm;
-$form-radio-size-xs: 2 * $base-xs;
+$form-radio-size-lg: 1.125 * $base-lg;
+$form-radio-size-md: 1.125 * $base-md;
+$form-radio-size-sm: 1.125 * $base-sm;
+$form-radio-size-xs: 1.125 * $base-xs;
 
 // Checkbox size
-$form-checkbox-size-lg: 2 * $base-lg;
-$form-checkbox-size-md: 2 * $base-md;
-$form-checkbox-size-sm: 2 * $base-sm;
-$form-checkbox-size-xs: 2 * $base-xs;
+$form-checkbox-size-lg: 1.125 * $base-lg;
+$form-checkbox-size-md: 1.125 * $base-md;
+$form-checkbox-size-sm: 1.125 * $base-sm;
+$form-checkbox-size-xs: 1.125 * $base-xs;

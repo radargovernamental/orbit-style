@@ -11,22 +11,30 @@
 }
 
 .c-form__radio {
+  color: $form-color-text;
+  position: relative;
+
   & > input {
-    display: none;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    left: -1px;
+    top: -1px;
+    z-index: -1;
   }
 
   & > .c-form__radio-value:before {
-    content: '';
-    display: inline-block;
-    width: $form-radio-size-md;
-    height: $form-radio-size-md;
+    background: #fff;
     border-radius: $form-radio-size-md;
     border: 1px solid $color-text-light;
-    background: transparent;
-    margin: 0 ($form-radio-size-md / 2) 0 0;
-    vertical-align: middle;
+    content: '';
+    display: inline-block;
     font-size: $font-size-md;
+    margin: 0 ($form-radio-size-md / 2) 0 0;
+    height: $form-radio-size-md;
     transition: $global-transition all ease-in-out;
+    vertical-align: -4px;
+    width: $form-radio-size-md;
   }
 
   &--lg {
@@ -79,5 +87,9 @@
     border-color: lighten($color_text, 30%);
     background: lighten($color_text, 80%);
     opacity: .4;
+  }
+
+  & > input:focus ~ .c-form__radio-value:before {
+    border-color: $color-primary;
   }
 }

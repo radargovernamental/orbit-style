@@ -1,0 +1,10 @@
+@import '../settings/settings';
+@import '../objects/wrap';
+
+.c-spacer {
+  display: block;
+
+  &--inline {
+    display: inline-block;
+  }
+}

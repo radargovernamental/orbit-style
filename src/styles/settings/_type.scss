@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
 $font-serif:      'Times New Roman', serif;
-$font-sans-serif: 'Arial', sans-serif;
+$font-sans-serif: 'Roboto', sans-serif;
 
 $font-heading: 'Roboto', sans-serif;
 $font-text: $font-sans-serif;
@@ -17,3 +19,4 @@ $line-height-base:    1.2em;
 $line-height-medium:  1.5em;
 $line-height-small:   1em;
 $line-height-tiny:    .9em;
+

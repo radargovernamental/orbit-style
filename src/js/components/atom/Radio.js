@@ -8,6 +8,7 @@ const Radio = (props) => {
   const {
     children,
     id,
+    name,
     lg,
     md,
     sm,
@@ -26,7 +27,7 @@ const Radio = (props) => {
   });
   return (
     <label htmlFor={id} className={classes}>
-      <input type="radio" name={id} id={id} {...otherProps} />
+      <input type="radio" name={name || id} id={id} {...otherProps} />
       <span className={css['c-form__radio-value']}>
         {children}
       </span>
@@ -36,7 +37,8 @@ const Radio = (props) => {
 
 Radio.propTypes = {
   children: PropTypes.node,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string,
   lg: PropTypes.bool,
   md: PropTypes.bool,
   sm: PropTypes.bool,
@@ -45,7 +47,7 @@ Radio.propTypes = {
 };
 Radio.defaultProps = {
   children: null,
-  id: 'check',
+  name: null,
   lg: false,
   md: false,
   sm: false,

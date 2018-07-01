@@ -1,8 +1,8 @@
 @import '../settings/settings';
 
 %c-form__textarea--valid {
-  border-color: $color-success !important;
-  background-color: lighten($color-success, 48%);
+  border-color: $form-color-border-normal;
+  background-color: $form-color-background-normal;
 }
 
 %c-form__textarea--error {
@@ -10,11 +10,16 @@
   background-color: lighten($color-danger, 48%);
 }
 
+.c-form__element {
+  display: block;
+}
+
 .c-form__textarea {
-  border: 1px solid $color-text;
+  background: $form-color-background-normal;
+  border: 1px solid $form-color-border-normal;
   border-radius: $form-border-radius-md;
   box-sizing: border-box;
-  color: $color-text;
+  color: $form-color-text;
   font-family: $font-sans-serif;
   font-size: $font-size-md;
   margin: 0;
@@ -40,7 +45,12 @@
 
   &:hover, &:focus {
     outline: none;
-    @extend %c-form__textarea--valid;
+    background: $form-color-background-hover;
+    border-color: $form-color-border-hover;
+  }
+
+  &.c-form__textfield--value {
+    background: $form-color-background-has-value;
   }
 
   &--valid {

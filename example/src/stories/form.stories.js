@@ -67,7 +67,7 @@ storiesOf('Forms/Textarea', module)
 
 storiesOf('Forms/Textfield', module)
   .addDecorator(checkA11y)
-  .add('of type text', () => <Textfield type="text" onChange={action('changed')} />)
+  .add('of type text', () => <Textfield type="text" onChange={action('changed')} value="Some text" />)
   .add('of type number', () => <Textfield type="number" onChange={action('changed')} />)
   .add('of type email', () => <Textfield type="email" onChange={action('changed')} />)
   .add('large', () => <Textfield lg onChange={action('changed')} />)

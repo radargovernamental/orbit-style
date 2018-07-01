@@ -9,16 +9,18 @@
  * label, an input or a button.
  */
 
+@import 'atom.blockquote';
 @import 'atom.button';
-@import 'atom.heading';
-@import 'atom.textfield';
-@import 'atom.textarea';
-@import 'atom.radio';
 @import 'atom.checkbox';
-@import 'atom.select';
+@import 'atom.form__label';
+@import 'atom.heading';
 @import 'atom.label';
+@import 'atom.radio';
 @import 'atom.row';
-@import 'molecule.form__footer';
+@import 'atom.select';
+@import 'atom.text';
+@import 'atom.textarea';
+@import 'atom.textfield';
 
 
 /**
@@ -27,9 +29,11 @@
  * take on their own properties and serve as the backbone of our design systems.
  */
 
-@import 'molecule.form__field';
 @import 'molecule.form__container';
-@import 'molecule.form__col';
+@import 'molecule.form__field';
+@import 'molecule.form__footer';
+@import 'molecule.form__item';
+@import 'molecule.form__row';
 
 /**
  * ORGANISMS
