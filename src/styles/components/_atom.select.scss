@@ -15,11 +15,9 @@
       //padding-top: 5px;
       box-shadow: none;
 
-      /** Input **/
-      & > div {
-        //padding-top: 10px;
-        //padding-bottom: 10px;
-
+      &:hover {
+        border-color: $form-color-border-hover !important;
+        background-color: $form-color-background-hover !important;
       }
     }
   }

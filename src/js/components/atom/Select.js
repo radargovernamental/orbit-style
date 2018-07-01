@@ -11,7 +11,7 @@ const css = Object.assign({}, mainCss, parentCss);
 
 const input = (base, state) => {
   let background = 'transparent';
-  let borderColor = '#f00';
+  let borderColor = '#ECEFF1';
 
   if (state.isFocused) {
     background = '#BEE6FF';
