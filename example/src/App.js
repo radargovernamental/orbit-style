@@ -12,6 +12,7 @@ import {
   Select,
   Textarea,
   Textfield,
+  Datepicker,
 } from 'radargovernamental-design-system';
 
 export default class App extends Component {
@@ -28,6 +29,8 @@ export default class App extends Component {
       message: '',
       list: null,
       listMultiple: null,
+      date: [],
+      dateWithTime: [],
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -48,6 +51,9 @@ export default class App extends Component {
       message,
       list,
       listMultiple,
+      date,
+      dateWithTime,
+      time,
     } = this.state;
     return (
       <Container>
@@ -144,6 +150,48 @@ export default class App extends Component {
                 </Spacer>
                 <Radio id="radio2" name="radio">Radio 2</Radio>
                 <FormLabel htmlFor="radio">Radio</FormLabel>
+              </FormItem>
+            </FormRow>
+          </FormBox>
+        </Spacer>
+        <Spacer mtLg={2} mtMd={2}>
+          <FormBox>
+            <FormRow>
+              <FormItem>
+                <Datepicker
+                  name="date"
+                  onChange={this.handleChange}
+                  options={{
+                    dateFormat: 'd/m/Y',
+                  }}
+                  value={date}
+                />
+                <FormLabel htmlFor="date">Some date</FormLabel>
+              </FormItem>
+              <FormItem>
+                <Datepicker
+                  name="time"
+                  onChange={this.handleChange}
+                  options={{
+                    altFormat: 'H:i',
+                  }}
+                  value={time}
+                  withTime
+                  withDate={false}
+                />
+                <FormLabel htmlFor="time">Some time</FormLabel>
+              </FormItem>
+              <FormItem>
+                <Datepicker
+                  name="dateWithTime"
+                  onChange={this.handleChange}
+                  options={{
+                    dateFormat: 'F j, Y - H:i',
+                  }}
+                  value={dateWithTime}
+                  withTime
+                />
+                <FormLabel htmlFor="dateWithTime">Some date with time</FormLabel>
               </FormItem>
             </FormRow>
           </FormBox>

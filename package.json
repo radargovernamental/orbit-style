@@ -63,6 +63,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "react-autosize-textarea": "^4.0.0",
+    "react-flatpickr": "^3.6.4",
     "react-input-mask": "^2.0.2",
     "react-select": "^2.0.0-beta.6"
   }

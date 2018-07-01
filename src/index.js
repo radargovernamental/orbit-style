@@ -12,6 +12,7 @@ export Spacer from './js/components/molecule/Spacer';
 
 // Form
 export Checkbox from './js/components/atom/Checkbox';
+export Datepicker from './js/components/atom/Datepicker';
 export Radio from './js/components/atom/Radio';
 export Select from './js/components/atom/Select';
 export Textarea from './js/components/atom/Textarea';
