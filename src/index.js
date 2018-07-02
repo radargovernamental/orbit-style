@@ -4,6 +4,7 @@ export Row from './js/components/molecule/Row';
 export Container from './js/components/molecule/Container';
 
 // UI
+export Badge from './js/components/atom/Badge';
 export Blockquote from './js/components/atom/Blockquote';
 export Button from './js/components/atom/Button';
 export Content from './js/components/molecule/Content';
