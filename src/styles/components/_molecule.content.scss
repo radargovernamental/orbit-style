@@ -12,16 +12,16 @@
   border: $content-border;
   box-sizing: border-box;
   color: $color-text;
-  display: flex;
-  flex: 1;
-  flex-direction: row;
   font-family: $font-text;
-  //min-height: 100vh;
   height: 100%;
+  padding: $base-spacing-unit;
   width: 100%;
 
-  &:not(&--with-sidebar) {
-    padding: $base-spacing-unit;
+  &--with-sidebar {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    padding: 0;
   }
 
   &__main {

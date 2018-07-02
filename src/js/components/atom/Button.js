@@ -12,10 +12,12 @@ const Button = (props) => {
     danger,
     warning,
     outline,
+    type,
     lg,
     md,
     sm,
     xs,
+    ...otherProps
   } = props;
 
   const classes = classNames({
@@ -35,9 +37,9 @@ const Button = (props) => {
   });
 
   return (
-    <div className={classes}>
+    <button type={type || 'button'} className={classes} {...otherProps}>
       {children}
-    </div>
+    </button>
   );
 };
 
@@ -52,6 +54,7 @@ Button.propTypes = {
   sm: PropTypes.bool,
   md: PropTypes.bool,
   xs: PropTypes.bool,
+  type: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -65,6 +68,7 @@ Button.defaultProps = {
   md: false,
   sm: false,
   xs: false,
+  type: 'button',
 };
 
 export default Button;

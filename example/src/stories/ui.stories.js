@@ -13,6 +13,8 @@ import {
   Heading,
   Sidebar,
   Spacer,
+  Tag,
+  TagAction,
   Text,
 } from 'radargovernamental-design-system';
 
@@ -175,6 +177,27 @@ storiesOf('UI/Spacer', module)
       </Spacer>
     </div>
   ));
+
+storiesOf('UI/Tag', module)
+  .addDecorator(checkA11y)
+  .add('with text', () => <Tag>Hello World</Tag>)
+  .add('with primary color', () => <Tag primary>Hello World</Tag>)
+  .add('with success color', () => <Tag success>Hello World</Tag>)
+  .add('with warning color', () => <Tag warning>Hello World</Tag>)
+  .add('with danger color', () => <Tag danger>Hello World</Tag>)
+  .add('with action', () => <Tag action>Hello World <TagAction>x</TagAction></Tag>)
+  .add('with action and color', () => <Tag primary action>Hello World <TagAction>x</TagAction></Tag>)
+  .add('with action, color and size', () => (
+    <div>
+      <p><Tag lg primary action>Hello World <TagAction>x</TagAction></Tag></p>
+      <p><Tag md primary action>Hello World <TagAction>x</TagAction></Tag></p>
+      <p><Tag sm primary action>Hello World <TagAction>x</TagAction></Tag></p>
+    </div>
+  ))
+  .add('large', () => <Tag lg>Hello World</Tag>)
+  .add('medium/default', () => <Tag>Hello World</Tag>)
+  .add('small', () => <Tag sm>Hello World</Tag>)
+  .add('extra small', () => <Tag xs>Hello World</Tag>);
 
 storiesOf('UI/Text', module)
   .addDecorator(checkA11y)

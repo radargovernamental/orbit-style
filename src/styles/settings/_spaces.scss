@@ -46,7 +46,7 @@ $btn-border-radius-sm: 0.2 * $base-sm;
 $btn-border-radius-xs: 0.2 * $base-xs;
 
 /**********************************
- * FormExample Simple Spacing
+ * Form Spacing
  */
 
 // Padding vertical
@@ -78,3 +78,25 @@ $form-checkbox-size-lg: 1.125 * $base-lg;
 $form-checkbox-size-md: 1.125 * $base-md;
 $form-checkbox-size-sm: 1.125 * $base-sm;
 $form-checkbox-size-xs: 1.125 * $base-xs;
+
+/**********************************
+ * Tag
+ */
+
+// Base vertical spacing for tag in different sizes
+$tag-padding-vertical-lg: 0.5 * $base-lg;
+$tag-padding-vertical-md: 0.5 * $base-md;
+$tag-padding-vertical-sm: 0.5 * $base-sm;
+$tag-padding-vertical-xs: 0.5 * $base-xs;
+
+// Base horizontal spacing for tag in different sizes
+$tag-padding-horizontal-lg: 1.2 * $base-lg;
+$tag-padding-horizontal-md: 1.2 * $base-md;
+$tag-padding-horizontal-sm: 1.2 * $base-sm;
+$tag-padding-horizontal-xs: 1.2 * $base-xs;
+
+// Base border-radius for tag in different sizes
+$tag-border-radius-lg: 0.2 * $base-lg;
+$tag-border-radius-md: 0.2 * $base-md;
+$tag-border-radius-sm: 0.2 * $base-sm;
+$tag-border-radius-xs: 0.2 * $base-xs;

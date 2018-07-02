@@ -181,6 +181,10 @@ export default class FormExample extends Component {
                 <FormLabel htmlFor="listSourceMultiple">List external source multiple</FormLabel>
               </FormItem>
             </FormRow>
+          </FormBox>
+        </Spacer>
+        <Spacer mtLg={2} mtMd={2}>
+          <FormBox>
             <FormRow>
               <FormItem isActive>
                 <Spacer mrLg={4} inline>
