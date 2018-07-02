@@ -14,7 +14,7 @@ const Spacer = (props) => {
   directions.forEach((direction) => {
     breakpoints.forEach((breakpoint) => {
       const name = `${direction}${breakpoint}`;
-      if (props[name]) {  //eslint-disable-line
+      if (typeof props[name] === 'number') {  //eslint-disable-line
         classes.push(css[`${direction}-${breakpoint.toLowerCase()}-${props[name]}`]); //eslint-disable-line
       }
     });

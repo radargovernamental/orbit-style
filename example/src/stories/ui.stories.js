@@ -9,6 +9,7 @@ import {
   Blockquote,
   Button,
   Heading,
+  Spacer,
   Text,
 } from 'radargovernamental-design-system';
 
@@ -49,6 +50,35 @@ storiesOf('UI/Heading', module)
   .add('H5', () => <Heading level={5} title="Hello World">Hello World</Heading>)
   .add('H6', () => <Heading level={6} title="Hello World">Hello World</Heading>)
   .add('with color', () => <Heading level={1} title="Hello World" primary>Hello World</Heading>);
+
+storiesOf('UI/Spacer', module)
+  .addDecorator(checkA11y)
+  .add('with margin', () => (
+    <Spacer
+      mtLg={10}
+      mtMd={5}
+      mtSm={2}
+      mtXs={0}
+      mrLg={10}
+      mrMd={5}
+      mrSm={2}
+      mrXs={0}
+      style={{ background: '#eee' }}
+    >
+      Hello World
+    </Spacer>
+  ))
+  .add('with padding', () => (
+    <Spacer
+      ptLg={10}
+      ptMd={0}
+      prLg={10}
+      prMd={0}
+      style={{ background: '#eee' }}
+    >
+      Hello World
+    </Spacer>
+  ));
 
 storiesOf('UI/Text', module)
   .addDecorator(checkA11y)

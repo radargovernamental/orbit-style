@@ -13,6 +13,7 @@
 .c-form__radio {
   color: $form-color-text;
   position: relative;
+  font-family: $font-text;
 
   & > input {
     position: absolute;
@@ -50,6 +51,7 @@
       width: $form-radio-size-sm;
       height: $form-radio-size-sm;
       border-radius: $form-radio-size-sm;
+      vertical-align: -2px;
     }
     font-size: $font-size-sm;
   }
@@ -58,6 +60,7 @@
       width: $form-radio-size-xs;
       height: $form-radio-size-xs;
       border-radius: $form-radio-size-xs;
+      vertical-align: -1px;
     }
     font-size: $font-size-sm;
   }

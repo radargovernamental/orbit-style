@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactSelect from 'react-select';
+import ReactSelectAsync from 'react-select/lib/Async';
 
 import mainCss from '../../../styles/components/_atom.select.scss';
 import parentCss from '../../../styles/components/_molecule.form__box.scss';
@@ -25,12 +26,12 @@ const input = (base, state) => {
   };
 };
 
-const customStyles = {
+const customStyles = (isFormBox) => ({
   multiValue: base => ({
     ...base,
     background: '#009FFF',
     color: '#fff',
-    marginTop: '5px',
+    marginTop: isFormBox ? '5px' : '12px',
   }),
   multiValueLabel: base => ({
     ...base,
@@ -43,12 +44,12 @@ const customStyles = {
   }),
   valueContainer: base => ({
     ...base,
-    marginTop: '20px',
-    paddingBottom: '10px',
+    marginTop: isFormBox ? '20px' : '0',
+    paddingBottom: isFormBox ? '10px' : '12px',
   }),
   input: base => ({
     ...base,
-    marginTop: '9px',
+    marginTop: isFormBox ? '9px' : '13px',
   }),
   menu: base => ({
     ...base,
@@ -56,7 +57,7 @@ const customStyles = {
     paddingTop: 0,
   }),
   container: input,
-};
+});
 
 class Select extends React.Component {
   state = {
@@ -76,6 +77,9 @@ class Select extends React.Component {
       onChange,
       id,
       name,
+      async,
+      asyncData,
+      isFormBox,
       ...otherProps
     } = this.props;
 
@@ -94,25 +98,36 @@ class Select extends React.Component {
       [css['c-form__select--error']]: error,
     });
 
+    const allProps = {
+      className: css['c-form-select-custom'],
+      inputId: id || name,
+      isMulti: multiple,
+      name,
+      options,
+      onChange: val => onChange({ target: { name, value: val } }),
+      placeholder: null,
+      ref: (ref) => { this.select = ref; },
+      styles: customStyles(isFormBox),
+      value,
+      ...otherProps,
+    };
+
+    let elem = <ReactSelect {...allProps} />;
+    if (async) {
+      Object.assign(allProps, {
+        loadOptions: asyncData,
+        name: null,
+      });
+      elem = <ReactSelectAsync {...allProps} />;
+    }
+
     return (
       <div
         className={classes}
         onFocusCapture={() => this.setState({ isFocused: true })}
         onBlurCapture={() => this.setState({ isFocused: false })}
       >
-        <ReactSelect
-          className={css['c-form-select-custom']}
-          id={id || name}
-          isMulti={multiple}
-          name={name}
-          options={options}
-          onChange={val => onChange({ target: { name, value: val } })}
-          placeholder={null}
-          ref={(ref) => { this.select = ref; }}
-          styles={customStyles}
-          value={value}
-          {...otherProps}
-        />
+        {elem}
       </div>
     );
   }
@@ -121,6 +136,8 @@ class Select extends React.Component {
 Select.propTypes = {
   options: PropTypes.array, //eslint-disable-line
   type: PropTypes.string,
+  async: PropTypes.bool,
+  asyncData: PropTypes.oneOfType([PropTypes.func, PropTypes.array]),
   lg: PropTypes.bool,
   md: PropTypes.bool,
   sm: PropTypes.bool,
@@ -131,10 +148,13 @@ Select.propTypes = {
   onChange: PropTypes.func,
   name: PropTypes.string.isRequired,
   id: PropTypes.string,
+  isFormBox: PropTypes.bool,
 };
 Select.defaultProps = {
   options: [],
   type: 'text',
+  async: false,
+  asyncData: [],
   lg: false,
   md: false,
   sm: false,
@@ -144,6 +164,7 @@ Select.defaultProps = {
   value: null,
   onChange: f => f,
   id: null,
+  isFormBox: true,
 };
 
 export default Select;

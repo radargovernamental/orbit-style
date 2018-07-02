@@ -10,7 +10,7 @@ export Heading from './js/components/atom/Heading';
 export Text from './js/components/atom/Text';
 export Spacer from './js/components/molecule/Spacer';
 
-// Form
+// FormExample
 export Checkbox from './js/components/atom/Checkbox';
 export Datepicker from './js/components/atom/Datepicker';
 export Radio from './js/components/atom/Radio';

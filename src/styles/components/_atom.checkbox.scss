@@ -14,6 +14,7 @@
 .c-form__checkbox {
   color: $form-color-text;
   position: relative;
+  font-family: $font-text;
 
   & > input {
     position: absolute;
@@ -43,7 +44,6 @@
     & > .c-form__checkbox-value:before {
       width: $form-checkbox-size-lg;
       height: $form-checkbox-size-lg;
-      border-radius: $form-checkbox-size-lg;
     }
     font-size: $font-size-lg;
   }
@@ -51,7 +51,7 @@
     & > .c-form__checkbox-value:before {
       width: $form-checkbox-size-sm;
       height: $form-checkbox-size-sm;
-      border-radius: $form-checkbox-size-sm;
+      vertical-align: -4px;
     }
     font-size: $font-size-sm;
   }
@@ -59,7 +59,7 @@
     & > .c-form__checkbox-value:before {
       width: $form-checkbox-size-xs;
       height: $form-checkbox-size-xs;
-      border-radius: $form-checkbox-size-xs;
+      vertical-align: -3px;
     }
     font-size: $font-size-sm;
   }

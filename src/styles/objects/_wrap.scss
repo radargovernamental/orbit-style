@@ -1,35 +1,40 @@
 @import '../settings/settings';
 @import '../tools/tools';
 
-@for $size from 1 to ($spacer-columns + 1) {
-  .mt-lg-#{$size} {
-    margin-top: $base-inline-spacer-lg-x * $size;
+@for $size from 0 to ($spacer-columns + 1) {
+
+  @include mq($from: desktop) {
+    .mt-lg-#{$size} {
+      margin-top: $base-inline-spacer-lg-x * $size;
+    }
   }
-  @include mq($until: desktop) {
+  @include mq($from: tablet, $until: desktop) {
     .mt-md-#{$size} {
       margin-top: $base-inline-spacer-md-x * $size;
     }
   }
-  @include mq($until: desktop) {
+  @include mq($from: mobile, $until: tablet) {
     .mt-sm-#{$size} {
       margin-top: $base-inline-spacer-sm-x * $size;
     }
   }
-  @include mq($until: desktop) {
+  @include mq($until: mobile) {
     .mt-xs-#{$size} {
       margin-top: $base-inline-spacer-xs-x * $size;
     }
   }
 
-  .mr-lg-#{$size} {
-    margin-right: $base-inline-spacer-lg-x * $size;
+  @include mq($from: desktop) {
+    .mr-lg-#{$size} {
+      margin-right: $base-inline-spacer-lg-x * $size;
+    }
   }
-  @include mq($until: desktop) {
+  @include mq($from: tablet, $until: desktop) {
     .mr-md-#{$size} {
       margin-right: $base-inline-spacer-md-x * $size;
     }
   }
-  @include mq($until: tablet) {
+  @include mq($from: mobile, $until: tablet) {
     .mr-sm-#{$size} {
       margin-right: $base-inline-spacer-sm-x * $size;
     }
@@ -37,6 +42,132 @@
   @include mq($until: mobile) {
     .mr-xs-#{$size} {
       margin-right: $base-inline-spacer-xs-x * $size;
+    }
+  }
+
+  @include mq($from: desktop) {
+    .mb-lg-#{$size} {
+      margin-bottom: $base-inline-spacer-lg-y * $size;
+    }
+  }
+  @include mq($from: tablet, $until: desktop) {
+    .mb-md-#{$size} {
+      margin-bottom: $base-inline-spacer-md-y * $size;
+    }
+  }
+  @include mq($from: mobile, $until: tablet) {
+    .mb-sm-#{$size} {
+      margin-bottom: $base-inline-spacer-sm-y * $size;
+    }
+  }
+  @include mq($until: mobile) {
+    .mb-xs-#{$size} {
+      margin-bottom: $base-inline-spacer-xs-y * $size;
+    }
+  }
+
+  @include mq($from: desktop) {
+    .ml-lg-#{$size} {
+      margin-left: $base-inline-spacer-lg-x * $size;
+    }
+  }
+  @include mq($from: tablet, $until: desktop) {
+    .ml-md-#{$size} {
+      margin-left: $base-inline-spacer-md-x * $size;
+    }
+  }
+  @include mq($from: mobile, $until: tablet) {
+    .ml-sm-#{$size} {
+      margin-left: $base-inline-spacer-sm-x * $size;
+    }
+  }
+  @include mq($until: mobile) {
+    .ml-xs-#{$size} {
+      margin-left: $base-inline-spacer-xs-x * $size;
+    }
+  }
+
+  @include mq($from: desktop) {
+    .pt-lg-#{$size} {
+      padding-top: $base-inline-spacer-lg-x * $size;
+    }
+  }
+  @include mq($from: tablet, $until: desktop) {
+    .pt-md-#{$size} {
+      padding-top: $base-inline-spacer-md-x * $size;
+    }
+  }
+  @include mq($from: mobile, $until: tablet) {
+    .pt-sm-#{$size} {
+      padding-top: $base-inline-spacer-sm-x * $size;
+    }
+  }
+  @include mq($until: mobile) {
+    .pt-xs-#{$size} {
+      padding-top: $base-inline-spacer-xs-x * $size;
+    }
+  }
+
+  @include mq($from: desktop) {
+    .pr-lg-#{$size} {
+      padding-right: $base-inline-spacer-lg-x * $size;
+    }
+  }
+  @include mq($from: tablet, $until: desktop) {
+    .pr-md-#{$size} {
+      padding-right: $base-inline-spacer-md-x * $size;
+    }
+  }
+  @include mq($from: mobile, $until: tablet) {
+    .pr-sm-#{$size} {
+      padding-right: $base-inline-spacer-sm-x * $size;
+    }
+  }
+  @include mq($until: mobile) {
+    .pr-xs-#{$size} {
+      padding-right: $base-inline-spacer-xs-x * $size;
+    }
+  }
+
+  @include mq($from: desktop) {
+    .pb-lg-#{$size} {
+      padding-bottom: $base-inline-spacer-lg-x * $size;
+    }
+  }
+  @include mq($from: tablet, $until: desktop) {
+    .pb-md-#{$size} {
+      padding-bottom: $base-inline-spacer-md-x * $size;
+    }
+  }
+  @include mq($from: mobile, $until: tablet) {
+    .pb-sm-#{$size} {
+      padding-bottom: $base-inline-spacer-sm-x * $size;
+    }
+  }
+  @include mq($until: mobile) {
+    .pb-xs-#{$size} {
+      padding-bottom: $base-inline-spacer-xs-x * $size;
+    }
+  }
+
+  @include mq($from: desktop) {
+    .pl-lg-#{$size} {
+      padding-left: $base-inline-spacer-lg-x * $size;
+    }
+  }
+  @include mq($from: tablet, $until: desktop) {
+    .pl-md-#{$size} {
+      padding-left: $base-inline-spacer-md-x * $size;
+    }
+  }
+  @include mq($from: mobile, $until: tablet) {
+    .pl-sm-#{$size} {
+      padding-left: $base-inline-spacer-sm-x * $size;
+    }
+  }
+  @include mq($until: mobile) {
+    .pl-xs-#{$size} {
+      padding-left: $base-inline-spacer-xs-x * $size;
     }
   }
 }

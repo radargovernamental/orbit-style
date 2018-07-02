@@ -25,7 +25,7 @@ const Textarea = (props) => {
   } = props;
 
   const classes = classNames({
-    [css['c-form__element--value']]: value.length,
+    [css['c-form__element--value']]: (value && value.length),
     [css['c-form__element']]: true,
     [css['c-form__textarea']]: true,
     [css['c-form__textarea--lg']]: lg,
