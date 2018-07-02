@@ -1,0 +1,41 @@
+@import '../settings/settings';
+
+:global {
+  html, body {
+    height: 100%;
+  }
+}
+
+.c-content {
+  align-items: stretch;
+  background: $content-background;
+  border: $content-border;
+  box-sizing: border-box;
+  color: $color-text;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  font-family: $font-text;
+  //min-height: 100vh;
+  height: 100%;
+  width: 100%;
+
+  &:not(&--with-sidebar) {
+    padding: $base-spacing-unit;
+  }
+
+  &__main {
+    padding: $base-spacing-unit;
+    width: 100%;
+    flex: 1;
+  }
+
+  &__sidebar {
+    background: $sidebar-background;
+    border: $sidebar-border;
+    border-bottom: 0;
+    border-top: 0;
+    max-width: $content-sidebar-width;
+    width: 100%;
+  }
+}

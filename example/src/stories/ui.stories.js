@@ -8,7 +8,10 @@ import { checkA11y } from '@storybook/addon-a11y';
 import {
   Blockquote,
   Button,
+  Content,
+  Main,
   Heading,
+  Sidebar,
   Spacer,
   Text,
 } from 'radargovernamental-design-system';
@@ -40,6 +43,74 @@ storiesOf('UI/Button', module)
   .add('medium/default', () => (<Button onClick={action('clicked')}>Hello Button</Button>))
   .add('small', () => (<Button onClick={action('clicked')} sm>Hello Button</Button>))
   .add('extra small', () => (<Button onClick={action('clicked')} xs>Hello Button</Button>));
+
+storiesOf('UI/Content', module)
+  .addDecorator(checkA11y)
+  .add('simple', () => <Content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, possimus?</Content>)
+  .add('full height', () => (
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <Content>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, possimus?
+      </Content>
+    </div>
+  ))
+  .add('with right sidebar', () => (
+    <Content sidebar>
+      <Main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quis.</p>
+      </Main>
+      <Sidebar>
+        <ul>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Omnis optio perspiciatis sapiente ut.</li>
+          <li>Adipisci asperiores aut quisquam recusandae.</li>
+          <li>Doloremque iusto mollitia neque voluptatibus?</li>
+          <li>Amet excepturi inventore recusandae velit?</li>
+        </ul>
+      </Sidebar>
+    </Content>
+  ))
+  .add('with left sidebar', () => (
+    <Content sidebar>
+      <Sidebar>
+        <ul>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Omnis optio perspiciatis sapiente ut.</li>
+          <li>Adipisci asperiores aut quisquam recusandae.</li>
+          <li>Doloremque iusto mollitia neque voluptatibus?</li>
+          <li>Amet excepturi inventore recusandae velit?</li>
+        </ul>
+      </Sidebar>
+      <Main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quis.</p>
+      </Main>
+    </Content>
+  ))
+  .add('with left and right sidebar', () => (
+    <Content sidebar>
+      <Sidebar>
+        <ul>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Omnis optio perspiciatis sapiente ut.</li>
+          <li>Adipisci asperiores aut quisquam recusandae.</li>
+          <li>Doloremque iusto mollitia neque voluptatibus?</li>
+          <li>Amet excepturi inventore recusandae velit?</li>
+        </ul>
+      </Sidebar>
+      <Main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quis.</p>
+      </Main>
+      <Sidebar>
+        <ul>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Omnis optio perspiciatis sapiente ut.</li>
+          <li>Adipisci asperiores aut quisquam recusandae.</li>
+          <li>Doloremque iusto mollitia neque voluptatibus?</li>
+          <li>Amet excepturi inventore recusandae velit?</li>
+        </ul>
+      </Sidebar>
+    </Content>
+  ));
 
 storiesOf('UI/Heading', module)
   .addDecorator(checkA11y)
@@ -78,6 +149,31 @@ storiesOf('UI/Spacer', module)
     >
       Hello World
     </Spacer>
+  ))
+  .add('inline', () => (
+    <div>
+      <Spacer
+        mrLg={2}
+        inline
+        style={{ background: '#eee' }}
+      >
+        Hello
+      </Spacer>
+      <Spacer
+        mrLg={2}
+        inline
+        style={{ background: '#eee' }}
+      >
+        World
+      </Spacer>
+      <Spacer
+        mrLg={2}
+        inline
+        style={{ background: '#eee' }}
+      >
+        !
+      </Spacer>
+    </div>
   ));
 
 storiesOf('UI/Text', module)

@@ -1,5 +1,5 @@
 // Base spacing between components
-$base-spacing-unit: 20px;
+$base-spacing-unit: 24px;
 
 $base-lg: 20px;
 $base-md: 16px;
@@ -18,6 +18,12 @@ $base-inline-spacer-xs-y: $base-xs / 2;
 
 
 /**********************************
+ * Content spacing
+ */
+
+$content-sidebar-width: 265px;
+
+/**********************************
  * Buttons spacing
  */
 
@@ -34,10 +40,10 @@ $btn-padding-horizontal-sm: 1.5 * $base-sm;
 $btn-padding-horizontal-xs: 1.5 * $base-xs;
 
 // Base border-radius for btn in different sizes
-$btn-border-radius-lg: 0.5 * $base-lg;
-$btn-border-radius-md: 0.5 * $base-md;
-$btn-border-radius-sm: 0.5 * $base-sm;
-$btn-border-radius-xs: 0.5 * $base-xs;
+$btn-border-radius-lg: 0.2 * $base-lg;
+$btn-border-radius-md: 0.2 * $base-md;
+$btn-border-radius-sm: 0.2 * $base-sm;
+$btn-border-radius-xs: 0.2 * $base-xs;
 
 /**********************************
  * FormExample Simple Spacing

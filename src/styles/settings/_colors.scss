@@ -3,10 +3,22 @@
  */
 
 $color-primary: #009FFF;
-$color-success: #0F0;
-$color-warning: #F90;
-$color-danger: #F00;
+$color-success: #6DD386;
+$color-warning: #D3CF6D;
+$color-danger: #FB8686;
 
 $color-text: #222;
-$color-text-light: lighten($color-text, 60%);
+$color-text-light: #8FA4AE;
 $color-white: #fff;
+
+$content-background: #FAFBFC;
+$content-border: none;
+
+$sidebar-background: #F0F3F5;
+$sidebar-border: 1px solid #ECEFF1;
+
+/**
+ * Buttons
+ */
+$btn-border-color: $color-text-light;
+$btn-color: #455A64;

@@ -3,6 +3,10 @@
 :global {
   @import '~flatpickr/dist/flatpickr.min.css';
 
+  .flatpickr-calendar {
+    font-family: $font-text;
+  }
+
   .flatpickr-month {
     background: $color-primary !important;
     padding-bottom: 5px;
