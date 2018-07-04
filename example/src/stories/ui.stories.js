@@ -4,6 +4,7 @@ import '@storybook/addon-storysource/register';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { checkA11y } from '@storybook/addon-a11y';
+import { withNotes } from '@storybook/addon-notes/src/index';
 
 import {
   AlertModal,
@@ -13,6 +14,7 @@ import {
   Content,
   ContentLoading,
   ConfirmModal,
+  EmptyModal,
   Loading,
   Main,
   Heading,
@@ -22,7 +24,6 @@ import {
   TagAction,
   Text,
 } from 'radargovernamental-design-system';
-import {withNotes} from "@storybook/addon-notes/src/index";
 
 
 storiesOf('UI/Badge', module)
@@ -279,6 +280,17 @@ storiesOf('UI/Modals/Confirm', module)
       onClose={() => action('Cancelled')}
       modalIsOpen={true}
     />));
+
+storiesOf('UI/Modals/Empty', module)
+  .addDecorator(checkA11y)
+  .add('with content', () => (
+    <EmptyModal
+      onClose={() => action('Cancelled')}
+      modalIsOpen={true}
+    >
+      <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.</Text>
+    </EmptyModal>
+  ));
 
 storiesOf('UI/Spacer', module)
   .addDecorator(checkA11y)

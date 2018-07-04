@@ -33,7 +33,6 @@ const ConfirmModal = (props) => {
       shouldCloseOnOverlayClick={false}
       isOpen={modalIsOpen}
       onRequestClose={() => onClose()}
-      contentLabel="Example Modal"
       className={classes}
       overlayClassName={css['c-modal-overlay']}
     >

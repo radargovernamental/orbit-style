@@ -33,3 +33,4 @@ export FormBox from './js/components/molecule/FormBox';
 // Utilities
 export AlertModal from './js/components/organism/AlertModal';
 export ConfirmModal from './js/components/organism/ConfirmModal';
+export EmptyModal from './js/components/organism/EmptyModal';

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import classNames from 'classnames';
@@ -24,7 +24,7 @@ const AlertModal = (props) => {
 
   const classes = classNames(
     css['c-modal'],
-    css['c-modal__confirm-modal'],
+    css['c-modal__alert-modal'],
   );
 
   return (
@@ -32,7 +32,6 @@ const AlertModal = (props) => {
       shouldCloseOnOverlayClick={isLoading ? false : shouldCloseOnOverlayClick}
       isOpen={modalIsOpen}
       onRequestClose={() => onClose()}
-      contentLabel="Example Modal"
       className={classes}
       overlayClassName={css['c-modal-overlay']}
     >
