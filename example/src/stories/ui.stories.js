@@ -6,10 +6,14 @@ import { action } from '@storybook/addon-actions';
 import { checkA11y } from '@storybook/addon-a11y';
 
 import {
+  AlertModal,
   Badge,
   Blockquote,
   Button,
   Content,
+  ContentLoading,
+  ConfirmModal,
+  Loading,
   Main,
   Heading,
   Sidebar,
@@ -18,6 +22,7 @@ import {
   TagAction,
   Text,
 } from 'radargovernamental-design-system';
+import {withNotes} from "@storybook/addon-notes/src/index";
 
 
 storiesOf('UI/Badge', module)
@@ -156,6 +161,124 @@ storiesOf('UI/Heading', module)
   .add('H5', () => <Heading level={5} title="Hello World">Hello World</Heading>)
   .add('H6', () => <Heading level={6} title="Hello World">Hello World</Heading>)
   .add('with color', () => <Heading level={1} title="Hello World" primary>Hello World</Heading>);
+
+storiesOf('UI/Loading/Reading', module)
+  .addDecorator(checkA11y)
+  .add('with placeholder', withNotes('Abstraction for: https://github.com/danilowoz/react-content-loader')(() => (
+    <div style={{ maxWidth: '600px', margin: '100px' }}>
+      <ContentLoading height={350}>
+        <rect x="0" y="15" rx="4" ry="4" width="343.98" height="20" />
+        <rect x="0" y="55" rx="3" ry="3" width="100" height="22" />
+        <rect x="110" y="55" rx="3" ry="3" width="130" height="24" />
+        <rect x="0" y="105" rx="3" ry="3" width="390" height="10" />
+        <rect x="0" y="135" rx="3" ry="3" width="520" height="10" />
+        <rect x="0" y="165" rx="3" ry="3" width="340" height="10" />
+      </ContentLoading>
+    </div>
+  )));
+
+storiesOf('UI/Loading/Writing', module)
+  .addDecorator(checkA11y)
+  .add('with default color', () => <Loading />)
+  .add('with white color', () => <div style={{ background: '#eee' }}><Loading white /></div>)
+  .add('with primary color', () => <Loading primary />)
+  .add('with success color', () => <Loading success />)
+  .add('with warning color', () => <Loading warning />)
+  .add('with danger color', () => <Loading danger />)
+  .add('inline', () => <div><Loading inline /><Loading inline /><Loading inline /></div>)
+  .add('large', () => <Loading lg />)
+  .add('medium/default', () => <Loading />)
+  .add('small', () => <Loading sm />)
+  .add('extra small', () => <Loading xs />);
+
+storiesOf('UI/Modals/Alert', module)
+  .addDecorator(checkA11y)
+  .add('with title', () => (
+    <AlertModal
+      title="Lorem ipsum dolor sit amet."
+      onConfirm={() => action('Confirmed')}
+      onClose={() => action('Cancelled')}
+      modalIsOpen={true}
+    />))
+  .add('with title and body', () => (
+    <AlertModal
+      title="Lorem ipsum dolor sit amet."
+      onConfirm={() => action('Confirmed')}
+      onClose={() => action('Cancelled')}
+      modalIsOpen={true}
+    >
+      <Text justify>
+        Aliquid autem blanditiis enim maxime necessitatibus, optio provident sapiente tempore?
+        Assumenda beatae consequatur ipsum magni? Dignissimos nemo numquam quasi sunt.
+      </Text>
+      <Text justify>Consequuntur cum eius error exercitationem nemo quis repellat saepe sunt!</Text>
+    </AlertModal>))
+  .add('with custom button', () => (
+    <AlertModal
+      title="Lorem ipsum dolor sit amet."
+      confirmText="Confirm Button"
+      onConfirm={() => action('Confirmed')}
+      onClose={() => action('Cancelled')}
+      modalIsOpen={true}
+    />))
+  .add('with loading', () => (
+    <AlertModal
+      title="Lorem ipsum dolor sit amet."
+      isLoading
+      loadingComponent={<Loading primary />}
+      onConfirm={() => action('Confirmed')}
+      onClose={() => action('Cancelled')}
+      modalIsOpen={true}
+    />))
+  .add('with overlay click-to-close blocked', () => (
+    <AlertModal
+      title="Lorem ipsum dolor sit amet."
+      onConfirm={() => action('Confirmed')}
+      onClose={() => action('Cancelled')}
+      modalIsOpen={true}
+      shouldCloseOnOverlayClick={false}
+    />));
+
+storiesOf('UI/Modals/Confirm', module)
+  .addDecorator(checkA11y)
+  .add('with title', () => (
+    <ConfirmModal
+      title="Are you sure you really wanna do this?"
+      onConfirm={() => action('Confirmed')}
+      onClose={() => action('Cancelled')}
+      modalIsOpen={true}
+    />))
+  .add('with title and body', () => (
+    <ConfirmModal
+      title="Are you sure you really wanna do this?"
+      onConfirm={() => action('Confirmed')}
+      onClose={() => action('Cancelled')}
+      modalIsOpen={true}
+    >
+      <Text justify>
+        Aliquid autem blanditiis enim maxime necessitatibus, optio provident sapiente tempore?
+        Assumenda beatae consequatur ipsum magni? Dignissimos nemo numquam quasi sunt.
+      </Text>
+      <Text justify>Consequuntur cum eius error exercitationem nemo quis repellat saepe sunt!</Text>
+    </ConfirmModal>))
+  .add('with custom buttons', () => (
+    <ConfirmModal
+      title="Are you sure you really wanna do this?"
+      confirmText="Confirm Button"
+      cancelText="Cancel Button"
+      onConfirm={() => action('Confirmed')}
+      onClose={() => action('Cancelled')}
+      modalIsOpen={true}
+    />))
+  .add('with loading', () => (
+    <ConfirmModal
+      title="Are you sure you really wanna do this?"
+      isLoading
+      loadingComponent={<Loading primary />}
+      onConfirm={() => action('Confirmed')}
+      onClose={() => action('Cancelled')}
+      modalIsOpen={true}
+    />));
 
 storiesOf('UI/Spacer', module)
   .addDecorator(checkA11y)

@@ -13,6 +13,10 @@ const Text = (props) => {
     success,
     danger,
     warning,
+    center,
+    left,
+    right,
+    justify,
     ...otherProps
   } = props;
 
@@ -23,6 +27,10 @@ const Text = (props) => {
     [css['c-text--success']]: success,
     [css['c-text--danger']]: danger,
     [css['c-text--warning']]: warning,
+    [css['c-text--center']]: center,
+    [css['c-text--left']]: left,
+    [css['c-text--right']]: right,
+    [css['c-text--justify']]: justify,
   });
 
   const classes = `${tmpClasses} ${className}`;
@@ -37,6 +45,10 @@ Text.propTypes = {
   success: PropTypes.bool,
   warning: PropTypes.bool,
   danger: PropTypes.bool,
+  center: PropTypes.bool,
+  left: PropTypes.bool,
+  right: PropTypes.bool,
+  justify: PropTypes.bool,
 };
 
 Text.defaultProps = {
@@ -46,6 +58,10 @@ Text.defaultProps = {
   success: false,
   danger: false,
   warning: false,
+  center: false,
+  left: false,
+  right: false,
+  justify: false,
 };
 
 export default Text;

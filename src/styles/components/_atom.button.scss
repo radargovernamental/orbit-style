@@ -1,6 +1,7 @@
 @import '../settings/settings';
 
 .c-btn {
+  background: transparent;
   border: 1px solid $btn-border-color;
   border-radius: $btn-border-radius-md;
   color: $btn-color;

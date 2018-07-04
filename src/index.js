@@ -8,7 +8,9 @@ export Badge from './js/components/atom/Badge';
 export Blockquote from './js/components/atom/Blockquote';
 export Button from './js/components/atom/Button';
 export Content from './js/components/molecule/Content';
+export ContentLoading from './js/components/atom/ContentLoading';
 export Heading from './js/components/atom/Heading';
+export Loading from './js/components/atom/Loading';
 export Main from './js/components/atom/Main';
 export Sidebar from './js/components/atom/Sidebar';
 export Spacer from './js/components/molecule/Spacer';
@@ -27,3 +29,7 @@ export FormRow from './js/components/molecule/FormRow';
 export FormItem from './js/components/molecule/FormItem';
 export FormLabel from './js/components/atom/FormLabel';
 export FormBox from './js/components/molecule/FormBox';
+
+// Utilities
+export AlertModal from './js/components/organism/AlertModal';
+export ConfirmModal from './js/components/organism/ConfirmModal';

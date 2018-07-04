@@ -7,19 +7,34 @@ $color-success: #6DD386;
 $color-warning: #D3CF6D;
 $color-danger: #FB8686;
 
-$color-text: #222;
+$color-text: #455A64;
 $color-text-light: #8FA4AE;
 $color-white: #fff;
+$color-heading: #273238;
 
+/**
+ * Content
+ */
 $content-background: #FAFBFC;
 $content-border: none;
 
+/**
+ * Content Sidebar
+ */
 $sidebar-background: #F0F3F5;
 $sidebar-border: 1px solid #ECEFF1;
 
 /**
  * Buttons
  */
-$btn-border-color: $color-text-light;
+$btn-border-color: #CFD8DC;
 $btn-color: #455A64;
 $btn-background-primary: $color-primary;
+
+/**
+ * Modal
+ */
+
+$modal-overlay-background-color: rgba(242, 250, 255, .5);
+$modal-background-color: #fff;
+$modal-border: 1px solid #ECEFF1;
