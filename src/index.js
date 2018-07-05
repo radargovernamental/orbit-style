@@ -1,10 +1,3 @@
-// Grid
-import { Col as _Col, Row as _Row, Grid as _Grid } from 'react-flexbox-grid';
-
-export const Grid = _Grid;
-export const Col = _Col;
-export const Row = _Row;
-
 // UI
 export Badge from './js/components/atom/Badge';
 export Blockquote from './js/components/atom/Blockquote';
@@ -36,3 +29,10 @@ export FormBox from './js/components/molecule/FormBox';
 export AlertModal from './js/components/organism/AlertModal';
 export ConfirmModal from './js/components/organism/ConfirmModal';
 export EmptyModal from './js/components/organism/EmptyModal';
+
+// Grid
+import { Col as _Col, Row as _Row, Grid as _Grid } from 'react-flexbox-grid';
+
+export const Grid = _Grid;
+export const Col = _Col;
+export const Row = _Row;
