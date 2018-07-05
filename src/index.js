@@ -1,7 +1,9 @@
 // Grid
-export Col from './js/components/molecule/Col';
-export Row from './js/components/molecule/Row';
-export Container from './js/components/molecule/Container';
+import { Col as _Col, Row as _Row, Grid as _Grid } from 'react-flexbox-grid';
+
+export const Grid = _Grid;
+export const Col = _Col;
+export const Row = _Row;
 
 // UI
 export Badge from './js/components/atom/Badge';

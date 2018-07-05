@@ -15,6 +15,7 @@ const Col = (props) => {
     mdOffset,
     smOffset,
     xsOffset,
+    ...otherProps
   } = props;
 
 
@@ -40,7 +41,7 @@ const Col = (props) => {
   );
 
   return (
-    <div className={colClasses}>
+    <div className={colClasses} {...otherProps}>
       {children}
     </div>
   );

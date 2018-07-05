@@ -8,12 +8,12 @@ import { action } from '@storybook/addon-actions';
 
 import {
   Checkbox,
-  Container,
   Datepicker,
   FormBox,
   FormItem,
   FormLabel,
   FormRow,
+  Grid,
   Radio,
   Select,
   Spacer,
@@ -85,7 +85,7 @@ storiesOf('Forms/FormBox', module)
     </FormBox>
   ))
   .add('with many boxes and rows', () => (
-    <Container>
+    <Grid fluid>
       <Spacer mtLg={2} mtMd={2}>
         <FormBox>
           <FormRow>
@@ -230,7 +230,7 @@ storiesOf('Forms/FormBox', module)
           </FormRow>
         </FormBox>
       </Spacer>
-    </Container>
+    </Grid>
   ));
 
 storiesOf('Forms/Radio', module)

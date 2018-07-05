@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 import {
-  Container,
   Checkbox,
   FormBox,
   FormItem,
   FormLabel,
   FormRow,
+  Grid,
   Radio,
   Spacer,
   Select,
@@ -60,7 +60,7 @@ export default class FormExample extends Component {
       time,
     } = this.state;
     return (
-      <Container>
+      <Grid fluid>
         <Spacer mtLg={2} mtMd={2}>
           <FormBox>
             <FormRow>
@@ -245,7 +245,7 @@ export default class FormExample extends Component {
             </FormRow>
           </FormBox>
         </Spacer>
-      </Container>
+      </Grid>
     );
   }
 }

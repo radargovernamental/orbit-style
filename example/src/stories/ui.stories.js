@@ -4,13 +4,15 @@ import '@storybook/addon-storysource/register';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { checkA11y } from '@storybook/addon-a11y';
-import { withNotes } from '@storybook/addon-notes/src/index';
+import { withNotes } from '@storybook/addon-notes';
 
 import {
   AlertModal,
   Badge,
   Blockquote,
   Button,
+  Col,
+  Grid,
   Content,
   ContentLoading,
   ConfirmModal,
@@ -18,6 +20,7 @@ import {
   Loading,
   Main,
   Heading,
+  Row,
   Sidebar,
   Spacer,
   Tag,
@@ -151,6 +154,207 @@ storiesOf('UI/Content', module)
         </ul>
       </Sidebar>
     </Content>
+  ));
+
+storiesOf('UI/Grid', module)
+  .addDecorator(checkA11y)
+  .add('with one column', () => (
+    <Grid fluid>
+      <Row>
+        <Col xs>
+          <div style={{ background: '#eee' }}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quis!
+          </div>
+        </Col>
+      </Row>
+    </Grid>
+  ))
+  .add('with auto column', () => (
+    <Grid fluid>
+      <Row>
+        <Col xs>
+          <div style={{ background: '#eee' }}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quis!
+          </div>
+        </Col>
+        <Col xs>
+          <div style={{ background: '#eee' }}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quis!
+          </div>
+        </Col>
+        <Col xs>
+          <div style={{ background: '#eee' }}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quis!
+          </div>
+        </Col>
+      </Row>
+      <Spacer mtLg={2}>
+        <Row>
+          <Col xs>
+            <div style={{ background: '#eee' }}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quis!
+            </div>
+          </Col>
+          <Col xs>
+            <div style={{ background: '#eee' }}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quis!
+            </div>
+          </Col>
+        </Row>
+      </Spacer>
+    </Grid>
+  ))
+  .add('with different columns', () => (
+    <Grid fluid>
+      <Row>
+        <Col xs={12} sm={3} md={2} lg={1}>
+          <div style={{ background: '#eee' }}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quis!
+          </div>
+        </Col>
+        <Col xs={6} sm={6} md={8} lg={10}>
+          <div style={{ background: '#eee' }}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quis!
+          </div>
+        </Col>
+        <Col xs={6} sm={6} md={2} lg={1}>
+          <div style={{ background: '#eee' }}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quis!
+          </div>
+        </Col>
+      </Row>
+    </Grid>
+  ))
+  .add('with horizontal alignment', () => (
+    <Grid fluid>
+      <Spacer mtLg={2}>
+        <Row>
+          <Col xs={12}>
+            <Row start="xs">
+              <Col xs={6}>
+                <div style={{ background: '#eee' }}>
+                  start=xs
+                </div>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Spacer>
+      <Spacer mtLg={2}>
+        <Row>
+          <Col xs={12}>
+            <Row center="xs">
+              <Col xs={6}>
+                <div style={{ background: '#eee' }}>
+                  center=xs
+                </div>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Spacer>
+      <Spacer mtLg={2}>
+        <Row>
+          <Col xs={12}>
+            <Row end="xs">
+              <Col xs={6}>
+                <div style={{ background: '#eee' }}>
+                  end=xs
+                </div>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Spacer>
+    </Grid>
+  ))
+  .add('with vertical alignment', () => (
+    <Grid fluid>
+      <Spacer mtLg={2}>
+        <Row top="xs">
+          <Col xs={6}>
+            <div style={{ background: '#eee' }}>
+              top=xs
+            </div>
+          </Col>
+          <Col xs={6}>
+            <div style={{ background: '#eee', height: '100px' }}>
+              top=xs
+            </div>
+          </Col>
+        </Row>
+      </Spacer>
+      <Spacer mtLg={2}>
+        <Row middle="xs">
+          <Col xs={6}>
+            <div style={{ background: '#eee' }}>
+              middle=xs
+            </div>
+          </Col>
+          <Col xs={6}>
+            <div style={{ background: '#eee', height: '100px' }}>
+              middle=xs
+            </div>
+          </Col>
+        </Row>
+      </Spacer>
+      <Spacer mtLg={2}>
+        <Row bottom="xs">
+          <Col xs={6}>
+            <div style={{ background: '#eee' }}>
+              bottom=xs
+            </div>
+          </Col>
+          <Col xs={6}>
+            <div style={{ background: '#eee', height: '100px' }}>
+              bottom=xs
+            </div>
+          </Col>
+        </Row>
+      </Spacer>
+    </Grid>
+  ))
+  .add('with distribution', () => (
+    <Grid fluid>
+      <Spacer mtLg={2}>
+        <Row around="xs">
+          <Col xs={2}>
+            <div style={{ background: '#eee' }}>
+              around=xs
+            </div>
+          </Col>
+          <Col xs={2}>
+            <div style={{ background: '#eee' }}>
+              around=xs
+            </div>
+          </Col>
+          <Col xs={2}>
+            <div style={{ background: '#eee' }}>
+              around=xs
+            </div>
+          </Col>
+        </Row>
+      </Spacer>
+      <Spacer mtLg={2}>
+        <Row between="xs">
+          <Col xs={2}>
+            <div style={{ background: '#eee' }}>
+              between=xs
+            </div>
+          </Col>
+          <Col xs={2}>
+            <div style={{ background: '#eee' }}>
+              between=xs
+            </div>
+          </Col>
+          <Col xs={2}>
+            <div style={{ background: '#eee' }}>
+              between=xs
+            </div>
+          </Col>
+        </Row>
+      </Spacer>
+    </Grid>
   ));
 
 storiesOf('UI/Heading', module)
