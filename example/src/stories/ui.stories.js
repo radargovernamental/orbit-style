@@ -394,7 +394,8 @@ storiesOf('UI/Loading/Writing', module)
   .add('large', () => <Loading lg />)
   .add('medium/default', () => <Loading />)
   .add('small', () => <Loading sm />)
-  .add('extra small', () => <Loading xs />);
+  .add('extra small', () => <Loading xs />)
+  .add('with text', () => <Loading>Loading</Loading>);
 
 storiesOf('UI/Modals/Alert', module)
   .addDecorator(checkA11y)
