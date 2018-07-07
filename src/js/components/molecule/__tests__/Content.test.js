@@ -2,23 +2,23 @@ import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import Badge from '../Badge';
+import Content from '../Content';
 
 configure({ adapter: new Adapter() });
 
-describe('Badge', () => {
+describe('Content', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<Badge />);
+    const wrapper = shallow(<Content>Lorem</Content>);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('renders with text inside it', () => {
-    const wrapper = shallow(<Badge>Lorem Ipsum</Badge>);
-    expect(wrapper.text()).toBe('Lorem Ipsum');
+  it('renders with a child section', () => {
+    const wrapper = shallow(<Content>Lorem</Content>);
+    expect(wrapper.is('section')).toBe(true);
   });
 
   it('renders with children inside it', () => {
-    const wrapper = shallow(<Badge><div>Lorem <strong>Ipsum</strong></div></Badge>);
+    const wrapper = shallow(<Content><div>Lorem <strong>Ipsum</strong></div></Content>);
     expect(wrapper.children().html()).toBe('<div>Lorem <strong>Ipsum</strong></div>');
   });
 });

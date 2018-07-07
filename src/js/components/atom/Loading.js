@@ -35,7 +35,7 @@ const Loading = (props) => {
 
   return (
     <div className={classes}>
-      {children}
+      {children ? <span>{children}</span> : null}
     </div>
   );
 };

@@ -2,23 +2,23 @@ import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import Badge from '../Badge';
+import Blockquote from '../Blockquote';
 
 configure({ adapter: new Adapter() });
 
-describe('Badge', () => {
-  it('renders correctly', () => {
-    const wrapper = shallow(<Badge />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
+describe('Blockquote', () => {
   it('renders with text inside it', () => {
-    const wrapper = shallow(<Badge>Lorem Ipsum</Badge>);
+    const wrapper = shallow(<Blockquote>Lorem Ipsum</Blockquote>);
     expect(wrapper.text()).toBe('Lorem Ipsum');
   });
 
   it('renders with children inside it', () => {
-    const wrapper = shallow(<Badge><div>Lorem <strong>Ipsum</strong></div></Badge>);
+    const wrapper = shallow(<Blockquote><div>Lorem <strong>Ipsum</strong></div></Blockquote>);
     expect(wrapper.children().html()).toBe('<div>Lorem <strong>Ipsum</strong></div>');
+  });
+
+  it('renders with button inside it', () => {
+    const wrapper = shallow(<Blockquote>Lorem Ipsum</Blockquote>);
+    expect(wrapper.is('blockquote')).toBe(true);
   });
 });
