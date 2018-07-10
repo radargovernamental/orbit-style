@@ -26,6 +26,9 @@ import {
   Tag,
   TagAction,
   Text,
+  Timeline,
+  TimelineContent,
+  TimelineItem,
 } from 'radargovernamental-design-system';
 
 
@@ -577,6 +580,7 @@ storiesOf('UI/Text', module)
   .add('with text', () => <Text>Hello World</Text>)
   .add('with children', () => <Text>Hello <strong>World</strong></Text>)
   .add('with color', () => <Text danger>Hello World</Text>)
+  .add('with inline', () => <div><Text danger inline>Hello</Text> <Text warning inline>World</Text></div>)
   .add('with ellipsis', () => (
     <div style={{ width: '100px' }}>
       <Text ellipsis>Lorem ipsum dolor sit amet.</Text>
@@ -599,4 +603,235 @@ storiesOf('UI/Text', module)
         repudiandae sed sint vitae voluptatum.
       </Text>
     </section>
+  ));
+
+storiesOf('UI/Timeline', module)
+  .addDecorator(checkA11y)
+  .add('with items', () => (
+    <Timeline>
+      <TimelineItem>
+        <TimelineContent>
+          <div>
+            <Button xs primary>Hello</Button>
+          </div>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+          illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+          voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+          laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineContent>
+          <div>
+            <Button xs success>Hello world</Button>
+          </div>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque, exercitationem iusto omnis
+            placeat quibusdam recusandae repellat saepe tempora vel.
+          </Text>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+          illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+          voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+          laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineContent>
+          <Text inline>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque, exercitationem iusto omnis
+            placeat quibusdam recusandae repellat saepe tempora vel.
+          </Text>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+          illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+          voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+          laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+    </Timeline>
+  ))
+  .add('with items and alternate rows', () => (
+    <Timeline alternateRows>
+      <TimelineItem>
+        <TimelineContent>
+          <div>
+            <Button xs primary>Hello</Button>
+          </div>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineContent>
+          <div>
+            <Button xs success>Hello world</Button>
+          </div>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque, exercitationem iusto omnis
+            placeat quibusdam recusandae repellat saepe tempora vel.
+          </Text>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineContent>
+          <Text inline>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque, exercitationem iusto omnis
+            placeat quibusdam recusandae repellat saepe tempora vel.
+          </Text>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+    </Timeline>
+  ))
+  .add('with items and date', () => (
+    <Timeline withDate>
+      <TimelineItem date="03/03/2018">
+        <TimelineContent>
+          <div>
+            <Button xs primary>Hello</Button>
+          </div>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem date="02/02/2018">
+        <TimelineContent>
+          <div>
+            <Button xs success>Hello world</Button>
+          </div>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque, exercitationem iusto omnis
+            placeat quibusdam recusandae repellat saepe tempora vel.
+          </Text>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem date="01/01/2018">
+        <TimelineContent>
+          <Text inline>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque, exercitationem iusto omnis
+            placeat quibusdam recusandae repellat saepe tempora vel.
+          </Text>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+    </Timeline>
+  ))
+  .add('with items, date and alternate rows', () => (
+    <Timeline withDate alternateRows>
+      <TimelineItem date="03/03/2018">
+        <TimelineContent>
+          <div>
+            <Button xs primary>Hello</Button>
+          </div>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem date="02/02/2018">
+        <TimelineContent>
+          <div>
+            <Button xs success>Hello world</Button>
+          </div>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque, exercitationem iusto omnis
+            placeat quibusdam recusandae repellat saepe tempora vel.
+          </Text>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem date="01/01/2018">
+        <TimelineContent>
+          <Text inline>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque, exercitationem iusto omnis
+            placeat quibusdam recusandae repellat saepe tempora vel.
+          </Text>
+          <Text>
+            Consectetur consequuntur doloribus esse eum
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
+          </Text>
+          <Text>
+            A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+          </Text>
+        </TimelineContent>
+      </TimelineItem>
+    </Timeline>
   ));

@@ -29,6 +29,9 @@ export FormBox from './js/components/molecule/FormBox';
 export AlertModal from './js/components/organism/AlertModal';
 export ConfirmModal from './js/components/organism/ConfirmModal';
 export EmptyModal from './js/components/organism/EmptyModal';
+export Timeline from './js/components/organism/Timeline';
+export TimelineItem from './js/components/molecule/TimelineItem';
+export TimelineContent from './js/components/atom/TimelineContent';
 
 // Grid
 import { Col as _Col, Row as _Row, Grid as _Grid } from 'react-flexbox-grid';

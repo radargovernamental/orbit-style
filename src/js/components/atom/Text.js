@@ -17,6 +17,7 @@ const Text = (props) => {
     left,
     right,
     justify,
+    inline,
     ...otherProps
   } = props;
 
@@ -31,6 +32,7 @@ const Text = (props) => {
     [css['c-text--left']]: left,
     [css['c-text--right']]: right,
     [css['c-text--justify']]: justify,
+    [css['c-text--inline']]: inline,
   });
 
   const classes = `${tmpClasses} ${className}`;
@@ -49,6 +51,7 @@ Text.propTypes = {
   left: PropTypes.bool,
   right: PropTypes.bool,
   justify: PropTypes.bool,
+  inline: PropTypes.bool,
 };
 
 Text.defaultProps = {
@@ -62,6 +65,7 @@ Text.defaultProps = {
   left: false,
   right: false,
   justify: false,
+  inline: false,
 };
 
 export default Text;

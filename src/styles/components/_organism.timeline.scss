@@ -1,0 +1,79 @@
+@import '../settings/settings';
+
+.c-timeline {
+  &__item {
+    background: $timeline-background-default;
+    padding: 0 $base-spacing-unit 16px 60px;
+    position: relative;
+
+    &:before {
+      background: $timeline-line-color;
+      bottom: -30px;
+      content: '';
+      display: inline-block;
+      left: 40px;
+      position: absolute;
+      top: 0;
+      width: 1px;
+    }
+
+    &:first-child:before {
+      top: $base-spacing-unit + 10px;
+    }
+
+    &:last-child:before {
+      bottom: auto;
+      height: $base-spacing-unit + 10px;
+    }
+
+    &:after {
+      background: #fff;
+      border: 1px solid $timeline-line-color;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: 8px;
+      left: 35px;
+      position: absolute;
+      top: $base-spacing-unit + 10px;
+      width: 8px;
+    }
+
+
+    &__content {
+      display: block;
+      padding: $base-spacing-unit 0;
+    }
+
+    &__date {
+      display: inline-block;
+      color: $color-text;
+      font-family: $font-text;
+      font-weight: 500;
+      left: 7px + $base-spacing-unit;
+      top: 30px;
+      position: absolute;
+    }
+  }
+
+  &--with-date {
+    .c-timeline__item {
+      padding-left: 130px + $base-spacing-unit;
+
+      &:before {
+        left: 110px + $base-spacing-unit;
+      }
+      &:after {
+        left: 105px + $base-spacing-unit;
+      }
+    }
+  }
+
+  &--alternate-rows {
+    color: #f00;
+
+    .c-timeline__item:nth-child(2n) {
+      background: $timeline-background-alternate;
+    }
+  }
+}
