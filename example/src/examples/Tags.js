@@ -4,7 +4,7 @@ import {
   Content,
   Tag,
   TagAction,
-} from 'radargovernamental-design-system';
+} from 'orbit-style';
 
 export default () => (
   <Content>

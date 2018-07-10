@@ -1,10 +1,10 @@
 {
-  "name": "radargovernamental-design-system",
+  "name": "orbit-style",
   "version": "0.0.1",
   "description": "Radar Governamental's Design System",
   "author": "radargovernamental",
   "license": "Apache-2.0",
-  "repository": "radargovernamental/design-system",
+  "repository": "radargovernamental/orbit-style",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

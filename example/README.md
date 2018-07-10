@@ -12,4 +12,4 @@ npm run storybook
 
 ## License
 
-Apache License 2.0 © [radargovernamental](https://github.com/radargovernamental/design-system)
+Apache License 2.0 © [radargovernamental](https://github.com/radargovernamental/orbit-style)

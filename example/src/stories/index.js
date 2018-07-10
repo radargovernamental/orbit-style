@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 
 import { checkA11y } from '@storybook/addon-a11y';
 
-import { Button } from 'design-system'
+import { Button } from 'orbit-style';
 
 storiesOf('Button', module)
   .addDecorator(checkA11y)

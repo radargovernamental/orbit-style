@@ -19,7 +19,7 @@ import {
   Spacer,
   Textarea,
   Textfield,
-} from 'radargovernamental-design-system';
+} from 'orbit-style';
 
 
 storiesOf('Forms/Checkbox', module)

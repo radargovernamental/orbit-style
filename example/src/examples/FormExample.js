@@ -13,7 +13,7 @@ import {
   Textarea,
   Textfield,
   Datepicker,
-} from 'radargovernamental-design-system';
+} from 'orbit-style';
 
 export default class FormExample extends Component {
   constructor(props) {

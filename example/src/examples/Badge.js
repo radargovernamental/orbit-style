@@ -4,7 +4,7 @@ import {
   Content,
   Badge,
   Heading,
-} from 'radargovernamental-design-system';
+} from 'orbit-style';
 
 export default () => (
   <Content>

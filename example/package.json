@@ -1,12 +1,12 @@
 {
-  "name": "radargovernamental-design-system-example",
-  "homepage": "https://radargovernamental.github.io/design-system",
+  "name": "orbit-style-example",
+  "homepage": "https://radargovernamental.github.io/orbit-style",
   "version": "0.0.1",
   "private": true,
   "license": "Apache-2.0",
   "dependencies": {
     "prop-types": "^15.6.1",
-    "radargovernamental-design-system": "link:..",
+    "orbit-style": "link:..",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "^1.1.1"

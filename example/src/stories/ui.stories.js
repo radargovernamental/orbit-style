@@ -29,7 +29,7 @@ import {
   Timeline,
   TimelineContent,
   TimelineItem,
-} from 'radargovernamental-design-system';
+} from 'orbit-style';
 
 
 storiesOf('UI/Badge', module)

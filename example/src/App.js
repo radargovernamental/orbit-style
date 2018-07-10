@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
   ContentLoading,
-} from 'radargovernamental-design-system';
+} from 'orbit-style';
 
 export default class App extends React.Component {
   render() {
