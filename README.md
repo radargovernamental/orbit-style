@@ -30,7 +30,7 @@ class Example extends Component {
 
 ## Concept
 
-We had a few premisses regarding our own design system:
+We had a few premise regarding our own design system:
 
 1. We want to use it as pure scss (to reuse in non SPAs, such as landing pages, for example)
 2. We want to use it with React
@@ -39,11 +39,11 @@ We had a few premisses regarding our own design system:
 5. Must be tree shaking ready and use CSS Modules for SPAs.
 6. Must be easy to use
 
-Considering our premisses, we mixed three main concepts: Atomic Design, ITCSS and BEM. How?
+Considering our premise, we mixed three main concepts: Atomic Design, ITCSS and BEM. How?
 
 ### ITCSS
 
-ITCSS is already quite known for its robustness and scalability regarding css. To adapt for our premisses, here is how we did it:
+ITCSS is already quite known for its robustness and scalability regarding css. To adapt for our premise, here is how we did it:
 
 - Settings: stores variables, colors and sizes
 - Tools: a series of mixins
