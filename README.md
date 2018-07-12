@@ -12,6 +12,13 @@ yarn add orbit-style
 
 ## Usage
 
+1. Import global styles in your index.css (created with create-react-app):
+```css
+@import '~orbit-style/src/styles/settings/_global.scss';
+```
+
+2. Use components
+
 ```jsx
 import React, { Component } from 'react'
 
