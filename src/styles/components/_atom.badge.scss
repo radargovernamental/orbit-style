@@ -3,14 +3,14 @@
 .c-badge {
   background: $color-text-light;
   border: none;
-  border-radius: 0.5em;
+  border-radius: 1em;
   color: #fff;
   display: inline-block;
   font-family: $font-text;
   font-size: .7em;
   font-weight: 500;
   line-height: 1em;
-  padding: 0.3em .9em;
+  padding: 0.3em .5em;
   vertical-align: 0.2em;
 
   &--pill {

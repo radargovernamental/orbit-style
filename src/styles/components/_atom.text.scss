@@ -25,6 +25,10 @@
     color: $color-danger;
   }
 
+  &--white {
+    color: #fff;
+  }
+
   &--ellipsis {
     white-space: nowrap;
     overflow: hidden;

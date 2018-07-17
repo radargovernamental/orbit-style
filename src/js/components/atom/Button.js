@@ -18,6 +18,7 @@ const Button = (props) => {
     md,
     sm,
     xs,
+    fullWidth,
     ...otherProps
   } = props;
 
@@ -31,6 +32,7 @@ const Button = (props) => {
     [css['c-btn--outline-danger']]: outline && danger,
     [css['c-btn--warning']]: warning,
     [css['c-btn--outline-warning']]: outline && warning,
+    [css['c-btn--full-width']]: fullWidth,
     [css['c-btn--lg']]: lg,
     [css['c-btn--md']]: md,
     [css['c-btn--sm']]: sm,
@@ -55,6 +57,7 @@ Button.propTypes = {
   sm: PropTypes.bool,
   md: PropTypes.bool,
   xs: PropTypes.bool,
+  fullWidth: PropTypes.bool,
   type: PropTypes.string,
 };
 

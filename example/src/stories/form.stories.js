@@ -9,6 +9,7 @@ import { action } from '@storybook/addon-actions';
 import {
   Checkbox,
   Datepicker,
+  Form,
   FormBox,
   FormItem,
   FormLabel,
@@ -86,150 +87,152 @@ storiesOf('Forms/FormBox', module)
   ))
   .add('with many boxes and rows', () => (
     <Grid fluid>
-      <Spacer mtLg={2} mtMd={2}>
-        <FormBox>
-          <FormRow>
-            <FormItem>
-              <Textfield name="name" onChange={action('changed')} />
-              <FormLabel htmlFor="name">Name</FormLabel>
-            </FormItem>
-          </FormRow>
-          <FormRow>
-            <FormItem>
-              <Textfield name="lastName" onChange={action('changed')} />
-              <FormLabel htmlFor="lastName">Last Name</FormLabel>
-            </FormItem>
-          </FormRow>
-        </FormBox>
-      </Spacer>
-      <Spacer mtLg={2} mtMd={2}>
-        <FormBox>
-          <FormRow>
-            <FormItem>
-              <Textarea name="message" onChange={action('changed')} rows={1} />
-              <FormLabel htmlFor="message">Message</FormLabel>
-            </FormItem>
-          </FormRow>
-        </FormBox>
-      </Spacer>
-      <Spacer mtLg={2} mtMd={2}>
-        <FormBox>
-          <FormRow>
-            <FormItem>
-              <Select
-                name="list"
-                options={[
-                  { label: 'Option 1', value: '1' },
-                  { label: 'Option 2', value: '2' },
-                  { label: 'Option 3', value: '3' },
-                ]}
-              />
-              <FormLabel htmlFor="list">List</FormLabel>
-            </FormItem>
-            <FormItem>
-              <Select
-                name="listMultiple"
-                options={[
-                  { label: 'Option 1', value: '1' },
-                  { label: 'Option 2', value: '2' },
-                  { label: 'Option 3', value: '3' },
-                ]}
-                multiple
-              />
-              <FormLabel htmlFor="listMultiple">List Multiple</FormLabel>
-            </FormItem>
-          </FormRow>
-          <FormRow>
-            <FormItem>
-              <Select
-                name="listSource"
-                async
-                asyncData={(inputValue) => {
-                  const data = [{ value: 'a', label: 'A' }, { value: 'b', label: 'B' }, { value: 'c', label: 'C' }];
-                  return new Promise((resolve) => {
-                    setTimeout(
-                      () => resolve(data.filter(i => i.label.toLowerCase().includes(inputValue.toLowerCase()))),
-                      1000,
-                    );
-                  });
-                }}
-                loadingMessage={() => 'Carregando..'}
-                noOptionsMessage={() => 'Não encontrado.'}
-              />
-              <FormLabel htmlFor="listSource">List external source</FormLabel>
-            </FormItem>
-            <FormItem>
-              <Select
-                multiple
-                name="listSourceMultiple"
-                async
-                asyncData={(inputValue) => {
-                  const data = [{ value: 'a', label: 'A' }, { value: 'b', label: 'B' }, { value: 'c', label: 'C' }];
-                  return new Promise((resolve) => {
-                    setTimeout(
-                      () => resolve(data.filter(i => i.label.toLowerCase().includes(inputValue.toLowerCase()))),
-                      1000,
-                    );
-                  });
-                }}
-              />
-              <FormLabel htmlFor="listSourceMultiple">List external source multiple</FormLabel>
-            </FormItem>
-          </FormRow>
-          <FormRow>
-            <FormItem isActive>
-              <Spacer mrLg={4} inline>
-                <Checkbox id="arquived">Archived</Checkbox>
-              </Spacer>
-              <Checkbox id="not_arquived">Not Archived</Checkbox>
-              <FormLabel htmlFor="archiving">Archiving</FormLabel>
-            </FormItem>
-            <FormItem isActive>
-              <Spacer mrLg={4} inline>
-                <Radio id="radio1" name="radio">Radio 1</Radio>
-              </Spacer>
-              <Radio id="radio2" name="radio">Radio 2</Radio>
-              <FormLabel htmlFor="radio">Radio</FormLabel>
-            </FormItem>
-          </FormRow>
-        </FormBox>
-      </Spacer>
-      <Spacer mtLg={2} mtMd={2}>
-        <FormBox>
-          <FormRow>
-            <FormItem>
-              <Datepicker
-                name="date"
-                onChange={this.handleChange} options={{
-                  dateFormat: 'd/m/Y',
-                }}
-              />
-              <FormLabel htmlFor="date">Some date</FormLabel>
-            </FormItem>
-            <FormItem>
-              <Datepicker
-                name="time"
-                options={{
-                  altFormat: 'H:i',
-                }}
-                withTime
-                withDate={false}
-              />
-              <FormLabel htmlFor="time">Some time</FormLabel>
-            </FormItem>
-            <FormItem>
-              <Datepicker
-                name="dateWithTime"
-                options={{
-                  dateFormat: 'F j, Y - H:i',
-                }}
-                withTime
-              />
-              <FormLabel htmlFor="dateWithTime">Some date with time</FormLabel>
-            </FormItem>
-          </FormRow>
-        </FormBox>
-      </Spacer>
+      <Form>
+        <Spacer mtLg={2} mtMd={2}>
+          <FormBox>
+            <FormRow>
+              <FormItem>
+                <Textfield name="name" onChange={action('changed')} />
+                <FormLabel htmlFor="name">Name</FormLabel>
+              </FormItem>
+            </FormRow>
+            <FormRow>
+              <FormItem>
+                <Textfield name="lastName" onChange={action('changed')} />
+                <FormLabel htmlFor="lastName">Last Name</FormLabel>
+              </FormItem>
+            </FormRow>
+          </FormBox>
+        </Spacer>
+        <Spacer mtLg={2} mtMd={2}>
+          <FormBox>
+            <FormRow>
+              <FormItem>
+                <Textarea name="message" onChange={action('changed')} rows={1} />
+                <FormLabel htmlFor="message">Message</FormLabel>
+              </FormItem>
+            </FormRow>
+          </FormBox>
+        </Spacer>
+        <Spacer mtLg={2} mtMd={2}>
+          <FormBox>
+            <FormRow>
+              <FormItem>
+                <Select
+                  name="list"
+                  options={[
+                    { label: 'Option 1', value: '1' },
+                    { label: 'Option 2', value: '2' },
+                    { label: 'Option 3', value: '3' },
+                  ]}
+                />
+                <FormLabel htmlFor="list">List</FormLabel>
+              </FormItem>
+              <FormItem>
+                <Select
+                  name="listMultiple"
+                  options={[
+                    { label: 'Option 1', value: '1' },
+                    { label: 'Option 2', value: '2' },
+                    { label: 'Option 3', value: '3' },
+                  ]}
+                  multiple
+                />
+                <FormLabel htmlFor="listMultiple">List Multiple</FormLabel>
+              </FormItem>
+            </FormRow>
+            <FormRow>
+              <FormItem>
+                <Select
+                  name="listSource"
+                  async
+                  asyncData={(inputValue) => {
+                    const data = [{ value: 'a', label: 'A' }, { value: 'b', label: 'B' }, { value: 'c', label: 'C' }];
+                    return new Promise((resolve) => {
+                      setTimeout(
+                        () => resolve(data.filter(i => i.label.toLowerCase().includes(inputValue.toLowerCase()))),
+                        1000,
+                      );
+                    });
+                  }}
+                  loadingMessage={() => 'Carregando..'}
+                  noOptionsMessage={() => 'Não encontrado.'}
+                />
+                <FormLabel htmlFor="listSource">List external source</FormLabel>
+              </FormItem>
+              <FormItem>
+                <Select
+                  multiple
+                  name="listSourceMultiple"
+                  async
+                  asyncData={(inputValue) => {
+                    const data = [{ value: 'a', label: 'A' }, { value: 'b', label: 'B' }, { value: 'c', label: 'C' }];
+                    return new Promise((resolve) => {
+                      setTimeout(
+                        () => resolve(data.filter(i => i.label.toLowerCase().includes(inputValue.toLowerCase()))),
+                        1000,
+                      );
+                    });
+                  }}
+                />
+                <FormLabel htmlFor="listSourceMultiple">List external source multiple</FormLabel>
+              </FormItem>
+            </FormRow>
+            <FormRow>
+              <FormItem isActive>
+                <Spacer mrLg={4} inline>
+                  <Checkbox id="arquived">Archived</Checkbox>
+                </Spacer>
+                <Checkbox id="not_arquived">Not Archived</Checkbox>
+                <FormLabel htmlFor="archiving">Archiving</FormLabel>
+              </FormItem>
+              <FormItem isActive>
+                <Spacer mrLg={4} inline>
+                  <Radio id="radio1" name="radio">Radio 1</Radio>
+                </Spacer>
+                <Radio id="radio2" name="radio">Radio 2</Radio>
+                <FormLabel htmlFor="radio">Radio</FormLabel>
+              </FormItem>
+            </FormRow>
+          </FormBox>
+        </Spacer>
+        <Spacer mtLg={2} mtMd={2}>
+          <FormBox>
+            <FormRow>
+              <FormItem>
+                <Datepicker
+                  name="date"
+                  onChange={this.handleChange} options={{
+                    dateFormat: 'd/m/Y',
+                  }}
+                />
+                <FormLabel htmlFor="date">Some date</FormLabel>
+              </FormItem>
+              <FormItem>
+                <Datepicker
+                  name="time"
+                  options={{
+                    altFormat: 'H:i',
+                  }}
+                  withTime
+                  withDate={false}
+                />
+                <FormLabel htmlFor="time">Some time</FormLabel>
+              </FormItem>
+              <FormItem>
+                <Datepicker
+                  name="dateWithTime"
+                  options={{
+                    dateFormat: 'F j, Y - H:i',
+                  }}
+                  withTime
+                />
+                <FormLabel htmlFor="dateWithTime">Some date with time</FormLabel>
+              </FormItem>
+            </FormRow>
+          </FormBox>
+        </Spacer>
+      </Form>
     </Grid>
   ));
 

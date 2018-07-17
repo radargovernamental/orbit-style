@@ -16,14 +16,15 @@ export Text from './js/components/atom/Text';
 // FormExample
 export Checkbox from './js/components/atom/Checkbox';
 export Datepicker from './js/components/atom/Datepicker';
+export Form from './js/components/organism/Form';
+export FormBox from './js/components/molecule/FormBox';
+export FormItem from './js/components/molecule/FormItem';
+export FormLabel from './js/components/atom/FormLabel';
+export FormRow from './js/components/molecule/FormRow';
 export Radio from './js/components/atom/Radio';
 export Select from './js/components/atom/Select';
 export Textarea from './js/components/atom/Textarea';
 export Textfield from './js/components/atom/Textfield';
-export FormRow from './js/components/molecule/FormRow';
-export FormItem from './js/components/molecule/FormItem';
-export FormLabel from './js/components/atom/FormLabel';
-export FormBox from './js/components/molecule/FormBox';
 
 // Utilities
 export AlertModal from './js/components/organism/AlertModal';

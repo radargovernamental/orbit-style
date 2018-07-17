@@ -163,4 +163,12 @@
     border-radius: $btn-border-radius-xs;
     font-size: $font-size-xs;
   }
+
+  // Width
+  &--full-width {
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    width: 100%;
+  }
 }

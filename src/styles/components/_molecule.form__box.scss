@@ -2,6 +2,13 @@
 @import '../tools/tools';
 
 .c-form__box {
+  padding: 0;
+  border: none;
+
+  &:disabled {
+    opacity: .6;
+  }
+
   .c-form__element:not(.c-form__select--parent) {
     border-radius: 0;
     padding-top: 30px;

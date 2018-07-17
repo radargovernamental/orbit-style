@@ -89,7 +89,8 @@ storiesOf('UI/Button', module)
   .add('large', () => (<Button onClick={action('clicked')} lg>Hello Button</Button>))
   .add('medium/default', () => (<Button onClick={action('clicked')}>Hello Button</Button>))
   .add('small', () => (<Button onClick={action('clicked')} sm>Hello Button</Button>))
-  .add('extra small', () => (<Button onClick={action('clicked')} xs>Hello Button</Button>));
+  .add('extra small', () => (<Button onClick={action('clicked')} xs>Hello Button</Button>))
+  .add('full width', () => (<Button onClick={action('clicked')} fullWidth>Hello Button</Button>));
 
 storiesOf('UI/Content', module)
   .addDecorator(checkA11y)
