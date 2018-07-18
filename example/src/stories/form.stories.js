@@ -202,7 +202,8 @@ storiesOf('Forms/FormBox', module)
               <FormItem>
                 <Datepicker
                   name="date"
-                  onChange={this.handleChange} options={{
+                  onChange={this.handleChange}
+                  options={{
                     dateFormat: 'd/m/Y',
                   }}
                 />

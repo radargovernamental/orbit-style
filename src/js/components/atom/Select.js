@@ -6,6 +6,7 @@ import ReactSelectAsync from 'react-select/lib/Async';
 
 import mainCss from '../../../styles/components/_atom.select.scss';
 import parentCss from '../../../styles/components/_molecule.form__box.scss';
+import debouncePromise from '../../lib/debounce-promise';
 
 const css = Object.assign({}, mainCss, parentCss);
 
@@ -26,7 +27,7 @@ const input = (base, state) => {
   };
 };
 
-const customStyles = (isFormBox) => ({
+const customStyles = isFormBox => ({
   multiValue: base => ({
     ...base,
     background: '#009FFF',
@@ -41,11 +42,12 @@ const customStyles = (isFormBox) => ({
   singleValue: base => ({
     ...base,
     color: '#546E7A',
+    minHeight: '1.1em',
   }),
   valueContainer: base => ({
     ...base,
-    marginTop: isFormBox ? '20px' : '0',
-    paddingBottom: isFormBox ? '10px' : '12px',
+    marginTop: isFormBox ? '18px' : '0',
+    paddingBottom: isFormBox ? '8px' : '12px',
   }),
   input: base => ({
     ...base,
@@ -55,6 +57,9 @@ const customStyles = (isFormBox) => ({
     ...base,
     marginTop: 0,
     paddingTop: 0,
+  }),
+  indicatorSeparator: () => ({
+    display: 'none',
   }),
   container: input,
 });
@@ -80,6 +85,7 @@ class Select extends React.Component {
       async,
       asyncData,
       isFormBox,
+      debounce,
       ...otherProps
     } = this.props;
 
@@ -113,9 +119,11 @@ class Select extends React.Component {
     };
 
     let elem = <ReactSelect {...allProps} />;
+
     if (async) {
+      const debouncedAsyncData = debouncePromise(asyncData, debounce);
       Object.assign(allProps, {
-        loadOptions: asyncData,
+        loadOptions: debouncedAsyncData,
         name: null,
       });
       elem = <ReactSelectAsync {...allProps} />;
@@ -149,6 +157,9 @@ Select.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string,
   isFormBox: PropTypes.bool,
+  debounce: PropTypes.number,
+  loadingMessage: PropTypes.func,
+  noOptionsMessage: PropTypes.func,
 };
 Select.defaultProps = {
   options: [],
@@ -165,6 +176,9 @@ Select.defaultProps = {
   onChange: f => f,
   id: null,
   isFormBox: true,
+  debounce: 500,
+  loadingMessage: () => 'Carregando..',
+  noOptionsMessage: () => 'Não encontrado.',
 };
 
 export default Select;
