@@ -13,6 +13,9 @@
     border-radius: 0;
     padding-top: 30px;
   }
+  .c-form__element > div > div {
+    background: $form-color-background-normal;
+  }
 
   .c-form__row--parent:first-of-type .c-form__item--parent:first-child {
     &.c-form__item--active { border-top-left-radius: 5px; }
@@ -21,7 +24,6 @@
       & > div > div {
         border-top-left-radius: 5px; // for react-select
       }
-      // for react-select
     }
   }
   .c-form__row--parent:first-of-type .c-form__item--parent:last-child {

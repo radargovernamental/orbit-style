@@ -43,7 +43,7 @@ class Datepicker extends Component {
     const { isFocused } = this.state;
 
     const classes = classNames({
-      [css['c-form__element--value']]: isFocused || value.length,
+      [css['c-form__element--value']]: isFocused || (value && value.length),
       [css['c-form__element']]: true,
       [css['c-form__datepicker']]: true,
       [css['c-form__datepicker--lg']]: lg,
@@ -51,7 +51,7 @@ class Datepicker extends Component {
       [css['c-form__datepicker--sm']]: sm,
       [css['c-form__datepicker--xs']]: xs,
       [css['c-form__datepicker--error']]: error,
-      [css['c-form__datepicker--value']]: value.length,
+      [css['c-form__datepicker--value']]: value && value.length,
     });
 
     const newOptions = Object.assign(

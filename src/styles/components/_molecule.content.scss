@@ -37,6 +37,8 @@
     border-bottom: 0;
     border-top: 0;
     max-width: $content-sidebar-width;
+    padding: $base-spacing-unit;
+    box-sizing: border-box;
     width: 100%;
   }
 }

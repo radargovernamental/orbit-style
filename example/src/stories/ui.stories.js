@@ -25,6 +25,7 @@ import {
   Spacer,
   Tag,
   TagAction,
+  TagExtension,
   Text,
   Timeline,
   TimelineContent,
@@ -562,6 +563,17 @@ storiesOf('UI/Tag', module)
   .add('with success color', () => <Tag success>Hello World</Tag>)
   .add('with warning color', () => <Tag warning>Hello World</Tag>)
   .add('with danger color', () => <Tag danger>Hello World</Tag>)
+  .add('with extension', () => (
+    <div>
+      <ul>
+        <li><Tag extension={<TagExtension>Hello!</TagExtension>}>Hello World</Tag></li>
+        <li><Tag primary extension={<TagExtension primary>Hello!</TagExtension>}>Hello World</Tag></li>
+        <li><Tag success extension={<TagExtension success>Hello!</TagExtension>}>Hello World</Tag></li>
+        <li><Tag warning extension={<TagExtension warning>Hello!</TagExtension>}>Hello World</Tag></li>
+        <li><Tag danger extension={<TagExtension danger>Hello!</TagExtension>}>Hello World</Tag></li>
+      </ul>
+    </div>
+  ))
   .add('with action', () => <Tag action>Hello World <TagAction>x</TagAction></Tag>)
   .add('with action and color', () => <Tag primary action>Hello World <TagAction>x</TagAction></Tag>)
   .add('with action, color and size', () => (

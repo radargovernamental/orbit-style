@@ -1,10 +1,10 @@
 @import '../settings/settings';
 
-.c-tag {
-  background: $color-text-light;
+.c-tag-extension {
+  background: lighten($color-text-light, 30%);
   border: none;
   border-radius: $tag-border-radius-md;
-  color: #fff;
+  color: darken($color-text-light, 10%);
   display: inline-block;
   font-family: $font-text;
   font-size: $font-size-sm;
@@ -14,16 +14,6 @@
 
   &--with-action {
     padding-right: 35px + $tag-padding-horizontal-xs;
-    position: relative;
-  }
-  &--with-extension {
-    padding: 0;
-
-    & > .c-tag__content {
-      display: inline-block;
-      padding: $tag-padding-vertical-md $tag-padding-horizontal-md;
-    }
-
     position: relative;
   }
 
@@ -51,66 +41,46 @@
   }
 
   &--primary {
-    color: $color-white;
-    background: $color-primary;
+    color: darken($color-primary, 10%);
+    background: lighten($color-primary, 30%);
     border-color: $color-primary;
 
     &:hover {
       background: darken($color-primary, 5%);
       border-color: darken($color-primary, 5%);
     }
-
-    .c-tag__action:hover, .c-tag__action:focus {
-      background: darken($color-primary, 10%);
-      border-color: darken($color-primary, 10%);
-    }
   }
 
   &--success {
-    color: $color-white;
-    background: $color-success;
+    color: darken($color-success, 10%);
+    background: lighten($color-success, 30%);
     border-color: $color-success;
 
     &:hover {
       background: darken($color-success, 5%);
       border-color: darken($color-success, 5%);
     }
-
-    .c-tag__action:hover, .c-tag__action:focus {
-      background: darken($color-success, 10%);
-      border-color: darken($color-success, 10%);
-    }
   }
 
   &--warning {
-    color: $color-white;
-    background: $color-warning;
+    color: darken($color-warning, 10%);
+    background: lighten($color-warning, 30%);
     border-color: $color-warning;
 
     &:hover {
       background: darken($color-warning, 5%);
       border-color: darken($color-warning, 5%);
     }
-
-    .c-tag__action:hover, .c-tag__action:focus {
-      background: darken($color-warning, 10%);
-      border-color: darken($color-warning, 10%);
-    }
   }
 
   &--danger {
-    color: $color-white;
-    background: $color-danger;
+    color: darken($color-danger, 10%);
+    background: lighten($color-danger, 30%);
     border-color: $color-danger;
 
     &:hover {
       background: darken($color-danger, 5%);
       border-color: darken($color-danger, 5%);
-    }
-
-    .c-tag__action:hover, .c-tag__action:focus {
-      background: darken($color-danger, 10%);
-      border-color: darken($color-danger, 10%);
     }
   }
 
@@ -123,12 +93,6 @@
     &.c-tag--with-action {
       padding-right: 35px + $tag-padding-horizontal-lg;
     }
-    &.c-tag--with-extension {
-      padding: 0;
-      & > .c-tag__content {
-        padding: $tag-padding-vertical-lg $tag-padding-horizontal-lg;
-      }
-    }
   }
   &--sm {
     padding: $tag-padding-vertical-sm $tag-padding-horizontal-sm;
@@ -137,12 +101,6 @@
     &.c-tag--with-action {
       padding-right: 35px + $tag-padding-horizontal-sm;
     }
-    &.c-tag--with-extension {
-      padding: 0;
-      & > .c-tag__content {
-        padding: $tag-padding-vertical-sm $tag-padding-horizontal-sm;
-      }
-    }
   }
   &--xs {
     padding: $tag-padding-vertical-xs $tag-padding-horizontal-xs;
@@ -150,13 +108,6 @@
     font-size: $font-size-xs;
     &.c-tag--with-action {
       padding-right: 35px + $tag-padding-horizontal-xs;
-    }
-
-    &.c-tag--with-extension {
-      padding: 0;
-      & > .c-tag__content {
-        padding: $tag-padding-vertical-xs $tag-padding-horizontal-xs;
-      }
     }
   }
 }

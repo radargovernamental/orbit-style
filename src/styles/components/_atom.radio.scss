@@ -27,7 +27,7 @@
   & > .c-form__radio-value:before {
     background: #fff;
     border-radius: $form-radio-size-md;
-    border: 1px solid $color-text-light;
+    border: 2px solid $form-color-radio-border;
     content: '';
     display: inline-block;
     font-size: $font-size-md;

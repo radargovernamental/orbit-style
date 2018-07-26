@@ -7,6 +7,7 @@ import css from '../../../styles/components/_molecule.content.scss';
 const Main = (props) => {
   const {
     children,
+    ...otherProps
   } = props;
 
   const classes = classNames({
@@ -14,7 +15,7 @@ const Main = (props) => {
   });
 
   return (
-    <main className={classes}>
+    <main className={classes} {...otherProps}>
       {children}
     </main>
   );

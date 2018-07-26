@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import css from '../../../styles/components/_atom.tag.scss';
+import css from '../../../styles/components/_atom.tag-extension.scss';
 
-const Tag = (props) => {
+const TagExtension = (props) => {
   const {
     children,
     primary,
@@ -15,33 +15,28 @@ const Tag = (props) => {
     md,
     sm,
     xs,
-    action,
-    extension,
   } = props;
 
   const classes = classNames({
-    [css['c-tag']]: true,
-    [css['c-tag--with-action']]: !!action,
-    [css['c-tag--with-extension']]: !!extension,
-    [css['c-tag--primary']]: primary,
-    [css['c-tag--success']]: success,
-    [css['c-tag--warning']]: warning,
-    [css['c-tag--danger']]: danger,
-    [css['c-tag--lg']]: lg,
-    [css['c-tag--md']]: md,
-    [css['c-tag--sm']]: sm,
-    [css['c-tag--xs']]: xs,
+    [css['c-tag-extension']]: true,
+    [css['c-tag-extension--primary']]: primary,
+    [css['c-tag-extension--success']]: success,
+    [css['c-tag-extension--warning']]: warning,
+    [css['c-tag-extension--danger']]: danger,
+    [css['c-tag-extension--lg']]: lg,
+    [css['c-tag-extension--md']]: md,
+    [css['c-tag-extension--sm']]: sm,
+    [css['c-tag-extension--xs']]: xs,
   });
 
   return (
     <span className={classes}>
-      <span className={css['c-tag__content']}>{children}</span>
-      {extension}
+      {children}
     </span>
   );
 };
 
-Tag.propTypes = {
+TagExtension.propTypes = {
   children: PropTypes.node,
   primary: PropTypes.bool,
   danger: PropTypes.bool,
@@ -51,11 +46,9 @@ Tag.propTypes = {
   md: PropTypes.bool,
   sm: PropTypes.bool,
   xs: PropTypes.bool,
-  action: PropTypes.bool,
-  extension: PropTypes.node,
 };
 
-Tag.defaultProps = {
+TagExtension.defaultProps = {
   children: null,
   primary: false,
   danger: false,
@@ -66,7 +59,6 @@ Tag.defaultProps = {
   sm: false,
   xs: false,
   action: false,
-  extension: null,
 };
 
-export default Tag;
+export default TagExtension;

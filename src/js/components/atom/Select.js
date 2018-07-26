@@ -10,23 +10,6 @@ import debouncePromise from '../../lib/debounce-promise';
 
 const css = Object.assign({}, mainCss, parentCss);
 
-
-const input = (base, state) => {
-  let background = 'transparent';
-  let borderColor = '#ECEFF1';
-
-  if (state.isFocused) {
-    background = '#BEE6FF';
-    borderColor = '#0f0';
-  }
-
-  return {
-    ...base,
-    background,
-    borderColor,
-  };
-};
-
 const customStyles = isFormBox => ({
   multiValue: base => ({
     ...base,
@@ -48,10 +31,11 @@ const customStyles = isFormBox => ({
     ...base,
     marginTop: isFormBox ? '18px' : '0',
     paddingBottom: isFormBox ? '8px' : '12px',
+    background: 'transparent',
   }),
   input: base => ({
     ...base,
-    marginTop: isFormBox ? '9px' : '13px',
+    marginTop: isFormBox ? '9px' : '10px',
   }),
   menu: base => ({
     ...base,
@@ -61,7 +45,27 @@ const customStyles = isFormBox => ({
   indicatorSeparator: () => ({
     display: 'none',
   }),
-  container: input,
+  container: (base, state) => {
+    let background = 'transparent';
+    let borderColor = '#ECEFF1';
+    let opacity = 1;
+
+    if (state.isFocused) {
+      background = '#BEE6FF';
+      borderColor = '#0f0';
+    }
+
+    if (state.isDisabled) {
+      opacity = 0.2;
+    }
+
+    return {
+      ...base,
+      background,
+      borderColor,
+      opacity,
+    };
+  },
 });
 
 class Select extends React.Component {
@@ -86,6 +90,7 @@ class Select extends React.Component {
       asyncData,
       isFormBox,
       debounce,
+      disabled,
       ...otherProps
     } = this.props;
 
@@ -115,6 +120,7 @@ class Select extends React.Component {
       ref: (ref) => { this.select = ref; },
       styles: customStyles(isFormBox),
       value,
+      isDisabled: disabled,
       ...otherProps,
     };
 
@@ -160,6 +166,7 @@ Select.propTypes = {
   debounce: PropTypes.number,
   loadingMessage: PropTypes.func,
   noOptionsMessage: PropTypes.func,
+  disabled: PropTypes.bool,
 };
 Select.defaultProps = {
   options: [],
@@ -176,9 +183,10 @@ Select.defaultProps = {
   onChange: f => f,
   id: null,
   isFormBox: true,
-  debounce: 500,
+  debounce: 275, // "zGolden ratio" value for typing
   loadingMessage: () => 'Carregando..',
   noOptionsMessage: () => 'Não encontrado.',
+  disabled: false,
 };
 
 export default Select;
