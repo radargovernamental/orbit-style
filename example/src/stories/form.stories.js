@@ -9,6 +9,7 @@ import { action } from '@storybook/addon-actions';
 import {
   Checkbox,
   Datepicker,
+  FileSelect,
   Form,
   FormBox,
   FormItem,
@@ -36,6 +37,15 @@ storiesOf('Forms/Datepicker', module)
   .add('with date', () => <Datepicker id="lorem" onChange={action('changed')} />)
   .add('with time', () => <Datepicker id="lorem" lg onChange={action('changed')} withTime withDate={false} />)
   .add('with date and time', () => <Datepicker id="lorem" md onChange={action('changed')} withTime />);
+
+
+storiesOf('Forms/FileSelect', module)
+  .addDecorator(checkA11y)
+  .add('medium/default', () => <FileSelect md onChange={action('changed')} />)
+  .add('large', () => <FileSelect lg onChange={action('changed')} />)
+  .add('small', () => <FileSelect sm onChange={action('changed')} />)
+  .add('extra small', () => <FileSelect xs onChange={action('changed')} />);
+
 
 storiesOf('Forms/FormBox', module)
   .addDecorator(checkA11y)

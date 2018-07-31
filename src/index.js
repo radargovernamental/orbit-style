@@ -14,9 +14,10 @@ export TagExtension from './js/components/atom/TagExtension';
 export TagAction from './js/components/atom/TagAction';
 export Text from './js/components/atom/Text';
 
-// FormExample
+// Forms
 export Checkbox from './js/components/atom/Checkbox';
 export Datepicker from './js/components/atom/Datepicker';
+export FileSelect from './js/components/atom/FileSelect';
 export Form from './js/components/organism/Form';
 export FormBox from './js/components/molecule/FormBox';
 export FormItem from './js/components/molecule/FormItem';

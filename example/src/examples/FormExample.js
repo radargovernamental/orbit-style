@@ -13,6 +13,7 @@ import {
   Textarea,
   Textfield,
   Datepicker,
+  FileSelect,
 } from 'orbit-style';
 
 export default class FormExample extends Component {
@@ -33,13 +34,34 @@ export default class FormExample extends Component {
       listSourceMultiple: null,
       date: [],
       dateWithTime: [],
+      file: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+  handleChange(e, callback) {
+    const {
+      name,
+      type,
+      value,
+      checked,
+      files,
+    } = e.target;
+
+    let val;
+    switch (type) {
+      case 'checkbox':
+        val = checked;
+        break;
+      case 'file':
+        val = files[0]; //eslint-disable-line
+        break;
+      default:
+        val = value;
+    }
+
+    this.setState({ [name]: val }, callback);
   }
 
   render () {
@@ -61,6 +83,16 @@ export default class FormExample extends Component {
     } = this.state;
     return (
       <Grid fluid>
+        <Spacer mtLg={2} mtMd={2}>
+          <FormBox>
+            <FormRow>
+              <FormItem>
+                <FileSelect name="file" onChange={this.handleChange} />
+                <FormLabel htmlFor="file">Arquivo</FormLabel>
+              </FormItem>
+            </FormRow>
+          </FormBox>
+        </Spacer>
         <Spacer mtLg={2} mtMd={2}>
           <FormBox>
             <FormRow>

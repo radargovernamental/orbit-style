@@ -17,6 +17,7 @@ const Tag = (props) => {
     xs,
     action,
     extension,
+    outline,
   } = props;
 
   const classes = classNames({
@@ -31,6 +32,7 @@ const Tag = (props) => {
     [css['c-tag--md']]: md,
     [css['c-tag--sm']]: sm,
     [css['c-tag--xs']]: xs,
+    [css['c-tag--outline']]: outline,
   });
 
   return (
@@ -52,6 +54,7 @@ Tag.propTypes = {
   sm: PropTypes.bool,
   xs: PropTypes.bool,
   action: PropTypes.bool,
+  outline: PropTypes.bool,
   extension: PropTypes.node,
 };
 
@@ -65,6 +68,7 @@ Tag.defaultProps = {
   md: false,
   sm: false,
   xs: false,
+  outline: false,
   action: false,
   extension: null,
 };

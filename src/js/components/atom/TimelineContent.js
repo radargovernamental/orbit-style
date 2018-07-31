@@ -7,6 +7,7 @@ import css from '../../../styles/components/_organism.timeline.scss';
 const TimelineContent = (props) => {
   const {
     children,
+    ...otherProps
   } = props;
 
   const classes = className({
@@ -14,7 +15,7 @@ const TimelineContent = (props) => {
   });
 
   return (
-    <div className={classes}>
+    <div className={classes} {...otherProps}>
       {children}
     </div>
   );

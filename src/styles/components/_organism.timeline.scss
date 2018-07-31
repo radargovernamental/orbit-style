@@ -26,17 +26,21 @@
       height: $base-spacing-unit + 10px;
     }
 
+    &:first-child:last-child:before {
+      display: none;
+    }
+
     &:after {
       background: #fff;
       border: 1px solid $timeline-line-color;
       border-radius: 50%;
       content: '';
       display: inline-block;
-      height: 8px;
+      height: 11px;
       left: 35px;
       position: absolute;
       top: $base-spacing-unit + 10px;
-      width: 8px;
+      width: 11px;
     }
 
 
@@ -50,8 +54,9 @@
       color: $color-text;
       font-family: $font-text;
       font-weight: 500;
+      font-size: .875rem;
       left: 7px + $base-spacing-unit;
-      top: 30px;
+      top: 32px;
       position: absolute;
     }
   }

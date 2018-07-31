@@ -91,6 +91,7 @@ class Select extends React.Component {
       isFormBox,
       debounce,
       disabled,
+      required,
       ...otherProps
     } = this.props;
 
@@ -142,6 +143,19 @@ class Select extends React.Component {
         onBlurCapture={() => this.setState({ isFocused: false })}
       >
         {elem}
+        <input
+          tabIndex={-1}
+          value={value || ''}
+          required={required}
+          onChange={onChange}
+          style={{
+            opacity: 0,
+            width: 0,
+            height: 0,
+            position: 'absolute',
+          }}
+          onFocus={() => this.select.focus()}
+        />
       </div>
     );
   }
@@ -167,6 +181,7 @@ Select.propTypes = {
   loadingMessage: PropTypes.func,
   noOptionsMessage: PropTypes.func,
   disabled: PropTypes.bool,
+  required: PropTypes.bool,
 };
 Select.defaultProps = {
   options: [],
@@ -187,6 +202,7 @@ Select.defaultProps = {
   loadingMessage: () => 'Carregando..',
   noOptionsMessage: () => 'Não encontrado.',
   disabled: false,
+  required: false,
 };
 
 export default Select;

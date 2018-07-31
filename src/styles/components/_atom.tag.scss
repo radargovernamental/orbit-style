@@ -50,6 +50,17 @@
     }
   }
 
+  &--outline {
+    color: $color-text;
+    background: transparent;
+    border: 1px solid #E3E7EB;
+
+    &:hover {
+      background: #E3E7EB;
+    }
+  }
+
+
   &--primary {
     color: $color-white;
     background: $color-primary;

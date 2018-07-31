@@ -9,6 +9,7 @@ const Timeline = (props) => {
     alternateRows,
     children,
     withDate,
+    ...otherProps
   } = props;
 
   const classes = className({
@@ -18,7 +19,7 @@ const Timeline = (props) => {
   });
 
   return (
-    <div className={classes}>
+    <div className={classes} {...otherProps}>
       {children}
     </div>
   );
