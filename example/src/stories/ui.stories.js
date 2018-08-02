@@ -23,6 +23,7 @@ import {
   Row,
   Sidebar,
   Spacer,
+  Table,
   Tag,
   TagAction,
   TagExtension,
@@ -556,6 +557,117 @@ storiesOf('UI/Spacer', module)
         !
       </Spacer>
     </div>
+  ));
+
+storiesOf('UI/Table', module)
+  .addDecorator(checkA11y)
+  .add('simple', () => (
+    <Table>
+      <thead>
+        <tr>
+          <th>Lorem ipsum.</th>
+          <th>Dolor, esse?</th>
+          <th>Natus, quod.</th>
+          <th>Ducimus, optio.</th>
+          <th>Perspiciatis, totam!</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td>Atque culpa eos ex tempore?</td>
+          <td>Eius expedita iusto porro suscipit?</td>
+          <td>Aut distinctio porro quasi. Optio.</td>
+          <td>Alias dicta, ea? Maiores, odio!</td>
+        </tr>
+        <tr>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td>Atque culpa eos ex tempore?</td>
+          <td>Eius expedita iusto porro suscipit?</td>
+          <td>Aut distinctio porro quasi. Optio.</td>
+          <td>Alias dicta, ea? Maiores, odio!</td>
+        </tr>
+        <tr>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td>Atque culpa eos ex tempore?</td>
+          <td>Eius expedita iusto porro suscipit?</td>
+          <td>Aut distinctio porro quasi. Optio.</td>
+          <td>Alias dicta, ea? Maiores, odio!</td>
+        </tr>
+      </tbody>
+    </Table>
+  ))
+  .add('with alternating rows', () => (
+    <Table alternateRows>
+      <thead>
+        <tr>
+          <th>Lorem ipsum.</th>
+          <th>Dolor, esse?</th>
+          <th>Natus, quod.</th>
+          <th>Ducimus, optio.</th>
+          <th>Perspiciatis, totam!</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td>Atque culpa eos ex tempore?</td>
+          <td>Eius expedita iusto porro suscipit?</td>
+          <td>Aut distinctio porro quasi. Optio.</td>
+          <td>Alias dicta, ea? Maiores, odio!</td>
+        </tr>
+        <tr>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td>Atque culpa eos ex tempore?</td>
+          <td>Eius expedita iusto porro suscipit?</td>
+          <td>Aut distinctio porro quasi. Optio.</td>
+          <td>Alias dicta, ea? Maiores, odio!</td>
+        </tr>
+        <tr>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td>Atque culpa eos ex tempore?</td>
+          <td>Eius expedita iusto porro suscipit?</td>
+          <td>Aut distinctio porro quasi. Optio.</td>
+          <td>Alias dicta, ea? Maiores, odio!</td>
+        </tr>
+      </tbody>
+    </Table>
+  ))
+  .add('with different column sizes', () => (
+    <Table alternateRows>
+      <thead>
+        <tr>
+          <th width="40%">Lorem ipsum.</th>
+          <th width="30%">Dolor, esse?</th>
+          <th width="10%">Natus, quod.</th>
+          <th width="5%">Ducimus, optio.</th>
+          <th width="5%">Perspiciatis, totam!</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td>Atque culpa eos ex tempore?</td>
+          <td>Eius expedita iusto porro suscipit?</td>
+          <td>Aut distinctio porro quasi. Optio.</td>
+          <td>Alias dicta, ea? Maiores, odio!</td>
+        </tr>
+        <tr>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td>Atque culpa eos ex tempore?</td>
+          <td>Eius expedita iusto porro suscipit?</td>
+          <td>Aut distinctio porro quasi. Optio.</td>
+          <td>Alias dicta, ea? Maiores, odio!</td>
+        </tr>
+        <tr>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td>Atque culpa eos ex tempore?</td>
+          <td>Eius expedita iusto porro suscipit?</td>
+          <td>Aut distinctio porro quasi. Optio.</td>
+          <td>Alias dicta, ea? Maiores, odio!</td>
+        </tr>
+      </tbody>
+    </Table>
   ));
 
 storiesOf('UI/Tag', module)

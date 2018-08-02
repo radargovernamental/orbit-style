@@ -18,7 +18,7 @@
     display: block;
     width: 1.5em;
     height: 1.5em;
-    margin: 5px auto;
+    margin: 3px auto;
     border-radius: 50%;
     border: 5px solid;
     border-color: $color-text transparent $color-text transparent;
@@ -60,7 +60,7 @@
   }
 
   &--sm {
-    height: 1.9em;
+    height: 1em;
     width: 1.4em;
     &:before {
       border-width: 4px;

@@ -46,7 +46,7 @@
     border-color: $color-primary;
 
     &:hover {
-      background: darken($color-primary, 5%);
+      background: lighten($color-primary, 32%);
       border-color: darken($color-primary, 5%);
     }
   }
@@ -57,7 +57,7 @@
     border-color: $color-success;
 
     &:hover {
-      background: darken($color-success, 5%);
+      background: lighten($color-success, 32%);
       border-color: darken($color-success, 5%);
     }
   }
@@ -68,7 +68,7 @@
     border-color: $color-warning;
 
     &:hover {
-      background: darken($color-warning, 5%);
+      background: lighten($color-warning, 32%);
       border-color: darken($color-warning, 5%);
     }
   }
@@ -79,7 +79,7 @@
     border-color: $color-danger;
 
     &:hover {
-      background: darken($color-danger, 5%);
+      background: lighten($color-danger, 32%);
       border-color: darken($color-danger, 5%);
     }
   }

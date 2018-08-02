@@ -1,0 +1,64 @@
+@import '../settings/settings';
+@import '../tools/tools';
+
+.c-table {
+  font-family: $font-text;
+  font-size: $font-size-md;
+  color: $color-text;
+  text-align: left;
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+
+  @include mq($until: tablet) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  thead, tbody {
+    width: 100%;
+  }
+
+  th {
+    font-weight: 500;
+  }
+
+  td, th {
+    padding: 18px 12px;
+    border: none;
+    background: transparent;
+
+    &:hover {
+      background: lighten($color-primary, 48%)
+    }
+  }
+
+  tbody {
+    tr + tr {
+      td {
+        border: none;
+        border-top: 1px solid $table-border-color;
+      }
+    }
+  }
+
+  thead tr:last-child th {
+    border-bottom: 2px solid $table-border-color;
+  }
+
+  tbody tr:hover {
+    background: darken($table-background-alternate, 1%) !important;
+  }
+
+  &--alternate-rows {
+    tbody {
+      tr:nth-child(2n+0) {
+        background: $table-background-alternate;
+      }
+      tr:nth-child(2n+1) {
+        background: $table-background-default;
+      }
+    }
+  }
+}

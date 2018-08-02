@@ -9,6 +9,7 @@ export Loading from './js/components/atom/Loading';
 export Main from './js/components/atom/Main';
 export Sidebar from './js/components/atom/Sidebar';
 export Spacer from './js/components/molecule/Spacer';
+export Table from './js/components/molecule/Table';
 export Tag from './js/components/atom/Tag';
 export TagExtension from './js/components/atom/TagExtension';
 export TagAction from './js/components/atom/TagAction';

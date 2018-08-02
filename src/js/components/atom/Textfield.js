@@ -32,7 +32,7 @@ const Textfield = (props) => {
     [css['c-form__textfield--sm']]: sm,
     [css['c-form__textfield--xs']]: xs,
     [css['c-form__textfield--error']]: error,
-    [css['c-form__textfield--value']]: value.length,
+    [css['c-form__textfield--value']]: value && value.length,
   });
   return (
     <InputMask
@@ -40,7 +40,7 @@ const Textfield = (props) => {
       name={name}
       id={name}
       className={classes}
-      value={value}
+      value={value || ''}
       mask={mask}
       maskChar={maskChar}
       {...otherProps}
