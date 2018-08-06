@@ -3,12 +3,14 @@
 
 .c-table {
   font-family: $font-text;
-  font-size: $font-size-md;
+  font-size: $font-size-sm;
   color: $color-text;
   text-align: left;
   width: 100%;
   border: none;
   border-collapse: collapse;
+  line-height: 1.5em;
+  background: $table-background-default;
 
   @include mq($until: tablet) {
     display: block;
