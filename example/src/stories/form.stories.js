@@ -21,6 +21,7 @@ import {
   Spacer,
   Textarea,
   Textfield,
+  WYSIWYG,
 } from 'orbit-style';
 
 
@@ -321,3 +322,7 @@ storiesOf('Forms/Textfield', module)
   .add('medium/default', () => <Textfield md onChange={action('changed')} />)
   .add('small', () => <Textfield sm onChange={action('changed')} />)
   .add('extra small', () => <Textfield xs onChange={action('changed')} />);
+
+storiesOf('Forms/WYSIWYG', module)
+  .addDecorator(checkA11y)
+  .add('with text', () => <WYSIWYG value="<p>Lorem ipsum dolor</p>" />);

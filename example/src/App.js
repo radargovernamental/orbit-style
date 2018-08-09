@@ -1,15 +1,25 @@
 import React from 'react';
 
-// import {
-//   Text,
-// } from 'orbit-style';
+import {
+  Switch,
+} from 'orbit-style';
 
 import FormExample from './examples/FormExample';
 
 export default class App extends React.Component {
+  state = {
+    checked: false,
+  };
+
   render() {
+    const { checked } = this.state;
     return (
-      <FormExample />
+      <div style={{ margin: '200px' }}>
+        <Switch
+          checked={checked}
+          onChange={e => this.setState({ checked: e.target.checked })}
+        />
+      </div>
     );
   }
 }

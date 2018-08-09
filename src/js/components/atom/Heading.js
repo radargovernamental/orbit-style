@@ -14,6 +14,7 @@ const Heading = (props) => {
     success,
     danger,
     warning,
+    hidden,
     ...otherProps
   } = props;
 
@@ -29,23 +30,25 @@ const Heading = (props) => {
     [css['c-heading--success']]: success,
     [css['c-heading--danger']]: danger,
     [css['c-heading--warning']]: warning,
+    [css['c-heading--hidden']]: hidden,
   });
 
   const classes = `${tmpClasses} ${className}`;
 
+  const childrenNodes = hidden ? <span className={css['c-heading__sr-only']}>{children}</span> : children;
   switch (level) {
     case 1:
-      return <h1 className={classes} title={title} {...otherProps}>{children}</h1>;
+      return <h1 className={classes} title={title} {...otherProps}>{childrenNodes}</h1>;
     case 2:
-      return <h2 className={classes} title={title} {...otherProps}>{children}</h2>;
+      return <h2 className={classes} title={title} {...otherProps}>{childrenNodes}</h2>;
     case 3:
-      return <h3 className={classes} title={title} {...otherProps}>{children}</h3>;
+      return <h3 className={classes} title={title} {...otherProps}>{childrenNodes}</h3>;
     case 4:
-      return <h4 className={classes} title={title} {...otherProps}>{children}</h4>;
+      return <h4 className={classes} title={title} {...otherProps}>{childrenNodes}</h4>;
     case 5:
-      return <h5 className={classes} title={title} {...otherProps}>{children}</h5>;
+      return <h5 className={classes} title={title} {...otherProps}>{childrenNodes}</h5>;
     case 6:
-      return <h6 className={classes} title={title} {...otherProps}>{children}</h6>;
+      return <h6 className={classes} title={title} {...otherProps}>{childrenNodes}</h6>;
     default:
       return null;
   }
@@ -61,6 +64,7 @@ Heading.propTypes = {
   success: PropTypes.bool,
   warning: PropTypes.bool,
   danger: PropTypes.bool,
+  hidden: PropTypes.bool,
 };
 
 Heading.defaultProps = {
@@ -70,6 +74,7 @@ Heading.defaultProps = {
   success: false,
   danger: false,
   warning: false,
+  hidden: false,
 };
 
 export default Heading;

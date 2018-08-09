@@ -26,8 +26,10 @@ export FormLabel from './js/components/atom/FormLabel';
 export FormRow from './js/components/molecule/FormRow';
 export Radio from './js/components/atom/Radio';
 export Select from './js/components/atom/Select';
+export Switch from './js/components/atom/Switch';
 export Textarea from './js/components/atom/Textarea';
 export Textfield from './js/components/atom/Textfield';
+export WYSIWYG from './js/components/atom/WYSIWYG';
 
 // Utilities
 export AlertModal from './js/components/organism/AlertModal';
