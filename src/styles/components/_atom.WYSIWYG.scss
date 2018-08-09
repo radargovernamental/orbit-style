@@ -6,6 +6,7 @@
   .ql-container.ql-snow {
     border: 1px solid #CFD8DC;
     border-top: none;
+    border-radius: 0 0 5px 5px;
 
     .ql-editor {
       padding: 12px $base-spacing-unit $base-spacing-unit $base-spacing-unit;
@@ -18,6 +19,7 @@
     border: 1px solid #CFD8DC;
     border-bottom: none;
     padding: 14px 12px 12px 12px !important;
+    border-radius: 5px 5px 0 0;
 
     button {
       width: 32px;
