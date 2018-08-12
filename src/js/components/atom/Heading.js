@@ -15,6 +15,12 @@ const Heading = (props) => {
     danger,
     warning,
     hidden,
+    upper,
+    lower,
+    capitalize,
+    center,
+    left,
+    right,
     ...otherProps
   } = props;
 
@@ -31,6 +37,12 @@ const Heading = (props) => {
     [css['c-heading--danger']]: danger,
     [css['c-heading--warning']]: warning,
     [css['c-heading--hidden']]: hidden,
+    [css['c-heading--upper']]: upper,
+    [css['c-heading--lower']]: lower,
+    [css['c-heading--capitalize']]: capitalize,
+    [css['c-heading--center']]: center,
+    [css['c-heading--left']]: left,
+    [css['c-heading--right']]: right,
   });
 
   const classes = `${tmpClasses} ${className}`;
@@ -65,6 +77,12 @@ Heading.propTypes = {
   warning: PropTypes.bool,
   danger: PropTypes.bool,
   hidden: PropTypes.bool,
+  upper: PropTypes.bool,
+  lower: PropTypes.bool,
+  capitalize: PropTypes.bool,
+  center: PropTypes.bool,
+  left: PropTypes.bool,
+  right: PropTypes.bool,
 };
 
 Heading.defaultProps = {
@@ -75,6 +93,12 @@ Heading.defaultProps = {
   danger: false,
   warning: false,
   hidden: false,
+  upper: false,
+  lower: false,
+  capitalize: false,
+  center: false,
+  left: false,
+  right: false,
 };
 
 export default Heading;

@@ -29,6 +29,11 @@
     border: 0;
   }
 
+  & > .c-form__switch-value {
+    padding-left: 50px;
+    vertical-align: middle;
+  }
+
   & > .c-form__switch-value:before {
     border-radius: 50%;
     border: 2px solid #fff;
@@ -66,7 +71,7 @@
     transition: $global-transition all ease-in-out;
     position: absolute;
     left: .2 * $form-switch-size-md;
-    top: .12 * $form-switch-size-md;
+    top: .11 * $form-switch-size-md;
   }
 
   &--lg {

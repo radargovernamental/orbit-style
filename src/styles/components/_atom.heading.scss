@@ -53,6 +53,25 @@
     position: relative;
   }
 
+  &--upper {
+    text-transform: uppercase;
+  }
+  &--lower {
+    text-transform: lowercase;
+  }
+  &--capitalize {
+    text-transform: capitalize;
+  }
+  &--left {
+    text-align: left;
+  }
+  &--right {
+    text-align: right;
+  }
+  &--center {
+    text-align: center;
+  }
+
   &__sr-only {
     position: absolute;
     width: 1px;

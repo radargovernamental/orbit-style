@@ -378,7 +378,14 @@ storiesOf('UI/Heading', module)
   .add('H4', () => <Heading level={4} title="Hello World">Hello World</Heading>)
   .add('H5', () => <Heading level={5} title="Hello World">Hello World</Heading>)
   .add('H6', () => <Heading level={6} title="Hello World">Hello World</Heading>)
-  .add('with color', () => <Heading level={1} title="Hello World" primary>Hello World</Heading>);
+  .add('with color', () => <Heading level={1} title="Hello World" primary>Hello World</Heading>)
+  .add('with hidden text', () => <Heading level={1} title="Hello World" hidden>Hello World</Heading>)
+  .add('with left alignment', () => <Heading level={1} title="Hello World" left>Hello World</Heading>)
+  .add('with center alignment', () => <Heading level={1} title="Hello World" center>Hello World</Heading>)
+  .add('with right alignment', () => <Heading level={1} title="Hello World" right>Hello World</Heading>)
+  .add('with uppercase', () => <Heading level={1} title="Hello World" upper>Hello World</Heading>)
+  .add('with lowercase', () => <Heading level={1} title="Hello World" lower>Hello World</Heading>)
+  .add('with capitalize', () => <Heading level={1} title="Hello World" capitalize>Hello World</Heading>);
 
 storiesOf('UI/Loading/Reading', module)
   .addDecorator(checkA11y)
