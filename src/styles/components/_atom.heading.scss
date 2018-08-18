@@ -1,0 +1,86 @@
+@import '../settings/colors';
+@import '../settings/type';
+
+.c-heading {
+  color: $color-heading;
+  font-family: $font-heading;
+  line-height: $line-height-medium;
+  margin: 1em 0;
+
+  &__1 {
+    font-size: 1.6rem;
+  }
+
+  &__2 {
+    font-size: 1.4rem;
+  }
+
+  &__3 {
+    font-size: 1.25rem;
+  }
+
+  &__4 {
+    font-size: 1.2rem;
+  }
+
+  &__5 {
+    font-size: 1rem;
+  }
+
+  &__6 {
+    font-size: .9rem;
+  }
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--success {
+    color: $color-success;
+  }
+
+  &--warning {
+    color: $color-warning;
+  }
+
+  &--danger {
+    color: $color-danger;
+  }
+
+  &--hidden {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+  &--lower {
+    text-transform: lowercase;
+  }
+  &--capitalize {
+    text-transform: capitalize;
+  }
+  &--left {
+    text-align: left;
+  }
+  &--right {
+    text-align: right;
+  }
+  &--center {
+    text-align: center;
+  }
+
+  &__sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+}
+

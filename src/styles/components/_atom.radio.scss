@@ -1,0 +1,98 @@
+@import '../settings/settings';
+
+%c-form__radio--valid {
+  border-color: $color-primary;
+  background: radial-gradient(ellipse at center, $color-primary 60%, #fff 60%);
+}
+
+%c-form__radio--error {
+  border-color: $color-danger !important;
+  background: radial-gradient(ellipse at center, $color-danger 60%, #fff 60%) !important;
+}
+
+.c-form__radio {
+  color: $form-color-text;
+  position: relative;
+  font-family: $font-text;
+
+  & > input {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    left: -1px;
+    top: -1px;
+    z-index: -1;
+  }
+
+  & > .c-form__radio-value:before {
+    background: #fff;
+    border-radius: $form-radio-size-md;
+    border: 2px solid $form-color-radio-border;
+    content: '';
+    display: inline-block;
+    font-size: $font-size-md;
+    margin: 0 ($form-radio-size-md / 2) 0 0;
+    height: $form-radio-size-md;
+    transition:  all ease-in-out;
+    vertical-align: -4px;
+    width: $form-radio-size-md;
+  }
+
+  &--lg {
+    & > .c-form__radio-value:before {
+      width: $form-radio-size-lg;
+      height: $form-radio-size-lg;
+      border-radius: $form-radio-size-lg;
+    }
+    font-size: $font-size-lg;
+  }
+  &--sm {
+    & > .c-form__radio-value:before {
+      width: $form-radio-size-sm;
+      height: $form-radio-size-sm;
+      border-radius: $form-radio-size-sm;
+      vertical-align: -2px;
+    }
+    font-size: $font-size-sm;
+  }
+  &--xs {
+    & > .c-form__radio-value:before {
+      width: $form-radio-size-xs;
+      height: $form-radio-size-xs;
+      border-radius: $form-radio-size-xs;
+      vertical-align: -1px;
+    }
+    font-size: $font-size-sm;
+  }
+
+  &:hover, &:focus {
+    outline: none;
+    &:before {
+      @extend %c-form__radio--valid;
+    }
+  }
+
+  &--valid {
+    @extend %c-form__radio--valid;
+  }
+
+  &--error {
+    & > .c-form__radio-value:before {
+      @extend %c-form__radio--error;
+    }
+  }
+
+  & > input:checked ~ .c-form__radio-value:before {
+    @extend %c-form__radio--valid;
+  }
+
+  &:disabled {
+    border-color: lighten($color_text, 30%);
+    background: lighten($color_text, 80%);
+    opacity: .4;
+  }
+
+  & > input:focus ~ .c-form__radio-value:before {
+    border-color: $color-primary;
+  }
+}

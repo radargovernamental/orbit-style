@@ -1,0 +1,64 @@
+@import '../settings/settings';
+
+.c-badge {
+  background: $color-text-light;
+  border: none;
+  border-radius: 1em;
+  color: #fff;
+  display: inline-block;
+  font-family: $font-text;
+  font-size: .7em;
+  font-weight: 500;
+  line-height: 1em;
+  padding: 0.3em .5em;
+  vertical-align: 0.2em;
+
+  &--pill {
+    border-radius: 1em;
+    padding: 0.3em 0.5em;
+  }
+
+  &--primary {
+    color: $color-white;
+    background: $color-primary;
+    border-color: $color-primary;
+
+    &:hover {
+      background: darken($color-primary, 5%);
+      border-color: darken($color-primary, 5%);
+    }
+  }
+
+  &--success {
+    color: $color-white;
+    background: $color-success;
+    border-color: $color-success;
+
+    &:hover {
+      background: darken($color-success, 5%);
+      border-color: darken($color-success, 5%);
+    }
+  }
+
+  &--warning {
+    color: $color-white;
+    background: $color-warning;
+    border-color: $color-warning;
+
+    &:hover {
+      background: darken($color-warning, 5%);
+      border-color: darken($color-warning, 5%);
+    }
+  }
+
+  &--danger {
+    color: $color-white;
+    background: $color-danger;
+    border-color: $color-danger;
+
+    &:hover {
+      background: darken($color-danger, 5%);
+      border-color: darken($color-danger, 5%);
+    }
+  }
+}

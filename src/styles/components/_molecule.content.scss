@@ -1,0 +1,53 @@
+@import '../tools/mq';
+@import '../settings/settings';
+
+:global {
+  html, body {
+    height: 100%;
+  }
+}
+
+.c-content {
+  align-items: stretch;
+  background: $content-background;
+  border: $content-border;
+  box-sizing: border-box;
+  color: $color-text;
+  font-family: $font-text;
+  height: 100%;
+  padding: $base-spacing-unit;
+  text-align: left;
+  width: 100%;
+
+  &--with-sidebar {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  &__main {
+    padding: $base-spacing-unit;
+    width: 100%;
+    flex: 1;
+  }
+
+  &__sidebar {
+    background: $sidebar-background;
+    border: $sidebar-border;
+    border-bottom: 0;
+    border-top: 0;
+    max-width: $content-sidebar-width;
+    padding: $base-spacing-unit;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  @include mq($until: tablet) {
+    padding: 0;
+
+    &__main {
+      padding: 0;
+    }
+  }
+}

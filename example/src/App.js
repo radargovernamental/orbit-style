@@ -1,13 +1,25 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-import ExampleComponent from 'design-system'
+import {
+  Switch,
+} from 'orbit-style';
 
-export default class App extends Component {
-  render () {
+import FormExample from './examples/FormExample';
+
+export default class App extends React.Component {
+  state = {
+    checked: false,
+  };
+
+  render() {
+    const { checked } = this.state;
     return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
+      <div style={{ margin: '200px' }}>
+        <Switch
+          checked={checked}
+          onChange={e => this.setState({ checked: e.target.checked })}
+        />
       </div>
-    )
+    );
   }
 }

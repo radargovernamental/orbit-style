@@ -1,0 +1,29 @@
+@import '../settings/settings';
+@import '../tools/tools';
+
+.c-form__item {
+  position: relative;
+  width: 100%;
+
+  @for $i from 1 to ($form-columns + 1) {
+    &--col-lg-#{$i} {
+      width: percentage((1 / $form-columns) * $i);
+    }
+
+    &--col-md-#{$i} {
+      @include mq($until: desktop) {
+        width: percentage((1 / $form-columns) * $i);
+      }
+    }
+
+    &--col-sm-#{$i} {
+      @include mq($until: tablet) {
+        width: percentage((1 / $form-columns) * $i) !important;
+      }
+    }
+
+    @include mq($until: mobile) {
+      width: 100% !important;
+    }
+  }
+}

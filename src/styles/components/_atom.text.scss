@@ -1,0 +1,59 @@
+@import '../settings/colors';
+@import '../settings/type';
+
+
+.c-text {
+  color: $color-text;
+  font-size: $font-size-md;
+  font-family: $font-text;
+  line-height: $line-height-base;
+  margin: 1em 0;
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--success {
+    color: $color-success;
+  }
+
+  &--warning {
+    color: $color-warning;
+  }
+
+  &--danger {
+    color: $color-danger;
+  }
+
+  &--white {
+    color: #fff;
+  }
+
+  &--ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--justify {
+    text-align: justify;
+  }
+
+  &--inline {
+    display: inline-block;
+    margin: 0;
+  }
+}
+

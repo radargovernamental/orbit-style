@@ -1,0 +1,88 @@
+@import '../settings/settings';
+
+%c-form__file-select--valid {
+  border-color: $form-color-border-normal;
+  background-color: $form-color-background-normal;
+}
+
+%c-form__file-select--error {
+  border-color: $color-danger !important;
+  background-color: lighten($color-danger, 48%);
+}
+
+.c-form__element {
+  display: block;
+}
+
+.c-form__file-select {
+  background: $form-color-background-normal;
+  border: 1px solid $form-color-border-normal;
+  border-radius: $form-border-radius-md;
+  box-sizing: border-box;
+  color: $form-color-text;
+  font-family: $font-text;
+  font-size: $font-size-md;
+  margin: 0;
+  padding: $form-padding-vertical-md 50px $form-padding-vertical-md $form-padding-horizontal-md;
+  transition: $global-transition all ease-in-out;
+  width: 100%;
+  position: relative;
+
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE0cHgiIHZpZXdCb3g9IjAgMCAxNiAxNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5maWxlLWFkZDwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJEZXNrdG9wIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJFZGlhci1Eb2N1bWVudG8iIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04MTcuMDAwMDAwLCAtNzE2LjAwMDAwMCkiIGZpbGw9IiMwMDlGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+ICAgICAgICAgICAgPGcgaWQ9ImZpbGUtYWRkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MTcuMDAwMDAwLCA3MTYuMDAwMDAwKSI+ICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNCw4IEwxNCwxMiBMMiwxMiBMMiw4IEwwLDggTDAsMTMgQzYuNzYzNTM3NTFlLTE3LDEzLjU1MjI4NDcgMC40NDc3MTUyNSwxNCAxLDE0IEwxNSwxNCBDMTUuNTUyMjg0NywxNCAxNiwxMy41NTIyODQ3IDE2LDEzIEwxNiw4IEwxNCw4IFoiIGlkPSJTaGFwZSI+PC9wYXRoPiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIHBvaW50cz0iNyA4IDkgOCA5IDUgMTIgNSAxMiAzIDkgMyA5IDAgNyAwIDcgMyA0IDMgNCA1IDcgNSI+PC9wb2x5Z29uPiAgICAgICAgICAgIDwvZz4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==);
+  background-size: 16px 14px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) 50%;
+
+  &--lg {
+    padding: $form-padding-vertical-lg $form-padding-horizontal-lg;
+    font-size: $font-size-lg;
+    border-radius: $form-border-radius-lg;
+  }
+  &--sm {
+    padding: $form-padding-vertical-sm $form-padding-horizontal-sm;
+    font-size: $font-size-sm;
+    border-radius: $form-border-radius-sm;
+  }
+  &--xs {
+    padding: $form-padding-vertical-xs $form-padding-horizontal-xs;
+    font-size: $font-size-xs;
+    border-radius: $form-border-radius-xs;
+  }
+
+  &:hover, &:focus {
+    outline: none;
+    background-color: $form-color-background-hover;
+    border-color: $form-color-border-hover;
+  }
+
+  &.c-form__file-select--value {
+    background-color: $form-color-background-has-value;
+  }
+
+  &--valid {
+    @extend %c-form__file-select--valid;
+  }
+
+  &--error {
+    @extend %c-form__file-select--error;
+  }
+
+  &:disabled {
+    border-color: lighten($color_text, 30%);
+    background-color: lighten($color_text, 80%);
+    opacity: .4;
+  }
+
+  &__remove {
+    position: absolute;
+    right: 20px;
+    top: -10px;
+    background: $color-danger;
+    font-size: .875rem;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    padding: 5px 15px;
+  }
+}

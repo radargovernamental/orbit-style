@@ -1,0 +1,27 @@
+/**
+ * Number of columns for form grid
+ */
+
+$form-columns: 12 !default;
+
+$form-color-background-normal: #fff;
+$form-color-background-hover: #F2FAFF;
+$form-color-background-focus: #BEE6FF;
+$form-color-background-active: #BEE6FF;
+$form-color-background-has-value: #FCFDFF;
+
+$form-color-label-text: #8196a0;
+$form-color-label-text-active: $color-primary;
+$form-color-text: #546E7A;
+
+$form-color-border-normal: #ECEFF1;
+$form-color-border-hover: #BEE6FF;
+$form-color-border-focus: #BEE6FF;
+$form-color-border-active: #BEE6FF;
+
+$form-color-check-border: #CFD8DC;
+$form-color-radio-border: #CFD8DC;
+
+$form-color-tag-background: $color-primary;
+$form-color-tag-text: #fff;
+

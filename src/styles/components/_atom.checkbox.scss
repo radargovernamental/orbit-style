@@ -1,0 +1,99 @@
+@import '../settings/settings';
+
+%c-form__checkbox--valid {
+  border-color: $color-primary;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+) $color-primary no-repeat center center;
+  background-size: 60%;
+}
+
+%c-form__checkbox--error {
+  border-color: $color-danger !important;
+  background: $color-danger;
+}
+
+.c-form__checkbox {
+  color: $form-color-text;
+  position: relative;
+  font-family: $font-text;
+
+  & > input {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    left: -1px;
+    top: -1px;
+    z-index: -1;
+  }
+
+  & > .c-form__checkbox-value:before {
+    border-radius: 3px;
+    border: 2px solid $form-color-check-border;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+) #fff no-repeat center center;
+    background-size: 0;
+    content: '';
+    display: inline-block;
+    font-size: $font-size-md;
+    height: $form-checkbox-size-md;
+    margin: 0 ($form-checkbox-size-md / 2) 0 0;
+    transition: $global-transition all ease-in-out;
+    width: $form-checkbox-size-md;
+    vertical-align: -3px;
+  }
+
+  &--lg {
+    & > .c-form__checkbox-value:before {
+      width: $form-checkbox-size-lg;
+      height: $form-checkbox-size-lg;
+    }
+    font-size: $font-size-lg;
+  }
+  &--sm {
+    & > .c-form__checkbox-value:before {
+      width: $form-checkbox-size-sm;
+      height: $form-checkbox-size-sm;
+      vertical-align: -4px;
+    }
+    font-size: $font-size-sm;
+  }
+  &--xs {
+    & > .c-form__checkbox-value:before {
+      width: $form-checkbox-size-xs;
+      height: $form-checkbox-size-xs;
+      vertical-align: -3px;
+    }
+    font-size: $font-size-sm;
+  }
+
+  &:hover, &:focus {
+    outline: none;
+    &:before {
+      @extend %c-form__checkbox--valid;
+    }
+  }
+
+  &--valid {
+    @extend %c-form__checkbox--valid;
+  }
+
+  &--error {
+    & > .c-form__checkbox-value:before {
+      @extend %c-form__checkbox--error;
+    }
+  }
+
+  & > input:checked ~ .c-form__checkbox-value:before {
+    @extend %c-form__checkbox--valid;
+  }
+
+  &:disabled {
+    border-color: lighten($color_text, 30%);
+    background: lighten($color_text, 80%);
+    opacity: .4;
+  }
+
+
+  & > input:focus ~ .c-form__checkbox-value:before {
+    border-color: $color-primary;
+  }
+
+}

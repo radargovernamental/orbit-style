@@ -1,0 +1,103 @@
+@import '../settings/settings';
+@import '../tools/mq';
+
+.c-timeline {
+  &__item {
+    background: $timeline-background-default;
+    padding: 0 $base-spacing-unit 16px 60px;
+    position: relative;
+
+    &:before {
+      background: $timeline-line-color;
+      bottom: -30px;
+      content: '';
+      display: inline-block;
+      left: 40px;
+      position: absolute;
+      top: 0;
+      width: 1px;
+    }
+
+    &:first-child:before {
+      top: $base-spacing-unit + 10px;
+    }
+
+    &:last-child:before {
+      bottom: auto;
+      height: $base-spacing-unit + 10px;
+    }
+
+    &:first-child:last-child:before {
+      display: none;
+    }
+
+    &:after {
+      background: #fff;
+      border: 1px solid $timeline-line-color;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: 11px;
+      left: 35px;
+      position: absolute;
+      top: $base-spacing-unit + 10px;
+      width: 11px;
+    }
+
+
+    &__content {
+      display: block;
+      padding: $base-spacing-unit 0;
+    }
+
+    &__date {
+      display: inline-block;
+      color: $color-text;
+      font-family: $font-text;
+      font-weight: 500;
+      font-size: .875rem;
+      left: 7px + $base-spacing-unit;
+      top: 32px;
+      position: absolute;
+
+      @include mq($until: tablet) {
+        left: $base-spacing-unit + 4px;
+        top: 8px;
+        font-size: .6rem;
+      }
+    }
+  }
+
+  &--with-date {
+    .c-timeline__item {
+      padding-left: 130px + $base-spacing-unit;
+
+      @include mq($until: tablet) {
+        padding-left: $base-spacing-unit + 5px;
+      }
+
+      &:before {
+        left: 110px + $base-spacing-unit;
+
+        @include mq($until: tablet) {
+          left: 10px;
+        }
+      }
+      &:after {
+        left: 105px + $base-spacing-unit;
+
+        @include mq($until: tablet) {
+          left: 5px;
+        }
+      }
+    }
+  }
+
+  &--alternate-rows {
+    color: #f00;
+
+    .c-timeline__item:nth-child(2n) {
+      background: $timeline-background-alternate;
+    }
+  }
+}

@@ -19,3 +19,9 @@ dist
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.idea
+.yarn.lock
+coverage
+__snapshots__
+*.js.snap

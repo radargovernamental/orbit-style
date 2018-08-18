@@ -1,0 +1,113 @@
+@import '../settings/settings';
+
+.c-tag-extension {
+  background: lighten($color-text-light, 30%);
+  border: none;
+  border-radius: $tag-border-radius-md;
+  color: darken($color-text-light, 10%);
+  display: inline-block;
+  font-family: $font-text;
+  font-size: $font-size-sm;
+  font-weight: 400;
+  line-height: 1.5em;
+  padding: $tag-padding-vertical-md $tag-padding-horizontal-md;
+
+  &--with-action {
+    padding-right: 35px + $tag-padding-horizontal-xs;
+    position: relative;
+  }
+
+  &__action {
+    background: none;
+    border: 0;
+    border-left: 1px solid rgba(255, 255, 255, .7);
+    border-radius: 0 $tag-border-radius-md $tag-border-radius-md 0;
+    bottom: 0;
+    color: #fff;
+    font-size: 1.2em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover, &:focus {
+      outline: none;
+      background: darken($color-text-light, 20%);
+    }
+  }
+
+  &--primary {
+    color: darken($color-primary, 10%);
+    background: lighten($color-primary, 30%);
+    border-color: $color-primary;
+
+    &:hover {
+      background: lighten($color-primary, 32%);
+      border-color: darken($color-primary, 5%);
+    }
+  }
+
+  &--success {
+    color: darken($color-success, 10%);
+    background: lighten($color-success, 30%);
+    border-color: $color-success;
+
+    &:hover {
+      background: lighten($color-success, 32%);
+      border-color: darken($color-success, 5%);
+    }
+  }
+
+  &--warning {
+    color: darken($color-warning, 10%);
+    background: lighten($color-warning, 30%);
+    border-color: $color-warning;
+
+    &:hover {
+      background: lighten($color-warning, 32%);
+      border-color: darken($color-warning, 5%);
+    }
+  }
+
+  &--danger {
+    color: darken($color-danger, 10%);
+    background: lighten($color-danger, 30%);
+    border-color: $color-danger;
+
+    &:hover {
+      background: lighten($color-danger, 32%);
+      border-color: darken($color-danger, 5%);
+    }
+  }
+
+  // Sizes
+  &--lg {
+    padding: $tag-padding-vertical-lg $tag-padding-horizontal-lg;
+    border-radius: $tag-border-radius-lg;
+    font-size: $font-size-lg;
+
+    &.c-tag--with-action {
+      padding-right: 35px + $tag-padding-horizontal-lg;
+    }
+  }
+  &--sm {
+    padding: $tag-padding-vertical-sm $tag-padding-horizontal-sm;
+    border-radius: $tag-border-radius-sm;
+    font-size: $font-size-sm;
+    &.c-tag--with-action {
+      padding-right: 35px + $tag-padding-horizontal-sm;
+    }
+  }
+  &--xs {
+    padding: $tag-padding-vertical-xs $tag-padding-horizontal-xs;
+    border-radius: $tag-border-radius-xs;
+    font-size: $font-size-xs;
+    &.c-tag--with-action {
+      padding-right: 35px + $tag-padding-horizontal-xs;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import '../settings/settings';
+@import '../tools/tools';
+
+.c-modal {
+  background: $modal-background-color;
+  border: $modal-border;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: $color-text;
+  font-family: $font-text;
+  left: 50%;
+  max-height: 50vh;
+  max-width: 600px;
+  overflow-y: auto;
+  padding: $base-spacing-unit;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 9000;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include mq($until: desktop) {
+    max-height: 95vh;
+  }
+
+  @include mq($until: tablet) {
+    left: 20px;
+    max-width: 100%;
+    right: 20px;
+    top: 80px;
+    transform: translate(0);
+  }
+
+  &__header {
+    color: $color-heading;
+    font-size: $font-size-md;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    position: relative;
+
+    p {
+      font-size: .9rem;
+    }
+  }
+
+  &__footer {
+    margin-top: 20px;
+    text-align: right;
+  }
+}
+
+.c-modal-overlay {
+  background: $modal-overlay-background-color;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}

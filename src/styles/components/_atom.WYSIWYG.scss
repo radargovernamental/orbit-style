@@ -1,0 +1,45 @@
+@import '../settings/settings';
+
+:global {
+  @import '~react-quill/dist/quill.snow.css';
+
+  .ql-container.ql-snow {
+    border: 1px solid #CFD8DC;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+
+    .ql-editor {
+      padding: 12px $base-spacing-unit $base-spacing-unit $base-spacing-unit;
+      color: #607D8B;
+      font-size: 1rem;
+      font-family: $font-text;
+    }
+  }
+  .ql-toolbar.ql-snow {
+    border: 1px solid #CFD8DC;
+    border-bottom: none;
+    padding: 14px 12px 12px 12px !important;
+    border-radius: 5px 5px 0 0;
+
+    button {
+      width: 32px;
+      height: 32px;
+      padding: 6px 12px !important;
+
+      .ql-stroke {
+        stroke: #607D8B;
+      }
+      .ql-fill {
+        fill: #607D8B;
+      }
+    }
+
+    button + button {
+      margin-left: 5px;
+    }
+
+    .ql-formats {
+      margin-right: $base-spacing-unit;
+    }
+  }
+}

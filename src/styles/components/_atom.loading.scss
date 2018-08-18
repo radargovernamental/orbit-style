@@ -1,0 +1,90 @@
+@import '../settings/settings';
+
+.c-loading {
+  color: $color-text;
+  display: inline-block;
+  font-family: $font-text;
+  height: 2.7em;
+  text-align: center;
+  min-width: 2em;
+
+  & > * {
+    font-size: .7em;
+    margin-top: 10px;
+  }
+
+  &:before {
+    content: " ";
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 3px auto;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: $color-text transparent $color-text transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+
+  &--white:before {
+    border-color: #fff transparent #fff transparent;
+  }
+  &--primary:before {
+    border-color: $color-primary transparent $color-primary transparent;
+  }
+  &--success:before {
+    border-color: $color-success transparent $color-success transparent;
+  }
+  &--warning:before {
+    border-color: $color-warning transparent $color-warning transparent;
+  }
+  &--danger:before {
+    border-color: $color-danger transparent $color-danger transparent;
+  }
+
+  &--lg {
+    height: 3em;
+    width: 3em;
+    &:before {
+      height: 2.5em;
+      width: 2.5em;
+    }
+  }
+
+  &--md {
+    height: 2em;
+    width: 2em;
+    &:before {
+      height: 1.5em;
+      width: 1.5em;
+    }
+  }
+
+  &--sm {
+    height: 1em;
+    width: 1.4em;
+    &:before {
+      border-width: 4px;
+      height: 1em;
+      width: 1em;
+    }
+  }
+
+  &--xs {
+    height: 1em;
+    width: 1em;
+    &:before {
+      border-width: 3px;
+      height: .8em;
+      width: .8em;
+    }
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

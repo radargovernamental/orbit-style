@@ -1,0 +1,24 @@
+@import '../settings/settings';
+
+.c-form__select {
+  color: $color-text;
+
+  & > div {
+    /** Container **/
+    & > div {
+      //background: $form-color-background-normal;
+      border-color: $form-color-border-normal;
+      border-radius: 0;
+      color: $form-color-text;
+      font-family: $font-text;
+      font-size: $font-size-md;
+      //padding-top: 5px;
+      box-shadow: none;
+
+      &:hover {
+        border-color: $form-color-border-hover !important;
+        background-color: $form-color-background-hover !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/**
+ * Following atomic design - http://bradfrost.com/blog/post/atomic-web-design/
+ */
+
+
+/**
+ * ATOMS
+ * Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form
+ * label, an input or a button.
+ */
+
+@import 'atom.blockquote';
+@import 'atom.button';
+@import 'atom.checkbox';
+@import 'atom.form__label';
+@import 'atom.heading';
+@import 'atom.label';
+@import 'atom.radio';
+@import 'atom.row';
+@import 'atom.select';
+@import 'atom.text';
+@import 'atom.textarea';
+@import 'atom.textfield';
+
+
+/**
+ * MOLECULES
+ * Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound. These molecules
+ * take on their own properties and serve as the backbone of our design systems.
+ */
+
+@import 'molecule.form__container';
+@import 'molecule.form__field';
+@import 'molecule.form__footer';
+@import 'molecule.form__item';
+@import 'molecule.form__row';
+
+/**
+ * ORGANISMS
+ * Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.
+ */
+
+
+/**
+ * TEMPLATES
+ * At the template stage, we break our chemistry analogy to get into language that makes more sense to our clients and
+ * our final output. Templates consist mostly of groups of organisms stitched together to form pages. It’s here where
+ * we start to see the design coming together and start seeing things like layout in action.
+ */
+
+
+/**
+ * PAGES
+ * Pages are specific instances of templates. Here, placeholder content is replaced with real representative content to
+ * give an accurate depiction of what a user will ultimately see.
+ */

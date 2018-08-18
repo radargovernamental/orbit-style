@@ -1,0 +1,8 @@
+@import '../settings/settings';
+
+.c-form__label {
+  color: $form-color-label-text;
+  font-family: $font-text;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
