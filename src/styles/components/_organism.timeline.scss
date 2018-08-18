@@ -1,4 +1,5 @@
 @import '../settings/settings';
+@import '../tools/mq';
 
 .c-timeline {
   &__item {
@@ -58,6 +59,12 @@
       left: 7px + $base-spacing-unit;
       top: 32px;
       position: absolute;
+
+      @include mq($until: tablet) {
+        left: $base-spacing-unit + 4px;
+        top: 8px;
+        font-size: .6rem;
+      }
     }
   }
 
@@ -65,11 +72,23 @@
     .c-timeline__item {
       padding-left: 130px + $base-spacing-unit;
 
+      @include mq($until: tablet) {
+        padding-left: $base-spacing-unit + 5px;
+      }
+
       &:before {
         left: 110px + $base-spacing-unit;
+
+        @include mq($until: tablet) {
+          left: 10px;
+        }
       }
       &:after {
         left: 105px + $base-spacing-unit;
+
+        @include mq($until: tablet) {
+          left: 5px;
+        }
       }
     }
   }

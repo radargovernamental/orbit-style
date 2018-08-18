@@ -11,6 +11,8 @@
   border-collapse: collapse;
   line-height: 1.5em;
   background: $table-background-default;
+  table-layout: fixed;
+  word-wrap: break-word;
 
   @include mq($until: tablet) {
     display: block;

@@ -92,6 +92,8 @@ class Select extends React.Component {
       debounce,
       disabled,
       required,
+      noOptionsMessage,
+      firstMessage,
       ...otherProps
     } = this.props;
 
@@ -122,6 +124,7 @@ class Select extends React.Component {
       styles: customStyles(isFormBox),
       value,
       isDisabled: disabled,
+      noOptionsMessage: ({ inputValue }) => (inputValue && inputValue.length ? noOptionsMessage() : firstMessage()),
       ...otherProps,
     };
 
@@ -180,6 +183,7 @@ Select.propTypes = {
   debounce: PropTypes.number,
   loadingMessage: PropTypes.func,
   noOptionsMessage: PropTypes.func,
+  firstMessage: PropTypes.func,
   disabled: PropTypes.bool,
   required: PropTypes.bool,
 };
@@ -201,6 +205,7 @@ Select.defaultProps = {
   debounce: 275, // "zGolden ratio" value for typing
   loadingMessage: () => 'Carregando..',
   noOptionsMessage: () => 'Não encontrado.',
+  firstMessage: () => 'Digite para buscar',
   disabled: false,
   required: false,
 };

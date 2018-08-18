@@ -33,6 +33,14 @@ class Example extends Component {
 }
 ```
 
+3. Check components in storybook
+
+```jsx
+cd example
+yarn install
+yarn storybook
+```
+
 ----
 
 ## Concept
@@ -50,7 +58,7 @@ Considering our premise, we mixed three main concepts: Atomic Design, ITCSS and 
 
 ### ITCSS
 
-ITCSS is already quite known for its robustness and scalability regarding css. To adapt for our premise, here is how we did it:
+ITCSS is already quite known for its robustness and scalability regarding css. To adapt to our premise, here is what we did:
 
 - Settings: stores variables, colors and sizes
 - Tools: a series of mixins
@@ -66,7 +74,7 @@ This allow us to accomplish premises 1, 2, 3 and 5.
 
 ### Atomic Design
 
-Following http://bradfrost.com/blog/post/atomic-web-design/ idea and considering we already have your "components" directory for styles, we now have create a components directory in `/src/js/components`. This directory is separated as: atom, molecule and organism, where:
+Following http://bradfrost.com/blog/post/atomic-web-design/ idea and considering we already have our "components" directory for styles, we now have create a components directory in `/src/js/components`. This directory is structured as: atom, molecule and organism, where:
 
 - Atom: all unit styles
 - Molecule: two or more atoms together, or something that might hold two atoms (an element container, for example)
@@ -76,7 +84,7 @@ Atomic Design gives us a series of new approaches to work as we want with our co
 
 This allow us to accomplish premises 2, 5. To approach premise 6, it would be too complex for users to know what's an atom/molecule/organism, so we export them as their own name. Therefore, instead of using `import Button from 'orbit-style/atom'`, we just use `import { Button } from 'orbit-style'`.
 
-Also, to be sure 6 is achieved, we created all components using StoryBooks, which can be access in `/example` running `yarn storybook`.
+Also, to be sure 6 is achieved, we created all components using StoryBooks, which can be accessed in `/example` running `yarn storybook`.
 
 ### BEM
 
@@ -93,6 +101,7 @@ The only remaining premise is 4. In order to follow it, complex components such 
 - [react-flexbox-grid](https://github.com/roylee0704/react-flexbox-grid) for flex grid
 - [react-input-mask](https://github.com/sanniassin/react-input-mask) for input masking
 - [react-modal](https://github.com/reactjs/react-modal) for custom modals
+- [react-quill](https://github.com/zenoamaro/react-quill) for WYSIWYG
 - [react-select](https://github.com/JedWatson/react-select) for custom selects
 
 All credits for them, they did an awesome work :)

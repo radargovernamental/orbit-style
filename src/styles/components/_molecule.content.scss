@@ -1,3 +1,4 @@
+@import '../tools/mq';
 @import '../settings/settings';
 
 :global {
@@ -40,5 +41,13 @@
     padding: $base-spacing-unit;
     box-sizing: border-box;
     width: 100%;
+  }
+
+  @include mq($until: tablet) {
+    padding: 0;
+
+    &__main {
+      padding: 0;
+    }
   }
 }
