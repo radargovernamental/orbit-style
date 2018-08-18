@@ -2,7 +2,7 @@
 
 > Orbit Style is Radar Governamental's Design System, made with Sass and React
 
-[![NPM](https://img.shields.io/npm/v/orbit-style.svg)](https://www.npmjs.com/package/orbit-style) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@radargovernamental/orbit-style.svg)](https://www.npmjs.com/package/orbit-style) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
