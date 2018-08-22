@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 
 import '@storybook/addon-storysource/register';
@@ -19,6 +20,7 @@ import {
   EmptyModal,
   Loading,
   Main,
+  Message,
   Heading,
   Row,
   Sidebar,
@@ -386,6 +388,29 @@ storiesOf('UI/Heading', module)
   .add('with uppercase', () => <Heading level={1} title="Hello World" upper>Hello World</Heading>)
   .add('with lowercase', () => <Heading level={1} title="Hello World" lower>Hello World</Heading>)
   .add('with capitalize', () => <Heading level={1} title="Hello World" capitalize>Hello World</Heading>);
+
+const Icon = () => (
+  <svg width={16} height={14}>
+    <path
+      d="M15.216 12.529L8.882.654a1 1 0 0 0-1.765 0L.784 12.529A1 1 0 0 0 1.667 14h12.667a1 1 0 0 0 .882-1.471zM8 12a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm1-3H7V5h2v4z"
+      fill="#FB8686"
+      fillRule="nonzero"
+    />
+  </svg>
+);
+
+storiesOf('UI/Message', module)
+  .addDecorator(checkA11y)
+  .add('with text', () => <Message>Hello World</Message>)
+  .add('with primary color', () => <Message primary>Hello World</Message>)
+  .add('with success color', () => <Message success>Hello World</Message>)
+  .add('with danger color', () => <Message danger>Hello World</Message>)
+  .add('with warning color', () => <Message warning>Hello World</Message>)
+  .add('with gray color', () => <Message gray>Hello World</Message>)
+  .add('with close button', () => <Message close={<Button xs danger>Close</Button>}>Hello World</Message>)
+  .add('with icon', () => <Message icon={<Icon />}>Hello World</Message>)
+  .add('with icon and close button', () => <Message icon={<Icon />} close={<Button xs danger>Close</Button>}>Hello World</Message>)
+  .add('with children', () => (<Message>Hello World <Button xs>Button</Button></Message>));
 
 storiesOf('UI/Loading/Reading', module)
   .addDecorator(checkA11y)
