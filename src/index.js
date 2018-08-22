@@ -35,6 +35,7 @@ export WYSIWYG from './js/components/atom/WYSIWYG';
 export AlertModal from './js/components/organism/AlertModal';
 export ConfirmModal from './js/components/organism/ConfirmModal';
 export EmptyModal from './js/components/organism/EmptyModal';
+export Message from './js/components/organism/Message';
 export Timeline from './js/components/organism/Timeline';
 export TimelineItem from './js/components/molecule/TimelineItem';
 export TimelineContent from './js/components/atom/TimelineContent';

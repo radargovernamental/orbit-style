@@ -1,0 +1,64 @@
+@import '../settings/colors';
+@import '../settings/type';
+
+
+.c-message {
+  color: $color-text;
+  font-size: $font-size-md;
+  font-family: $font-text;
+  line-height: $line-height-base;
+  margin: 1em 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px #eee;
+  padding: 12px 18px;
+  display: flex;
+  background: #fff;
+
+
+  &--primary {
+    border-color: $color-primary;
+  }
+
+  &--success {
+    border-color: $color-success;
+  }
+
+  &--warning {
+    border-color: $color-warning;
+  }
+
+  &--danger {
+    border-color: $color-danger;
+  }
+
+  &--gray {
+    border-color: $color-text-light;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    min-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+  }
+
+  &__close {
+    flex-shrink: 0;
+    min-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+  }
+}
+
