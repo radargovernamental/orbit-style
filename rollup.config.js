@@ -4,7 +4,7 @@ import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 import url from 'rollup-plugin-url';
-import copy from 'rollup-plugin-copy';
+import copy from 'rollup-plugin-copy-glob';
 
 import pkg from './package.json';
 
@@ -32,9 +32,8 @@ export default {
     }),
     resolve(),
     commonjs(),
-    copy({
-      'src/styles': 'dist/styles',
-      verbose: true,
-    }),
+    copy([
+      { files: 'src/styles/**/*.*', dest: 'dist/styles' },
+    ], { verbose: true }),
   ],
 };
