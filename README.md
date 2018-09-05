@@ -22,7 +22,7 @@ yarn add @radargovernamental/orbit-style
 ```jsx
 import React, { Component } from 'react'
 
-import { Button } from 'orbit-style'
+import { Button } from '@radargovernamental/orbit-style'
 
 class Example extends Component {
   render () {
