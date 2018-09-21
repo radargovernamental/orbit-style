@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Flatpickr from 'react-flatpickr';
@@ -13,6 +13,8 @@ const css = Object.assign({}, mainCss, parentCss);
  */
 
 class Datepicker extends Component {
+  reactFlatpickr = null;
+
   state = {
     isFocused: false,
   };
@@ -37,6 +39,7 @@ class Datepicker extends Component {
       onChange,
       withDate,
       withTime,
+      required,
       ...otherProps
     } = this.props;
 
@@ -65,15 +68,37 @@ class Datepicker extends Component {
     );
 
     return (
-      <Flatpickr
-        className={classes}
-        id={id || name}
-        name={name}
-        onChange={val => onChange({ target: { name, value: val } })}
-        options={newOptions}
-        value={value}
-        {...otherProps}
-      />
+      <Fragment>
+        <Flatpickr
+          className={classes}
+          id={id || name}
+          name={name}
+          onChange={val => onChange({ target: { name, value: val } })}
+          options={newOptions}
+          value={value}
+          ref={(reactFlatpickr) => { this.reactFlatpickr = reactFlatpickr; }}
+          {...otherProps}
+        />
+        {!newOptions.allowInput && required ? (
+          <input
+            tabIndex={-1}
+            value={value || ''}
+            required={required}
+            onChange={onChange}
+            style={{
+              opacity: 0,
+              width: 0,
+              height: 0,
+              left: 0,
+              bottom: 0,
+              position: 'absolute',
+            }}
+            onFocus={() => {
+              setTimeout(() => this.reactFlatpickr.flatpickr.open(), 0);
+            }}
+          />
+        ) : null}
+      </Fragment>
     );
   }
 }
@@ -89,6 +114,7 @@ Datepicker.propTypes = {
   error: PropTypes.bool,
   withTime: PropTypes.bool,
   withDate: PropTypes.bool,
+  required: PropTypes.bool,
   options: PropTypes.object,
   onChange: PropTypes.func,
   locale: PropTypes.string,
@@ -103,6 +129,7 @@ Datepicker.defaultProps = {
   error: false,
   withDate: true,
   withTime: false,
+  required: false,
   options: {},
   onChange: f => f,
   locale: 'pt',
