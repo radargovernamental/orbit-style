@@ -1,7 +1,10 @@
 # Changelog
-## [Unreleased]
 
-## [1.1.0] 2018-08-22
+## [Unreleased]
+### Added
+- Accessible tabs and its stories
+
+## [1.1.0] - 2018-08-22
 ### Added
 - Message box with default styles and its stories
 
