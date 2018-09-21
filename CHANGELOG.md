@@ -1,5 +1,8 @@
 # Changelog
+
 ## [Unreleased]
+### Added
+- Accessible tabs and its stories
 
 ## [1.1.0] - 2018-08-22
 ### Added

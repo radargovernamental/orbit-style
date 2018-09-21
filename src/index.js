@@ -46,3 +46,13 @@ import { Col as _Col, Row as _Row, Grid as _Grid } from 'react-flexbox-grid';
 export const Grid = _Grid;
 export const Col = _Col;
 export const Row = _Row;
+
+import {
+  TabList as _TabList,
+  Tab as _Tab,
+  TabPanel as _TabPanel,
+} from 'react-tabs';
+export Tabs from './js/components/molecule/Tabs';
+export const TabList = _TabList;
+export const Tab = _Tab;
+export const TabPanel = _TabPanel;

@@ -25,6 +25,10 @@ import {
   Row,
   Sidebar,
   Spacer,
+  TabList,
+  Tabs,
+  Tab,
+  TabPanel,
   Table,
   Tag,
   TagAction,
@@ -594,6 +598,37 @@ storiesOf('UI/Spacer', module)
         !
       </Spacer>
     </div>
+  ));
+
+storiesOf('UI/Tab', module)
+  .addDecorator(checkA11y)
+  .add('simple', () => (
+    <Tabs defaultIndex={0} onSelect={index => action(index)}>
+      <TabList>
+        <Tab>Title 1</Tab>
+        <Tab>Title 2</Tab>
+      </TabList>
+      <TabPanel>Content Tab 1</TabPanel>
+      <TabPanel>Content Tab 2</TabPanel>
+    </Tabs>
+  ))
+  .add('only tabs', () => (
+    <Tabs withPanel={false} defaultIndex={0} onSelect={index => action(index)}>
+      <TabList>
+        <Tab>Title 1</Tab>
+        <Tab>Title 2</Tab>
+      </TabList>
+    </Tabs>
+  ))
+  .add('render tab only on change', () => (
+    <Tabs defaultIndex={0} onSelect={index => action(index)} forceRenderTabPanel>
+      <TabList>
+        <Tab>Title 1</Tab>
+        <Tab>Title 2</Tab>
+      </TabList>
+      <TabPanel>Content Tab 1</TabPanel>
+      <TabPanel>Content Tab 2</TabPanel>
+    </Tabs>
   ));
 
 storiesOf('UI/Table', module)
