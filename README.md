@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-yarn add orbit-style
+yarn add @radargovernamental/orbit-style
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ yarn add orbit-style
 ```jsx
 import React, { Component } from 'react'
 
-import { Button } from 'orbit-style'
+import { Button } from '@radargovernamental/orbit-style'
 
 class Example extends Component {
   render () {
@@ -82,7 +82,7 @@ Following http://bradfrost.com/blog/post/atomic-web-design/ idea and considering
 
 Atomic Design gives us a series of new approaches to work as we want with our components in a high scalable way. Also, we first created all of our components using React, allowing us to use it with CSS Modules and import in our React projects
 
-This allow us to accomplish premises 2, 5. To approach premise 6, it would be too complex for users to know what's an atom/molecule/organism, so we export them as their own name. Therefore, instead of using `import Button from 'orbit-style/atom'`, we just use `import { Button } from 'orbit-style'`.
+This allow us to accomplish premises 2, 5. To approach premise 6, it would be too complex for users to know what's an atom/molecule/organism, so we export them as their own name. Therefore, instead of using `import Button from '@radargovernamental/orbit-style/atom'`, we just use `import { Button } from '@radargovernamental/orbit-style'`.
 
 Also, to be sure 6 is achieved, we created all components using StoryBooks, which can be accessed in `/example` running `yarn storybook`.
 
