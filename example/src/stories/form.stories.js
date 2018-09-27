@@ -271,6 +271,19 @@ storiesOf('Forms/Select', module)
       isFormBox={false}
     />
   )))
+  .add('disabled', withNotes('Abstraction for: https://github.com/JedWatson/react-select')(() => (
+    <Select
+      disabled
+      onChange={action('changed')}
+      value={{ label: 'Option 2', value: '2' }}
+      options={[
+        { label: 'Option 1', value: '1' },
+        { label: 'Option 2', value: '2' },
+        { label: 'Option 3', value: '3' },
+      ]}
+      isFormBox={false}
+    />
+  )))
   .add('with multiple selection', withNotes('Abstraction for: https://github.com/JedWatson/react-select')(() => (
     <Select
       onChange={action('changed')}
@@ -301,7 +314,34 @@ storiesOf('Forms/Select', module)
       loadingMessage={() => 'Carregando..'}
       noOptionsMessage={() => 'Não encontrado.'}
     />
-  )));
+  )))
+  .add('with custom options', withNotes('Abstraction for: https://github.com/JedWatson/react-select')(() => (
+    <Select
+      name="customOptions"
+      allowCustomOptions
+      isFormBox={false}
+    />
+  )))
+  .add('with external source and custom options',
+    withNotes('Abstraction for: https://github.com/JedWatson/react-select')(() =>(
+      <Select
+        name="listSource"
+        async
+        allowCustomOptions
+        asyncData={(inputValue) => {
+          const data = [{ value: 'a', label: 'A' }, { value: 'b', label: 'B' }, { value: 'c', label: 'C' }];
+          return new Promise((resolve) => {
+            setTimeout(
+              () => resolve(data.filter(i => i.label.toLowerCase().includes(inputValue.toLowerCase()))),
+              1000,
+            );
+          });
+        }}
+        isFormBox={false}
+        loadingMessage={() => 'Carregando..'}
+        noOptionsMessage={() => 'Não encontrado.'}
+      />
+    )));
 
 storiesOf('Forms/Textarea', module)
   .addDecorator(checkA11y)

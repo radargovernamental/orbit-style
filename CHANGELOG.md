@@ -1,6 +1,10 @@
 # Changelog
 
 ## [Unreleased]
+### Added
+- Step Navigation
+### Changed
+- Select now has a property that allows inserting data
 
 ## [1.2.0] - 2018-09-21
 ### Added

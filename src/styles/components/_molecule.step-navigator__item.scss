@@ -1,0 +1,52 @@
+@import '../settings/settings';
+@import '../settings/colors';
+@import '../settings/type';
+@import '../tools/tools';
+
+.c-step-navigator__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 12px;
+  background: none;
+  border: none;
+  font-family: $font-text;
+  margin: 0 24px;
+  width: 120px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__number {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    background: $content-border-color;
+  }
+
+  &__label {
+    display: block;
+    margin-top: 10px;
+    color: $color-text-light;
+    font-size: 1rem;
+  }
+
+  &--active &__number {
+    background: $color-primary;
+  }
+
+  &--done &__number {
+    background: $color-primary;
+  }
+}
