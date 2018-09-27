@@ -9,8 +9,8 @@
 
   &:before {
     content: '';
-    left: 50px;
-    right: 50px;
+    left: 72px;
+    right: 72px;
     top: 18px;
     height: 4px;
     background: $content-border-color;
@@ -19,7 +19,7 @@
   }
 
   &__progress {
-    left: 50px;
+    left: 72px;
     top: 18px;
     height: 4px;
     background: $color-primary;
