@@ -7,13 +7,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 0 12px;
   background: none;
   border: none;
   font-family: $font-text;
-  margin: 0 24px;
-  width: 120px;
+  margin: 0 12px;
+  width: 144px;
 
   &:first-child {
     margin-left: 0;
