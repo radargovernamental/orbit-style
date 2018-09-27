@@ -39,6 +39,8 @@ export Message from './js/components/organism/Message';
 export Timeline from './js/components/organism/Timeline';
 export TimelineItem from './js/components/molecule/TimelineItem';
 export TimelineContent from './js/components/atom/TimelineContent';
+export StepNavigator from './js/components/organism/StepNavigator';
+export StepNavigatorItem from './js/components/molecule/StepNavigatorItem';
 
 // Grid
 import { Col as _Col, Row as _Row, Grid as _Grid } from 'react-flexbox-grid';

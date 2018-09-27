@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactSelect from 'react-select';
 import ReactSelectAsync from 'react-select/lib/Async';
+import ReactSelectCreatable from 'react-select/lib/Creatable';
+import ReactSelectAsyncCreatable from 'react-select/lib/AsyncCreatable';
 
 import mainCss from '../../../styles/components/_atom.select.scss';
 import parentCss from '../../../styles/components/_molecule.form__box.scss';
@@ -56,7 +58,7 @@ const customStyles = isFormBox => ({
     }
 
     if (state.isDisabled) {
-      opacity = 0.2;
+      opacity = 0.3;
     }
 
     return {
@@ -94,6 +96,8 @@ class Select extends React.Component {
       required,
       noOptionsMessage,
       firstMessage,
+      customOptionsMessage,
+      allowCustomOptions,
       ...otherProps
     } = this.props;
 
@@ -130,13 +134,23 @@ class Select extends React.Component {
 
     let elem = <ReactSelect {...allProps} />;
 
+
+    if (allowCustomOptions) {
+      elem = <ReactSelectCreatable {...allProps} formatCreateLabel={customOptionsMessage} />;
+    }
+
     if (async) {
       const debouncedAsyncData = debouncePromise(asyncData, debounce);
       Object.assign(allProps, {
         loadOptions: debouncedAsyncData,
         name: null,
       });
-      elem = <ReactSelectAsync {...allProps} />;
+
+      if (allowCustomOptions) {
+        elem = <ReactSelectAsyncCreatable {...allProps} formatCreateLabel={customOptionsMessage} />;
+      } else {
+        elem = <ReactSelectAsync {...allProps} />;
+      }
     }
 
     return (
@@ -183,9 +197,11 @@ Select.propTypes = {
   debounce: PropTypes.number,
   loadingMessage: PropTypes.func,
   noOptionsMessage: PropTypes.func,
+  customOptionsMessage: PropTypes.func,
   firstMessage: PropTypes.func,
   disabled: PropTypes.bool,
   required: PropTypes.bool,
+  allowCustomOptions: PropTypes.bool,
 };
 Select.defaultProps = {
   options: [],
@@ -206,8 +222,10 @@ Select.defaultProps = {
   loadingMessage: () => 'Carregando..',
   noOptionsMessage: () => 'Não encontrado.',
   firstMessage: () => 'Digite para buscar',
+  customOptionsMessage: newValue => `Criar "${newValue}"`,
   disabled: false,
   required: false,
+  allowCustomOptions: false,
 };
 
 export default Select;
