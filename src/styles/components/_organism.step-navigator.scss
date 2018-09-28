@@ -1,4 +1,5 @@
 @import '../settings/colors';
+@import '../tools/mq';
 
 .c-step-navigator {
   position: relative;
@@ -16,6 +17,14 @@
     background: $content-border-color;
     position: absolute;
 
+    @include mq($until: tablet) {
+      left: 30px;
+      right: auto;
+      top: 20px;
+      bottom: 20px;
+      width: 2px;
+      height: auto;
+    }
   }
 
   &__progress {
@@ -25,6 +34,10 @@
     background: $color-primary;
     position: absolute;
     z-index: 2;
+
+    @include mq($until: tablet) {
+      display: none;
+    }
   }
 
   &__children {
@@ -32,5 +45,9 @@
     z-index: 10;
     display: flex;
     flex-direction: row;
+
+    @include mq($until: tablet) {
+      flex-direction: column;
+    }
   }
 }
