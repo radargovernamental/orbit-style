@@ -1,19 +1,26 @@
 @import '../settings/settings';
 @import '../settings/colors';
 @import '../settings/type';
-@import '../tools/tools';
+@import '../tools/mq';
 
 .c-step-navigator__item {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 0 12px;
   background: none;
   border: none;
   font-family: $font-text;
-  margin: 0 24px;
-  width: 120px;
+  margin: 0 12px;
+  width: 144px;
+
+  @include mq($until: tablet) {
+    align-items: center;
+    margin: 6px 0;
+    flex-direction: row;
+    width: 100%;
+  }
 
   &:first-child {
     margin-left: 0;
@@ -33,6 +40,11 @@
     font-weight: bold;
     font-size: 1rem;
     background: $content-border-color;
+    flex-shrink: 0;
+
+    @include mq($until: tablet) {
+      margin-right: 12px;
+    }
   }
 
   &__label {
@@ -40,13 +52,25 @@
     margin-top: 10px;
     color: $color-text-light;
     font-size: 1rem;
+
+    @include mq($until: tablet) {
+      margin: 0;
+      text-align: left;
+    }
   }
 
   &--active &__number {
     background: $color-primary;
   }
 
+  &--active &__label {
+    color: $color-primary;
+  }
+
   &--done &__number {
     background: $color-primary;
+  }
+  &--done &__label {
+    color: $color-primary;
   }
 }
