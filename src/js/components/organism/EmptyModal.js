@@ -13,12 +13,14 @@ const AlertModal = (props) => {
     modalIsOpen,
     onClose,
     shouldCloseOnOverlayClick,
+    fluid,
   } = props;
 
-  const classes = classNames(
-    css['c-modal'],
-    css['c-modal__empty-modal'],
-  );
+  const classes = classNames({
+    [css['c-modal']]: true,
+    [css['c-modal__empty-modal']]: true,
+    [css['c-modal--fluid']]: fluid,
+  });
 
   return (
     <Modal
@@ -38,11 +40,13 @@ AlertModal.propTypes = {
   onClose: PropTypes.func.isRequired,
   modalIsOpen: PropTypes.bool.isRequired,
   shouldCloseOnOverlayClick: PropTypes.bool,
+  fluid: PropTypes.bool,
 };
 
 AlertModal.defaultProps = {
   children: null,
   shouldCloseOnOverlayClick: true,
+  fluid: true,
 };
 
 export default AlertModal;

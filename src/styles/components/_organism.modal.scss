@@ -22,6 +22,11 @@
     outline: none;
   }
 
+  &--fluid {
+    display: table;
+    max-width: 95%;
+  }
+
   @include mq($until: desktop) {
     max-height: 95vh;
   }

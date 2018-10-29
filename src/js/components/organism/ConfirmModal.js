@@ -21,12 +21,14 @@ const ConfirmModal = (props) => {
     onConfirm,
     onClose,
     title,
+    fluid,
   } = props;
 
-  const classes = classNames(
-    css['c-modal'],
-    css['c-modal__confirm-modal'],
-  );
+  const classes = classNames({
+    [css['c-modal']]: true,
+    [css['c-modal__confirm-modal']]: true,
+    [css['c-modal--fluid']]: fluid,
+  });
 
   return (
     <Modal
@@ -68,6 +70,7 @@ ConfirmModal.propTypes = {
   onConfirm: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   modalIsOpen: PropTypes.bool.isRequired,
+  fluid: PropTypes.bool.isRequired,
 };
 
 ConfirmModal.defaultProps = {
@@ -76,6 +79,7 @@ ConfirmModal.defaultProps = {
   children: null,
   isLoading: false,
   loadingComponent: null,
+  fluid: false,
 };
 
 export default ConfirmModal;
