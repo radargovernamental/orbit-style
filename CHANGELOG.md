@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- Modal now has a fluid props allowing full-width content
 
 ## [1.3.0] - 2018-09-27
 ### Added

@@ -544,6 +544,15 @@ storiesOf('UI/Modals/Empty', module)
     >
       <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.</Text>
     </EmptyModal>
+  ))
+  .add('with fluid content', () => (
+    <EmptyModal
+      onClose={() => action('Cancelled')}
+      modalIsOpen={true}
+      fluid
+    >
+      <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque doloremque quia quo sit. Autem debitis, eius enim magnam maiores mollitia nobis odit quidem! Ab aspernatur autem blanditiis commodi dicta esse et eum eveniet ex incidunt labore maiores maxime minima molestias natus necessitatibus nobis officiis possimus quasi qui quibusdam quidem rerum sequi sint totam, ullam voluptatibus? Accusamus adipisci, alias aperiam architecto aspernatur autem dicta dolore dolores doloribus et exercitationem facilis fuga impedit in iste itaque labore laboriosam laudantium nemo nesciunt obcaecati officiis quia quisquam ratione repellat repellendus soluta suscipit unde vel velit voluptate voluptates voluptatibus voluptatum. Dolorum provident quae qui.</Text>
+    </EmptyModal>
   ));
 
 storiesOf('UI/Spacer', module)
