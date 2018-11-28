@@ -89,6 +89,7 @@ storiesOf('UI/BadgeWithText', module)
       <div><BadgeWithText badgeSuccess number={10}>badgeSuccess</BadgeWithText></div>
       <div><BadgeWithText badgeDanger number={10}>badgeDanger</BadgeWithText></div>
       <div><BadgeWithText badgeGrayLight number={10}>badgeGrayLight</BadgeWithText></div>
+      <div><BadgeWithText></BadgeWithText></div>
     </div>
   ));
 
