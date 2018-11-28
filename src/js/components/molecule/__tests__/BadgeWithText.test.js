@@ -33,7 +33,7 @@ describe('BadgeWithText', () => {
   });
 
   it('renders with children inside it', () => {
-    const wrapper = shallow(<BadgeWithText badgeGrayLight number={10}><div>Lorem <strong>Ipsum</strong></div></BadgeWithText>);
-    expect(wrapper.children().html()).toBe('<span><span class="undefined">10</span><p class=" \"><div>Lorem <strong>Ipsum</strong></div></p></span>');
+    const wrapper = shallow(<BadgeWithText number={10}><div>Lorem <strong>Ipsum</strong></div></BadgeWithText>);
+    expect(wrapper.children().html()).toBe('<span><span class="\">10</span><p class=" \"><div>Lorem <strong>Ipsum</strong></div></p></span>');
   });
 });
