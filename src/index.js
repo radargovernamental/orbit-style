@@ -1,5 +1,6 @@
 // UI
 export Badge from './js/components/atom/Badge';
+export BadgeWithText from './js/components/molecule/BadgeWithText';
 export Blockquote from './js/components/atom/Blockquote';
 export Button from './js/components/atom/Button';
 export Content from './js/components/molecule/Content';
@@ -54,6 +55,7 @@ import {
   Tab as _Tab,
   TabPanel as _TabPanel,
 } from 'react-tabs';
+
 export Tabs from './js/components/molecule/Tabs';
 export const TabList = _TabList;
 export const Tab = _Tab;

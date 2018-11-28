@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.5]
+### Added
+- Added component 'BadgeWithText', will encapsulate badge and label, just pass the props number, text and badge type.
+### Changed
+- Badge has new color grayLight  
+
 ## [1.3.4]
 ### Changed
 - Modal now has a fluid props allowing full-width content

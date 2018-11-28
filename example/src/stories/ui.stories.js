@@ -10,6 +10,7 @@ import { withNotes } from '@storybook/addon-notes';
 import {
   AlertModal,
   Badge,
+  BadgeWithText,
   Blockquote,
   Button,
   Col,
@@ -55,6 +56,7 @@ storiesOf('UI/Badge', module)
   .add('with color', () => (
     <div>
       <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge>Default</Badge></Heading>
+      <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge grayLight>GrayLight</Badge></Heading>
       <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge primary>Primary</Badge></Heading>
       <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge success>Success</Badge></Heading>
       <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge warning>Warning</Badge></Heading>
@@ -64,6 +66,7 @@ storiesOf('UI/Badge', module)
   .add('with pill format', () => (
     <div>
       <Heading level={1} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge pill>1</Badge></Heading>
+      <Heading level={1} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge pill grayLight>1</Badge></Heading>
       <Heading level={2} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge primary pill>2</Badge></Heading>
       <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge success pill>30</Badge></Heading>
       <Heading level={4} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge warning pill>100</Badge></Heading>
@@ -74,6 +77,18 @@ storiesOf('UI/Badge', module)
   .add('with hidden text for screen readers', () => (
     <div>
       <Heading level={1} title="Lorem ipsum dolor" hidden>Lorem ipsum dolor</Heading>
+    </div>
+  ));
+
+storiesOf('UI/BadgeWithText', module)
+  .addDecorator(checkA11y)
+  .add('with text and color', () => (
+    <div>
+      <div><BadgeWithText number={10}>Default</BadgeWithText></div>
+      <div><BadgeWithText badgePrimary number={10}>badgePrimary</BadgeWithText></div>
+      <div><BadgeWithText badgeSuccess number={10}>badgeSuccess</BadgeWithText></div>
+      <div><BadgeWithText badgeDanger number={10}>badgeDanger</BadgeWithText></div>
+      <div><BadgeWithText badgeGrayLight number={10}>badgeGrayLight</BadgeWithText></div>
     </div>
   ));
 
@@ -551,7 +566,14 @@ storiesOf('UI/Modals/Empty', module)
       modalIsOpen={true}
       fluid
     >
-      <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque doloremque quia quo sit. Autem debitis, eius enim magnam maiores mollitia nobis odit quidem! Ab aspernatur autem blanditiis commodi dicta esse et eum eveniet ex incidunt labore maiores maxime minima molestias natus necessitatibus nobis officiis possimus quasi qui quibusdam quidem rerum sequi sint totam, ullam voluptatibus? Accusamus adipisci, alias aperiam architecto aspernatur autem dicta dolore dolores doloribus et exercitationem facilis fuga impedit in iste itaque labore laboriosam laudantium nemo nesciunt obcaecati officiis quia quisquam ratione repellat repellendus soluta suscipit unde vel velit voluptate voluptates voluptatibus voluptatum. Dolorum provident quae qui.</Text>
+      <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque doloremque quia quo sit. Autem
+        debitis, eius enim magnam maiores mollitia nobis odit quidem! Ab aspernatur autem blanditiis commodi dicta esse
+        et eum eveniet ex incidunt labore maiores maxime minima molestias natus necessitatibus nobis officiis possimus
+        quasi qui quibusdam quidem rerum sequi sint totam, ullam voluptatibus? Accusamus adipisci, alias aperiam
+        architecto aspernatur autem dicta dolore dolores doloribus et exercitationem facilis fuga impedit in iste itaque
+        labore laboriosam laudantium nemo nesciunt obcaecati officiis quia quisquam ratione repellat repellendus soluta
+        suscipit unde vel velit voluptate voluptates voluptatibus voluptatum. Dolorum provident quae qui.
+      </Text>
     </EmptyModal>
   ));
 
@@ -824,12 +846,12 @@ storiesOf('UI/Timeline', module)
           </div>
           <Text>
             Consectetur consequuntur doloribus esse eum
-          illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
-          voluptatem.
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
           </Text>
           <Text>
             A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
-          laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
           </Text>
         </TimelineContent>
       </TimelineItem>
@@ -844,12 +866,12 @@ storiesOf('UI/Timeline', module)
           </Text>
           <Text>
             Consectetur consequuntur doloribus esse eum
-          illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
-          voluptatem.
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
           </Text>
           <Text>
             A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
-          laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
           </Text>
         </TimelineContent>
       </TimelineItem>
@@ -861,12 +883,12 @@ storiesOf('UI/Timeline', module)
           </Text>
           <Text>
             Consectetur consequuntur doloribus esse eum
-          illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
-          voluptatem.
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
           </Text>
           <Text>
             A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
-          laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
           </Text>
         </TimelineContent>
       </TimelineItem>

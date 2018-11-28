@@ -61,4 +61,12 @@
       border-color: darken($color-danger, 5%);
     }
   }
+
+  &--gray-light {
+    background-color: rgba($color-gray, .25);
+    &:hover {
+      background: darken(rgba($color-gray, .25), 5%);
+      border-color: darken(rgba($color-gray, .25), 5%);
+    }
+  }
 }
