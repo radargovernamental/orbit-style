@@ -1,0 +1,19 @@
+@import '../settings/colors';
+@import '../settings/spaces';
+
+.c-badgeWithText {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 300;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    color: $color-text-light;
+    margin-left: $base-spacing-unit / 2;
+  }
+}
