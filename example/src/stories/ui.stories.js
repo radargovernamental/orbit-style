@@ -1067,8 +1067,8 @@ storiesOf('UI/Timeline', module)
 
 storiesOf('UI/Tooltip', module)
   .addDecorator(checkA11y)
-  .add('with default props', () => <Tooltip title="This is a tooltip"><span>Oi?</span></Tooltip>)
-  .add('with a different animation', () => <Tooltip title="This is a tooltip" animation="fade"><span>Oi?</span></Tooltip>);
+  .add('with default props', () => <Tooltip title="This is a tooltip"><span>Hello?</span></Tooltip>)
+  .add('with a different animation', () => <Tooltip title="This is a tooltip" animation="fade"><span>Hello?</span></Tooltip>);
 
 storiesOf('UI/Tooltip/Help', module)
   .addDecorator(checkA11y)

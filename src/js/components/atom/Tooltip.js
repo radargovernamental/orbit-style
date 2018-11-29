@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tooltip as Wrapper } from 'react-tippy';
 
 import css from '../../../styles/components/_atom.tooltip.scss';
+
+const { Tooltip: Wrapper } = require('react-tippy');
 
 const Tooltip = ({
   title, animation, tabIndex, children, ...props
