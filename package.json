@@ -20,7 +20,8 @@
   "peerDependencies": {
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
+    "react-dom": "^15.0.0 || ^16.0.0",
+    "react-tippy": "^1.2.3"
   },
   "devDependencies": {
     "@storybook/addon-viewport": "^3.4.8",

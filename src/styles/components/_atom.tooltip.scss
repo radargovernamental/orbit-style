@@ -1,0 +1,9 @@
+@import '../settings/type';
+
+:global {
+  @import '~react-tippy/dist/tippy.css';
+
+  .tippy-popper .tippy-tooltip-content {
+    font-family: $font-text;
+  }
+}

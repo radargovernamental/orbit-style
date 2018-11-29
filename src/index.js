@@ -15,6 +15,8 @@ export Tag from './js/components/atom/Tag';
 export TagExtension from './js/components/atom/TagExtension';
 export TagAction from './js/components/atom/TagAction';
 export Text from './js/components/atom/Text';
+export Tooltip from './js/components/atom/Tooltip';
+export TooltipHelp from './js/components/organism/TooltipHelp';
 
 // Forms
 export Checkbox from './js/components/atom/Checkbox';

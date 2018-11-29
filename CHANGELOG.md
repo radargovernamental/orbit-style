@@ -3,8 +3,9 @@
 ## [Unreleased]
 ### Added
 - Added component 'BadgeWithText', will encapsulate badge and label, just pass the props number, text and badge type.
+- Added Tooltip and TooltipHelper components
 ### Changed
-- Badge has new color grayLight  
+- Badge has new color grayLight
 
 ## [1.3.4]
 ### Changed
