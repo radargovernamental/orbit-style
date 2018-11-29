@@ -8,6 +8,7 @@ import css from '../../../styles/components/_molecule.badge-with-text.scss';
 
 const BadgeWithText = (props) => {
   const {
+    badgePill,
     badgePrimary,
     badgeSuccess,
     badgeDanger,
@@ -24,6 +25,7 @@ const BadgeWithText = (props) => {
           success={badgeSuccess}
           danger={badgeDanger}
           grayLight={badgeGrayLight}
+          pill={badgePill}
         >
           {number}
         </Badge>
@@ -34,6 +36,7 @@ const BadgeWithText = (props) => {
 };
 
 BadgeWithText.propTypes = {
+  badgePill: PropTypes.bool,
   badgePrimary: PropTypes.bool,
   badgeSuccess: PropTypes.bool,
   badgeDanger: PropTypes.bool,
@@ -43,6 +46,7 @@ BadgeWithText.propTypes = {
 };
 
 BadgeWithText.defaultProps = {
+  badgePill: true,
   badgePrimary: false,
   badgeSuccess: false,
   badgeDanger: false,

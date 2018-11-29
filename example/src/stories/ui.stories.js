@@ -82,11 +82,11 @@ storiesOf('UI/Badge', module)
 
 storiesOf('UI/BadgeWithText', module)
   .addDecorator(checkA11y)
-  .add('with default color', () => <BadgeWithText number={10}>Default</BadgeWithText>)
-  .add('with primary color', () => <BadgeWithText badgePrimary number={10}>badgePrimary</BadgeWithText>)
-  .add('with success color', () => <BadgeWithText badgeSuccess number={10}>badgeSuccess</BadgeWithText>)
-  .add('with danger color', () => <BadgeWithText badgeDanger number={10}>badgeDanger</BadgeWithText>)
-  .add('with grayLight color', () => <BadgeWithText badgeGrayLight number={10}>badgeGrayLight</BadgeWithText>);
+  .add('with default color', () => <BadgeWithText number={10}>Default Badge</BadgeWithText>)
+  .add('with primary color', () => <BadgeWithText badgePrimary number={10}>Badge Primary With Text</BadgeWithText>)
+  .add('with success color', () => <BadgeWithText badgeSuccess number={10}>Badge Success With Text</BadgeWithText>)
+  .add('with danger color', () => <BadgeWithText badgeDanger number={10}>Badge Danger With Text</BadgeWithText>)
+  .add('with grayLight color', () => <BadgeWithText badgeGrayLight number={10}>Badge Gray Light With Text</BadgeWithText>);
 
 storiesOf('UI/Blockquote', module)
   .addDecorator(checkA11y)
