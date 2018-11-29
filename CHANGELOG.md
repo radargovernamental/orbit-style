@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.3.5]
+## [Unreleased]
 ### Added
 - Added component 'BadgeWithText', will encapsulate badge and label, just pass the props number, text and badge type.
 ### Changed
