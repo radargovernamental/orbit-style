@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased]
+
+## [1.4.0]
+### Added
+- Added component 'BadgeWithText', will encapsulate badge and label, just pass the props number, text and badge type.
+- Added Tooltip and TooltipHelper components
+### Changed
+- Badge has new color grayLight
+
 ## [1.3.4]
 ### Changed
 - Modal now has a fluid props allowing full-width content
@@ -22,7 +31,8 @@
 - First release
 
 
-[Unreleased]: https://github.com/radargovernamental/orbit-style/compare/1.3.4...develop
+[Unreleased]: https://github.com/radargovernamental/orbit-style/compare/1.4.0...develop
+[1.4.0]: https://github.com/radargovernamental/orbit-style/compare/1.3.4...1.4.0
 [1.3.4]: https://github.com/radargovernamental/orbit-style/compare/1.3.0...1.3.4
 [1.3.0]: https://github.com/radargovernamental/orbit-style/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/radargovernamental/orbit-style/compare/1.1.0...1.2.0

@@ -11,6 +11,7 @@ const Badge = (props) => {
     success,
     warning,
     danger,
+    grayLight,
     pill,
   } = props;
 
@@ -21,6 +22,7 @@ const Badge = (props) => {
     [css['c-badge--success']]: success,
     [css['c-badge--warning']]: warning,
     [css['c-badge--danger']]: danger,
+    [css['c-badge--gray-light']]: grayLight,
   });
 
   return (
@@ -36,6 +38,7 @@ Badge.propTypes = {
   danger: PropTypes.bool,
   warning: PropTypes.bool,
   success: PropTypes.bool,
+  grayLight: PropTypes.bool,
   pill: PropTypes.bool,
 };
 
@@ -45,6 +48,7 @@ Badge.defaultProps = {
   danger: false,
   warning: false,
   success: false,
+  grayLight: false,
   pill: false,
 };
 

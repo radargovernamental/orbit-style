@@ -10,6 +10,7 @@ import { withNotes } from '@storybook/addon-notes';
 import {
   AlertModal,
   Badge,
+  BadgeWithText,
   Blockquote,
   Button,
   Col,
@@ -37,6 +38,8 @@ import {
   Timeline,
   TimelineContent,
   TimelineItem,
+  Tooltip,
+  TooltipHelp,
 } from 'orbit-style';
 
 
@@ -55,6 +58,7 @@ storiesOf('UI/Badge', module)
   .add('with color', () => (
     <div>
       <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge>Default</Badge></Heading>
+      <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge grayLight>GrayLight</Badge></Heading>
       <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge primary>Primary</Badge></Heading>
       <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge success>Success</Badge></Heading>
       <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge warning>Warning</Badge></Heading>
@@ -64,6 +68,7 @@ storiesOf('UI/Badge', module)
   .add('with pill format', () => (
     <div>
       <Heading level={1} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge pill>1</Badge></Heading>
+      <Heading level={1} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge pill grayLight>1</Badge></Heading>
       <Heading level={2} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge primary pill>2</Badge></Heading>
       <Heading level={3} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge success pill>30</Badge></Heading>
       <Heading level={4} title="Lorem ipsum dolor">Lorem ipsum dolor <Badge warning pill>100</Badge></Heading>
@@ -76,6 +81,14 @@ storiesOf('UI/Badge', module)
       <Heading level={1} title="Lorem ipsum dolor" hidden>Lorem ipsum dolor</Heading>
     </div>
   ));
+
+storiesOf('UI/BadgeWithText', module)
+  .addDecorator(checkA11y)
+  .add('with default color', () => <BadgeWithText number={10}>Default Badge</BadgeWithText>)
+  .add('with primary color', () => <BadgeWithText badgePrimary number={10}>Badge Primary With Text</BadgeWithText>)
+  .add('with success color', () => <BadgeWithText badgeSuccess number={10}>Badge Success With Text</BadgeWithText>)
+  .add('with danger color', () => <BadgeWithText badgeDanger number={10}>Badge Danger With Text</BadgeWithText>)
+  .add('with grayLight color', () => <BadgeWithText badgeGrayLight number={10}>Badge Gray Light With Text</BadgeWithText>);
 
 storiesOf('UI/Blockquote', module)
   .addDecorator(checkA11y)
@@ -551,7 +564,14 @@ storiesOf('UI/Modals/Empty', module)
       modalIsOpen={true}
       fluid
     >
-      <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque doloremque quia quo sit. Autem debitis, eius enim magnam maiores mollitia nobis odit quidem! Ab aspernatur autem blanditiis commodi dicta esse et eum eveniet ex incidunt labore maiores maxime minima molestias natus necessitatibus nobis officiis possimus quasi qui quibusdam quidem rerum sequi sint totam, ullam voluptatibus? Accusamus adipisci, alias aperiam architecto aspernatur autem dicta dolore dolores doloribus et exercitationem facilis fuga impedit in iste itaque labore laboriosam laudantium nemo nesciunt obcaecati officiis quia quisquam ratione repellat repellendus soluta suscipit unde vel velit voluptate voluptates voluptatibus voluptatum. Dolorum provident quae qui.</Text>
+      <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque doloremque quia quo sit. Autem
+        debitis, eius enim magnam maiores mollitia nobis odit quidem! Ab aspernatur autem blanditiis commodi dicta esse
+        et eum eveniet ex incidunt labore maiores maxime minima molestias natus necessitatibus nobis officiis possimus
+        quasi qui quibusdam quidem rerum sequi sint totam, ullam voluptatibus? Accusamus adipisci, alias aperiam
+        architecto aspernatur autem dicta dolore dolores doloribus et exercitationem facilis fuga impedit in iste itaque
+        labore laboriosam laudantium nemo nesciunt obcaecati officiis quia quisquam ratione repellat repellendus soluta
+        suscipit unde vel velit voluptate voluptates voluptatibus voluptatum. Dolorum provident quae qui.
+      </Text>
     </EmptyModal>
   ));
 
@@ -824,12 +844,12 @@ storiesOf('UI/Timeline', module)
           </div>
           <Text>
             Consectetur consequuntur doloribus esse eum
-          illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
-          voluptatem.
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
           </Text>
           <Text>
             A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
-          laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
           </Text>
         </TimelineContent>
       </TimelineItem>
@@ -844,12 +864,12 @@ storiesOf('UI/Timeline', module)
           </Text>
           <Text>
             Consectetur consequuntur doloribus esse eum
-          illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
-          voluptatem.
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
           </Text>
           <Text>
             A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
-          laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
           </Text>
         </TimelineContent>
       </TimelineItem>
@@ -861,12 +881,12 @@ storiesOf('UI/Timeline', module)
           </Text>
           <Text>
             Consectetur consequuntur doloribus esse eum
-          illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
-          voluptatem.
+            illo illum ipsam ipsum, maiores quis reiciendis reprehenderit temporibus unde voluptatum? Dolorem ut vel
+            voluptatem.
           </Text>
           <Text>
             A ad aperiam atque aut consequuntur, dignissimos dolorem eum illo, inventore labore
-          laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
+            laboriosam, nisi provident ratione repellendus soluta temporibus voluptates.
           </Text>
         </TimelineContent>
       </TimelineItem>
@@ -1043,3 +1063,14 @@ storiesOf('UI/Timeline', module)
       </TimelineItem>
     </Timeline>
   ));
+
+
+storiesOf('UI/Tooltip', module)
+  .addDecorator(checkA11y)
+  .add('with default props', () => <Tooltip title="This is a tooltip"><span>Hello?</span></Tooltip>)
+  .add('with a different animation', () => <Tooltip title="This is a tooltip" animation="fade"><span>Hello?</span></Tooltip>);
+
+storiesOf('UI/Tooltip/Help', module)
+  .addDecorator(checkA11y)
+  .add('with default props', () => <TooltipHelp title="This is a tooltip"/>)
+  .add('with fill color', () => <TooltipHelp title="This is a tooltip" fill="blue"/>);

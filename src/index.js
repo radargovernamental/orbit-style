@@ -1,5 +1,6 @@
 // UI
 export Badge from './js/components/atom/Badge';
+export BadgeWithText from './js/components/molecule/BadgeWithText';
 export Blockquote from './js/components/atom/Blockquote';
 export Button from './js/components/atom/Button';
 export Content from './js/components/molecule/Content';
@@ -14,6 +15,8 @@ export Tag from './js/components/atom/Tag';
 export TagExtension from './js/components/atom/TagExtension';
 export TagAction from './js/components/atom/TagAction';
 export Text from './js/components/atom/Text';
+export Tooltip from './js/components/atom/Tooltip';
+export TooltipHelp from './js/components/organism/TooltipHelp';
 
 // Forms
 export Checkbox from './js/components/atom/Checkbox';
@@ -54,6 +57,7 @@ import {
   Tab as _Tab,
   TabPanel as _TabPanel,
 } from 'react-tabs';
+
 export Tabs from './js/components/molecule/Tabs';
 export const TabList = _TabList;
 export const Tab = _Tab;
