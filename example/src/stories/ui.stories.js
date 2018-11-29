@@ -38,6 +38,8 @@ import {
   Timeline,
   TimelineContent,
   TimelineItem,
+  Tooltip,
+  TooltipHelp,
 } from 'orbit-style';
 
 
@@ -1061,3 +1063,14 @@ storiesOf('UI/Timeline', module)
       </TimelineItem>
     </Timeline>
   ));
+
+
+storiesOf('UI/Tooltip', module)
+  .addDecorator(checkA11y)
+  .add('with default props', () => <Tooltip title="This is a tooltip"><span>Oi?</span></Tooltip>)
+  .add('with a different animation', () => <Tooltip title="This is a tooltip" animation="fade"><span>Oi?</span></Tooltip>);
+
+storiesOf('UI/Tooltip/Help', module)
+  .addDecorator(checkA11y)
+  .add('with default props', () => <TooltipHelp title="This is a tooltip"/>)
+  .add('with fill color', () => <TooltipHelp title="This is a tooltip" fill="blue"/>);

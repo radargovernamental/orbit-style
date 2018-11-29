@@ -104,6 +104,7 @@ The only remaining premise is 4. In order to follow it, complex components such 
 - [react-quill](https://github.com/zenoamaro/react-quill) for WYSIWYG
 - [react-select](https://github.com/JedWatson/react-select) for custom selects
 - [react-tabs](https://github.com/reactjs/react-tabs) for accessible tabs
+- [react-tippy](https://github.com/tvkhoa/react-tippy) for accessible tooltips
 
 All credits for them, they did an awesome work :)
 
