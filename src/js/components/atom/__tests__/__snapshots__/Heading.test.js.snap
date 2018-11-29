@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Heading
+    capitalize={false}
+    center={false}
+    className=""
+    danger={false}
+    hidden={false}
+    left={false}
+    level={1}
+    lower={false}
+    primary={false}
+    right={false}
+    success={false}
+    title=""
+    upper={false}
+    warning={false}
+>
+    Lorem Ipsum
+</Heading>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Lorem Ipsum",
+      "className": " ",
+      "title": "",
+    },
+    "ref": null,
+    "rendered": "Lorem Ipsum",
+    "type": "h1",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Lorem Ipsum",
+        "className": " ",
+        "title": "",
+      },
+      "ref": null,
+      "rendered": "Lorem Ipsum",
+      "type": "h1",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

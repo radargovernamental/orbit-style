@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- Added .snap test files and fixed some tests
 
 ## [1.4.0]
 ### Added
