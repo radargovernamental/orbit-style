@@ -1,8 +1,11 @@
 # Changelog
 
 ## [Unreleased]
-### Changed
+### Added
 - Added .snap test files and fixed some tests
+- Bullet component
+### Changed
+- Rollup config to handle after-built z-index changing
 
 ## [1.4.0]
 ### Added
