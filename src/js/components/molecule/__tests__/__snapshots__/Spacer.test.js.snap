@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spacer renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Spacer
+    inline={false}
+    mbLg={null}
+    mbMd={null}
+    mbSm={null}
+    mbXs={null}
+    mlLg={null}
+    mlMd={null}
+    mlSm={null}
+    mlXs={null}
+    mrLg={null}
+    mrMd={null}
+    mrSm={null}
+    mrXs={null}
+    mtLg={null}
+    mtMd={null}
+    mtSm={null}
+    mtXs={null}
+    pbLg={null}
+    pbMd={null}
+    pbSm={null}
+    pbXs={null}
+    plLg={null}
+    plMd={null}
+    plSm={null}
+    plXs={null}
+    prLg={null}
+    prMd={null}
+    prSm={null}
+    prXs={null}
+    ptLg={null}
+    ptMd={null}
+    ptSm={null}
+    ptXs={null}
+    style={Object {}}
+>
+    Lorem
+</Spacer>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Lorem",
+      "className": "",
+      "style": Object {},
+    },
+    "ref": null,
+    "rendered": "Lorem",
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Lorem",
+        "className": "",
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": "Lorem",
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

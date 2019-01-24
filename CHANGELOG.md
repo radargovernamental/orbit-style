@@ -1,6 +1,12 @@
 # Changelog
 
 ## [Unreleased]
+## [1.5.0] - 2019-01-24
+### Added
+- Added .snap test files and fixed some tests
+- Bullet component
+### Changed
+- Rollup config to handle after-built z-index changing
 
 ## [1.4.0]
 ### Added
@@ -31,7 +37,8 @@
 - First release
 
 
-[Unreleased]: https://github.com/radargovernamental/orbit-style/compare/1.4.0...develop
+[Unreleased]: https://github.com/radargovernamental/orbit-style/compare/1.5.0...develop
+[1.5.0]: https://github.com/radargovernamental/orbit-style/compare/1.5.0...1.5.0
 [1.4.0]: https://github.com/radargovernamental/orbit-style/compare/1.3.4...1.4.0
 [1.3.4]: https://github.com/radargovernamental/orbit-style/compare/1.3.0...1.3.4
 [1.3.0]: https://github.com/radargovernamental/orbit-style/compare/1.2.0...1.3.0

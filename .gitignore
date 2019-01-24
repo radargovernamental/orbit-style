@@ -22,5 +22,5 @@ yarn-error.log*
 
 .idea
 coverage
-__snapshots__
-*.js.snap
+#__snapshots__
+#*.js.snap

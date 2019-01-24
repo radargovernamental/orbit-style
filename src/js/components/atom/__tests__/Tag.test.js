@@ -19,6 +19,6 @@ describe('Tag', () => {
 
   it('renders with children inside it', () => {
     const wrapper = shallow(<Tag><div>Lorem <strong>Ipsum</strong></div></Tag>);
-    expect(wrapper.children().html()).toBe('<div>Lorem <strong>Ipsum</strong></div>');
+    expect(wrapper.children().html()).toBe('<span><div>Lorem <strong>Ipsum</strong></div></span>');
   });
 });

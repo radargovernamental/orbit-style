@@ -12,9 +12,9 @@ describe('FormBox', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('renders with a child div', () => {
+  it('renders with a child fieldset', () => {
     const wrapper = shallow(<FormBox>Lorem</FormBox>);
-    expect(wrapper.is('div')).toBe(true);
+    expect(wrapper.is('fieldset')).toBe(true);
   });
 
   it('renders with children inside it', () => {

@@ -1,0 +1,288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Select
+    allowCustomOptions={false}
+    async={false}
+    asyncData={Array []}
+    customOptionsMessage={[Function]}
+    debounce={275}
+    disabled={false}
+    error={false}
+    firstMessage={[Function]}
+    id={null}
+    isFormBox={true}
+    lg={false}
+    loadingMessage={[Function]}
+    md={false}
+    multiple={false}
+    name="test"
+    noOptionsMessage={[Function]}
+    onChange={[Function]}
+    options={Array []}
+    required={false}
+    sm={false}
+    type="text"
+    value={null}
+    xs={false}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <StateManager
+          className={undefined}
+          defaultInputValue=""
+          defaultMenuIsOpen={false}
+          defaultValue={null}
+          inputId="test"
+          isDisabled={false}
+          isMulti={false}
+          loadingMessage={[Function]}
+          name="test"
+          noOptionsMessage={[Function]}
+          onChange={[Function]}
+          options={Array []}
+          placeholder={null}
+          styles={
+                    Object {
+                              "container": [Function],
+                              "indicatorSeparator": [Function],
+                              "input": [Function],
+                              "menu": [Function],
+                              "multiValue": [Function],
+                              "multiValueLabel": [Function],
+                              "singleValue": [Function],
+                              "valueContainer": [Function],
+                            }
+          }
+          type="text"
+          value={null}
+/>,
+        <input
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          style={
+                    Object {
+                              "height": 0,
+                              "opacity": 0,
+                              "position": "absolute",
+                              "width": 0,
+                            }
+          }
+          tabIndex={-1}
+          value=""
+/>,
+      ],
+      "className": "",
+      "onBlurCapture": [Function],
+      "onFocusCapture": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "className": undefined,
+          "defaultInputValue": "",
+          "defaultMenuIsOpen": false,
+          "defaultValue": null,
+          "inputId": "test",
+          "isDisabled": false,
+          "isMulti": false,
+          "loadingMessage": [Function],
+          "name": "test",
+          "noOptionsMessage": [Function],
+          "onChange": [Function],
+          "options": Array [],
+          "placeholder": null,
+          "styles": Object {
+            "container": [Function],
+            "indicatorSeparator": [Function],
+            "input": [Function],
+            "menu": [Function],
+            "multiValue": [Function],
+            "multiValueLabel": [Function],
+            "singleValue": [Function],
+            "valueContainer": [Function],
+          },
+          "type": "text",
+          "value": null,
+        },
+        "ref": [Function],
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "onChange": [Function],
+          "onFocus": [Function],
+          "required": false,
+          "style": Object {
+            "height": 0,
+            "opacity": 0,
+            "position": "absolute",
+            "width": 0,
+          },
+          "tabIndex": -1,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <StateManager
+            className={undefined}
+            defaultInputValue=""
+            defaultMenuIsOpen={false}
+            defaultValue={null}
+            inputId="test"
+            isDisabled={false}
+            isMulti={false}
+            loadingMessage={[Function]}
+            name="test"
+            noOptionsMessage={[Function]}
+            onChange={[Function]}
+            options={Array []}
+            placeholder={null}
+            styles={
+                        Object {
+                                    "container": [Function],
+                                    "indicatorSeparator": [Function],
+                                    "input": [Function],
+                                    "menu": [Function],
+                                    "multiValue": [Function],
+                                    "multiValueLabel": [Function],
+                                    "singleValue": [Function],
+                                    "valueContainer": [Function],
+                                  }
+            }
+            type="text"
+            value={null}
+/>,
+          <input
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            style={
+                        Object {
+                                    "height": 0,
+                                    "opacity": 0,
+                                    "position": "absolute",
+                                    "width": 0,
+                                  }
+            }
+            tabIndex={-1}
+            value=""
+/>,
+        ],
+        "className": "",
+        "onBlurCapture": [Function],
+        "onFocusCapture": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": undefined,
+            "defaultInputValue": "",
+            "defaultMenuIsOpen": false,
+            "defaultValue": null,
+            "inputId": "test",
+            "isDisabled": false,
+            "isMulti": false,
+            "loadingMessage": [Function],
+            "name": "test",
+            "noOptionsMessage": [Function],
+            "onChange": [Function],
+            "options": Array [],
+            "placeholder": null,
+            "styles": Object {
+              "container": [Function],
+              "indicatorSeparator": [Function],
+              "input": [Function],
+              "menu": [Function],
+              "multiValue": [Function],
+              "multiValueLabel": [Function],
+              "singleValue": [Function],
+              "valueContainer": [Function],
+            },
+            "type": "text",
+            "value": null,
+          },
+          "ref": [Function],
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "onChange": [Function],
+            "onFocus": [Function],
+            "required": false,
+            "style": Object {
+              "height": 0,
+              "opacity": 0,
+              "position": "absolute",
+              "width": 0,
+            },
+            "tabIndex": -1,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
