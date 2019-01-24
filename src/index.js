@@ -2,6 +2,7 @@
 export Badge from './js/components/atom/Badge';
 export BadgeWithText from './js/components/molecule/BadgeWithText';
 export Blockquote from './js/components/atom/Blockquote';
+export Bullet from './js/components/atom/Bullet';
 export Button from './js/components/atom/Button';
 export Content from './js/components/molecule/Content';
 export ContentLoading from './js/components/atom/ContentLoading';

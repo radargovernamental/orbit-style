@@ -24,7 +24,9 @@ export default {
     external(),
     postcss({
       modules: true,
-      minimize: true,
+      minimize: {
+        safe: true,
+      },
     }),
     url(),
     babel({

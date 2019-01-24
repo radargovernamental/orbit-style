@@ -12,6 +12,7 @@ import {
   Badge,
   BadgeWithText,
   Blockquote,
+  Bullet,
   Button,
   Col,
   Grid,
@@ -42,6 +43,43 @@ import {
   TooltipHelp,
 } from 'orbit-style';
 
+storiesOf('UI/Bullet', module)
+  .addDecorator(checkA11y)
+  .add('with colors', () => (
+    <div>
+      <Heading level={3} title="Lorem ipsum dolor.">
+        Success <Bullet success />
+      </Heading>
+      <Heading level={3} title="Lorem ipsum dolor.">
+        Danger <Bullet danger />
+      </Heading>
+      <Heading level={3} title="Lorem ipsum dolor.">
+        Warning <Bullet warning />
+      </Heading>
+      <Heading level={3} title="Lorem ipsum dolor.">
+        Success <Bullet />
+      </Heading>
+      <Heading level={3} title="Lorem ipsum dolor.">
+        GrayLight <Bullet grayLight />
+      </Heading>
+    </div>
+  ))
+  .add('with sizes', () => (
+    <div>
+      <Heading level={3} title="Lorem ipsum dolor.">
+        Large <Bullet success lg />
+      </Heading>
+      <Heading level={3} title="Lorem ipsum dolor.">
+        Default <Bullet success />
+      </Heading>
+      <Heading level={3} title="Lorem ipsum dolor.">
+        Small <Bullet success sm />
+      </Heading>
+      <Heading level={3} title="Lorem ipsum dolor.">
+        Small <Bullet success xs />
+      </Heading>
+    </div>
+  ));
 
 storiesOf('UI/Badge', module)
   .addDecorator(checkA11y)

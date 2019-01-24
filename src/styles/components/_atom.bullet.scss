@@ -1,0 +1,40 @@
+@import '../settings/colors';
+
+.bullet {
+  display: inline-block;
+  padding: .5em .5em;
+  border-radius: 50%;
+  background-color: $color-gray;
+
+  &--danger {
+    background-color: $color-danger;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+  }
+
+  &--success {
+    background-color: $color-success;
+  }
+
+  &--warning {
+    background-color: $color-warning;
+  }
+
+  &--grayLight {
+    background-color: $color-light-gray;
+  }
+
+  &--lg {
+    padding: .7em .7em;
+  }
+
+  &--sm {
+    padding: .4em .4em;
+  }
+
+  &--xs {
+    padding: .25em .25em;
+  }
+}
