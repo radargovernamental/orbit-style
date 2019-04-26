@@ -5,10 +5,10 @@
   "private": true,
   "license": "Apache-2.0",
   "dependencies": {
-    "prop-types": "^15.6.1",
     "orbit-style": "link:..",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-scripts": "^1.1.1"
   },
   "scripts": {

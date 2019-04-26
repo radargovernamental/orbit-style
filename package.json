@@ -1,6 +1,6 @@
 {
   "name": "@radargovernamental/orbit-style",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Radar Governamental's Design System",
   "author": "radargovernamental",
   "license": "Apache-2.0",
@@ -46,8 +46,8 @@
     "eslint-plugin-standard": "^3.0.1",
     "gh-pages": "^1.1.0",
     "node-sass": "^4.9.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-scripts": "^1.1.1",
     "rollup": "^0.54.0",
     "rollup-plugin-babel": "^3.0.3",
