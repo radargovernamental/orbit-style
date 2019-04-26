@@ -1,6 +1,11 @@
 # Changelog
 
 ## [Unreleased]
+## [1.6.0] - 2019-04-26
+### Changed
+- React version to 16.8.6
+- React-dom version to 16.8.6
+
 ## [1.5.0] - 2019-01-24
 ### Added
 - Added .snap test files and fixed some tests

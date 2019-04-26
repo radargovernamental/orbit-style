@@ -57,7 +57,7 @@ storiesOf('UI/Bullet', module)
         Warning <Bullet warning />
       </Heading>
       <Heading level={3} title="Lorem ipsum dolor.">
-        Success <Bullet />
+        Gray <Bullet />
       </Heading>
       <Heading level={3} title="Lorem ipsum dolor.">
         GrayLight <Bullet grayLight />
